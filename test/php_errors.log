@@ -1,0 +1,35 @@
+[03-Mar-2019 17:38:59 UTC] PHP Warning:  require(templates/template_file.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php on line 2
+[03-Mar-2019 17:38:59 UTC] PHP Stack trace:
+[03-Mar-2019 17:38:59 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[03-Mar-2019 17:40:43 UTC] PHP Notice:  Undefined variable: body in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php on line 7
+[03-Mar-2019 17:40:43 UTC] PHP Stack trace:
+[03-Mar-2019 17:40:43 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[03-Mar-2019 17:45:08 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\paths.php on line 5
+[03-Mar-2019 17:51:42 UTC] PHP Warning:  require_once(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/paths.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\main.php on line 1
+[03-Mar-2019 17:51:42 UTC] PHP Stack trace:
+[03-Mar-2019 17:51:42 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[03-Mar-2019 17:51:42 UTC] PHP   2. template\renderPage() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:7
+[03-Mar-2019 17:51:42 UTC] PHP   3. template\renderTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:29
+[03-Mar-2019 17:51:42 UTC] PHP   4. template\setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:20
+[03-Mar-2019 17:51:42 UTC] PHP   5. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:6
+[03-Mar-2019 17:51:42 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:/Users/luc-a/Desktop/Universita/Basididati/project/source/paths.php' (include_path='.;C:\php\pear') in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\main.php on line 1
+[03-Mar-2019 17:51:42 UTC] PHP Stack trace:
+[03-Mar-2019 17:51:42 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[03-Mar-2019 17:51:42 UTC] PHP   2. template\renderPage() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:7
+[03-Mar-2019 17:51:42 UTC] PHP   3. template\renderTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:29
+[03-Mar-2019 17:51:42 UTC] PHP   4. template\setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:20
+[03-Mar-2019 17:51:42 UTC] PHP   5. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:6
+[03-Mar-2019 17:52:52 UTC] PHP Warning:  require(/templates/template_file.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php on line 2
+[03-Mar-2019 17:52:52 UTC] PHP Stack trace:
+[03-Mar-2019 17:52:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[03-Mar-2019 17:52:52 UTC] PHP Fatal error:  require(): Failed opening required '/templates/template_file.php' (include_path='.;C:\php\pear') in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php on line 2
+[03-Mar-2019 17:52:52 UTC] PHP Stack trace:
+[03-Mar-2019 17:52:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[03-Mar-2019 17:53:49 UTC] PHP Warning:  require_once(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/test/test.html): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 6
+[03-Mar-2019 17:53:49 UTC] PHP Stack trace:
+[03-Mar-2019 17:53:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[03-Mar-2019 17:53:49 UTC] PHP   2. template\setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:14
+[03-Mar-2019 17:53:49 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:/Users/luc-a/Desktop/Universita/Basididati/project/source/test/test.html' (include_path='.;C:\php\pear') in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 6
+[03-Mar-2019 17:53:49 UTC] PHP Stack trace:
+[03-Mar-2019 17:53:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[03-Mar-2019 17:53:49 UTC] PHP   2. template\setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:14

@@ -2,7 +2,7 @@
     <head>
         <title><!--Title--></title>
         <meta base="/">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
         <!--Header-->
     </head>
 
@@ -13,14 +13,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
-        <div class="py-4">
+        <div class="py-4 px-3">
+            <?php echo $model['test']; ?>
+            <?php echo L::greeting; ?>
             <!--Body-->
         </div>
         <footer class="bg-light font-small blue">
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            <div class="text-right py-3 pr-2">
+                <a href="mailto:luca.faggion@studenti.unipr.it"> Luca Faggion.</a>
             </div>
         </footer>
-        <script src="bootstrap/js/bootstrap.js"></script>
+        <script src="/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>
