@@ -3,7 +3,56 @@ namespace template;
 if(!defined('ROOT')){
     define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 }
-require_once(ROOT.'/i18n.php');
+require_once(ROOT.'/private/i18n.php');
+require_once(ROOT.'/private/utils.php');
+
+class PageModel{
+    public $resources = [];
+    public $title = "";
+    public $body = NULL;
+    public $header = NULL;
+    public $templateFile = '/templates/layouts/main.php';
+    public $model = [];
+
+
+    private function generateStaticModel(){
+        $this->model['static']['<!--Title-->'] = $this->title;
+        $this->model['static']['<!--Header-->'] = $this->header;
+        $this->model['static']['<!--Body-->'] = $this->body;
+        $this->model['static']['<!--Resources_Header--'] = array_key_exists('header',$this->resources) ? addResource($this->resources['header']) : NULL;
+        $this->model['static']['<!--Resources_Body-->'] = array_key_exists('body',$this->resources) ? addResource($this->resources['body']) : NULL;
+    }
+
+    function getModel(){
+        if(array_key_exists('static',$this->model)){
+            $this->generateStaticModel();
+        }else{
+            $this->model['static'] = [];
+            $this->generateStaticModel();
+        }
+        return $this->model;
+    }
+
+    function setUpTemplate(){
+        ob_start();
+        require(ROOT . $this->templateFile);
+        $contents = ob_get_contents();
+        ob_end_clean();
+    
+        $out = $contents;
+        $model = $this->getModel();
+        if(array_key_exists('static',$model)){
+            foreach ($model['static'] as $key => $value) {
+                $out = preg_replace('/'.$key.'/',$value,$out);
+            }
+        }
+        return $out;
+    }
+
+    function render(){
+        echo $this->setUpTemplate();
+    }
+}
 
 function setUpTemplate(String $file, $model){
     ob_start();
@@ -12,7 +61,7 @@ function setUpTemplate(String $file, $model){
     ob_end_clean();
 
     $out = $contents;
-    if($model['static']){
+    if(array_key_exists('static',$model)){
         foreach ($model['static'] as $key => $value) {
             $out = preg_replace('/'.$key.'/',$value,$out);
         }
@@ -24,13 +73,18 @@ function renderTemplate(String $file, $model){
     echo setUpTemplate($file, $model);
 }
 
-function renderPage(String $title,$body = NULL,$model = NULL ,$header_model = NULL){
-    $model['static'] = array(
-        '<!--Title-->' => $title,
-        '<!--Header-->' => $header_model,
-        '<!--Body-->' => $body
-    );
-	renderTemplate(ROOT . "/templates/layouts/main.php",$model);
+function addResource($values){
+    foreach ($values as $key => $value) {
+        $model = array(
+            'type' => $key,
+            'value' => $value
+        );
+        return setUpTemplate(ROOT.'/templates/layouts/resources.php',$model);   
+    }
+}
+
+function renderPage(PageModel $model){
+    renderTemplate(ROOT . $model->templateFile,$model->getModel());
 }
 
 ?>

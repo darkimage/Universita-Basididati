@@ -1,6 +1,9 @@
 <?php class L {
-const greeting = 'Ciao Mondo!';
-const category_somethingother = 'qualcosaltro...';
+const login_title = 'Accedi';
+const login_username = 'Nome utente';
+const login_password = 'Password';
+const login_submit = 'Entra';
+const login_remember = 'Ricordami';
 public static function __callStatic($string, $args) {
     return vsprintf(constant("self::" . $string), $args);
 }

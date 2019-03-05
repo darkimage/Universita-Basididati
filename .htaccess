@@ -1,0 +1,26 @@
+Options -MultiViews
+DirectorySlash Off
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*[^/])$ $1/index.php?%{QUERY_STRING} [L]
+
+# RewriteCond %{REQUEST_FILENAME} -d
+# RewriteRule (.*)/$ $1.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+[^\/(.+)\.php])$ $1.php?%{QUERY_STRING} [L]
+# RewriteRule ^(.+[^/])$ $1.php?%{QUERY_STRING}
+# RewriteRule ^(.+)$ $1?%{QUERY_STRING}
+# RewriteRule ^(.+)/$ $1?%{QUERY_STRING}
+
+<Files *.*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files ~ "\.(php|js|sql|css|svg|eot|ttf|woff|woff2)$">
+    Order Allow,Deny
+    Allow from all
+</Files>

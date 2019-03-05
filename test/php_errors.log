@@ -33,3 +33,9 @@
 [03-Mar-2019 17:53:49 UTC] PHP Stack trace:
 [03-Mar-2019 17:53:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
 [03-Mar-2019 17:53:49 UTC] PHP   2. template\setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:14
+[04-Mar-2019 22:28:21 UTC] PHP Warning:  require_once(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/session.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php on line 5
+[04-Mar-2019 22:28:21 UTC] PHP Stack trace:
+[04-Mar-2019 22:28:21 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0
+[04-Mar-2019 22:28:21 UTC] PHP Fatal error:  require_once(): Failed opening required 'C:/Users/luc-a/Desktop/Universita/Basididati/project/source/session.php' (include_path='.;C:\php\pear') in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php on line 5
+[04-Mar-2019 22:28:21 UTC] PHP Stack trace:
+[04-Mar-2019 22:28:21 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test\index.php:0

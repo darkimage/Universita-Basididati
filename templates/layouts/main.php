@@ -2,7 +2,11 @@
     <head>
         <title><!--Title--></title>
         <meta base="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="/fontawesome/css/all.css">
+        <link rel="stylesheet" href="/application.css">
+        <!--Resources_Header-->
         <!--Header-->
     </head>
 
@@ -14,8 +18,6 @@
             </button>
         </nav>
         <div class="py-4 px-3">
-            <?php echo $model['test']; ?>
-            <?php echo L::greeting; ?>
             <!--Body-->
         </div>
         <footer class="bg-light font-small blue">

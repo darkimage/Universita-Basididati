@@ -3,7 +3,7 @@
 		define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 	}
 	
-	require_once(ROOT."/session.php");
+	require_once(ROOT."/private/session.php");
 	require_once(ROOT."/templates/template_file.php");
 
 	$body_model = array(
