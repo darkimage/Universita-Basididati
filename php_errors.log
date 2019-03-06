@@ -245,3 +245,475 @@ Stack trace:
 [04-Mar-2019 10:43:27 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:0
 [04-Mar-2019 10:43:27 UTC] PHP   2. template\renderPage() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:26
 [04-Mar-2019 10:43:27 UTC] PHP   3. array_key_exists() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:43
+[05-Mar-2019 16:06:17 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 16:06:18 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 16:11:44 UTC] PHP Warning:  DOMDocument::loadHTML(): ID setss already defined in Entity, line: 3 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 3
+[05-Mar-2019 16:11:44 UTC] PHP Stack trace:
+[05-Mar-2019 16:11:44 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:11:44 UTC] PHP   2. DOMDocument->loadHTML(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:3
+[05-Mar-2019 16:12:32 UTC] PHP Notice:  Trying to get property 'length' of non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 10
+[05-Mar-2019 16:12:32 UTC] PHP Stack trace:
+[05-Mar-2019 16:12:32 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:12:32 UTC] PHP   2. showDOMNode($domNode = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:4
+[05-Mar-2019 16:12:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 7
+[05-Mar-2019 16:12:34 UTC] PHP Stack trace:
+[05-Mar-2019 16:12:34 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:12:34 UTC] PHP   2. showDOMNode($domNode = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:4
+[05-Mar-2019 16:12:34 UTC] PHP   3. showDOMNode($domNode = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:11
+[05-Mar-2019 16:17:02 UTC] PHP Notice:  DOMDocument::loadHTML(): Namespace prefix t is not defined in Entity, line: 1 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 3
+[05-Mar-2019 16:17:02 UTC] PHP Stack trace:
+[05-Mar-2019 16:17:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:17:02 UTC] PHP   2. DOMDocument->loadHTML() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:3
+[05-Mar-2019 16:17:02 UTC] PHP Warning:  DOMDocument::loadHTML(): Tag t:test invalid in Entity, line: 1 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 3
+[05-Mar-2019 16:17:02 UTC] PHP Stack trace:
+[05-Mar-2019 16:17:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:17:02 UTC] PHP   2. DOMDocument->loadHTML() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:3
+[05-Mar-2019 16:17:16 UTC] PHP Warning:  DOMDocument::loadHTML(): Tag test invalid in Entity, line: 1 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 3
+[05-Mar-2019 16:17:16 UTC] PHP Stack trace:
+[05-Mar-2019 16:17:16 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:17:16 UTC] PHP   2. DOMDocument->loadHTML() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:3
+[05-Mar-2019 16:26:15 UTC] PHP Warning:  DOMDocument::loadHTML(): Tag t-testing invalid in Entity, line: 1 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 5
+[05-Mar-2019 16:26:15 UTC] PHP Stack trace:
+[05-Mar-2019 16:26:15 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:26:15 UTC] PHP   2. DOMDocument->loadHTML() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:5
+[05-Mar-2019 16:29:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function normalize() on bool in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:6
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 6
+[05-Mar-2019 16:31:07 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function showDOMNode(), 1 passed in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 17 and exactly 2 expected in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:9
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(17): showDOMNode(Object(DOMElement))
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(7): showDOMNode(Object(DOMDocument), 0)
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 9
+[05-Mar-2019 16:35:51 UTC] PHP Deprecated:  Non-static method DOMDocument::loadHTMLFile() should not be called statically in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 6
+[05-Mar-2019 16:35:51 UTC] PHP Stack trace:
+[05-Mar-2019 16:35:51 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:38:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function r() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 10
+[05-Mar-2019 16:44:59 UTC] PHP Notice:  Undefined variable: dom in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 11
+[05-Mar-2019 16:44:59 UTC] PHP Stack trace:
+[05-Mar-2019 16:44:59 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:45:26 UTC] PHP Fatal error:  Uncaught DOMException: Not Found Error in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:12
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(12): DOMNode->replaceChild(Object(DOMElement), Object(DOMElement))
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 12
+[05-Mar-2019 16:45:26 UTC] PHP Stack trace:
+[05-Mar-2019 16:45:26 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:45:26 UTC] PHP   2. DOMDocument->replaceChild(*uninitialized*, *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:12
+[05-Mar-2019 16:46:29 UTC] PHP Notice:  Undefined property: DOMElement::$parent in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 13
+[05-Mar-2019 16:46:29 UTC] PHP Stack trace:
+[05-Mar-2019 16:46:29 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:46:55 UTC] PHP Fatal error:  Uncaught DOMException: Not Found Error in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:13
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(13): DOMNode->replaceChild(Object(DOMElement), Object(DOMElement))
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 13
+[05-Mar-2019 16:46:55 UTC] PHP Stack trace:
+[05-Mar-2019 16:46:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 16:46:55 UTC] PHP   2. DOMElement->replaceChild(*uninitialized*, *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:13
+[05-Mar-2019 20:39:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 20:39:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 20:39:42 UTC] PHP Stack trace:
+[05-Mar-2019 20:39:42 UTC] PHP Stack trace:
+[05-Mar-2019 20:39:42 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:0
+[05-Mar-2019 20:39:42 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:0
+[05-Mar-2019 20:39:42 UTC] PHP   2. template\renderPage($model = *uninitialized*, *uninitialized*, *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:26
+[05-Mar-2019 20:39:42 UTC] PHP   2. template\renderPage($model = *uninitialized*, *uninitialized*, *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:26
+[05-Mar-2019 20:42:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DOMElement::childNodes() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 11
+[05-Mar-2019 20:42:24 UTC] PHP Stack trace:
+[05-Mar-2019 20:42:24 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 20:45:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 20:45:43 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 20:46:03 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 20:46:04 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 20:51:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 20
+[05-Mar-2019 20:51:37 UTC] PHP Stack trace:
+[05-Mar-2019 20:51:37 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 20:51:37 UTC] PHP   2. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:17
+[05-Mar-2019 20:51:37 UTC] PHP   3. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:34
+[05-Mar-2019 20:51:37 UTC] PHP Notice:  Undefined variable: node in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 37
+[05-Mar-2019 20:51:37 UTC] PHP Stack trace:
+[05-Mar-2019 20:51:37 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 20:51:37 UTC] PHP   2. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:17
+[05-Mar-2019 20:51:37 UTC] PHP   3. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:34
+[05-Mar-2019 20:51:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 20
+[05-Mar-2019 20:51:51 UTC] PHP Stack trace:
+[05-Mar-2019 20:51:51 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 20:51:51 UTC] PHP   2. showDOMNode($domNode = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:17
+[05-Mar-2019 20:51:51 UTC] PHP   3. showDOMNode($domNode = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:34
+[05-Mar-2019 20:54:05 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[05-Mar-2019 20:54:05 UTC] PHP Stack trace:
+[05-Mar-2019 20:54:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:0
+[05-Mar-2019 20:54:05 UTC] PHP   2. template\renderPage($model = *uninitialized*, *uninitialized*, *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:26
+[05-Mar-2019 20:58:10 UTC] PHP Notice:  Undefined variable: doc in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 24
+[05-Mar-2019 20:58:10 UTC] PHP Stack trace:
+[05-Mar-2019 20:58:10 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 20:58:10 UTC] PHP   2. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:17
+[05-Mar-2019 20:58:10 UTC] PHP   3. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:31
+[05-Mar-2019 20:58:10 UTC] PHP   4. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:31
+[05-Mar-2019 20:58:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function createElement() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:24
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(31): showDOMNode(Object(DOMElement))
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(31): showDOMNode(Object(DOMElement))
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(17): showDOMNode(Object(DOMDocument))
+#3 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 24
+[05-Mar-2019 20:59:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function showDOMNode(), 1 passed in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 17 and exactly 2 expected in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:19
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(17): showDOMNode(Object(DOMDocument))
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 19
+[05-Mar-2019 21:12:25 UTC] PHP Notice:  Undefined variable: nodes in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 10
+[05-Mar-2019 21:12:25 UTC] PHP Stack trace:
+[05-Mar-2019 21:12:25 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:12:25 UTC] PHP Notice:  Trying to get property 'childNodes' of non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 11
+[05-Mar-2019 21:12:25 UTC] PHP Stack trace:
+[05-Mar-2019 21:12:25 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:12:25 UTC] PHP Notice:  Trying to get property 'parentNode' of non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 13
+[05-Mar-2019 21:12:25 UTC] PHP Stack trace:
+[05-Mar-2019 21:12:25 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:12:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function replaceChild() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 13
+[05-Mar-2019 21:13:11 UTC] PHP Notice:  Undefined property: DOMNodeList::$childNodes in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 14
+[05-Mar-2019 21:13:11 UTC] PHP Stack trace:
+[05-Mar-2019 21:13:11 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:13:11 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to DOMNode::appendChild() must be an instance of DOMNode, null given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:14
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(14): DOMNode->appendChild(NULL)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 14
+[05-Mar-2019 21:13:21 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to DOMNode::appendChild() must be an instance of DOMNode, instance of DOMNodeList given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:14
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(14): DOMNode->appendChild(Object(DOMNodeList))
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 14
+[05-Mar-2019 21:14:23 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to DOMNode::appendChild() must be an instance of DOMNode, instance of DOMNodeList given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:14
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(14): DOMNode->appendChild(Object(DOMNodeList))
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 14
+[05-Mar-2019 21:20:06 UTC] PHP Notice:  Undefined variable: dom in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 12
+[05-Mar-2019 21:20:06 UTC] PHP Stack trace:
+[05-Mar-2019 21:20:06 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:20:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function createElement() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:12
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 12
+[05-Mar-2019 21:20:15 UTC] PHP Notice:  Undefined variable: oldNode in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 13
+[05-Mar-2019 21:20:15 UTC] PHP Stack trace:
+[05-Mar-2019 21:20:15 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:20:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function hasChildNodes() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 13
+[05-Mar-2019 21:20:21 UTC] PHP Notice:  Undefined variable: dom in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 25
+[05-Mar-2019 21:20:21 UTC] PHP Stack trace:
+[05-Mar-2019 21:20:21 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:20:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function saveHTML() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:25
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 25
+[05-Mar-2019 21:20:32 UTC] PHP Notice:  Undefined variable: libxmlErrors in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 56
+[05-Mar-2019 21:20:32 UTC] PHP Stack trace:
+[05-Mar-2019 21:20:32 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:25:09 UTC] PHP Notice:  Undefined variable: oldNode in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 35
+[05-Mar-2019 21:25:09 UTC] PHP Stack trace:
+[05-Mar-2019 21:25:09 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 21:25:09 UTC] PHP   2. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:29
+[05-Mar-2019 21:25:09 UTC] PHP   3. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:38
+[05-Mar-2019 21:25:09 UTC] PHP   4. showDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:38
+[05-Mar-2019 21:25:09 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to replaceNode() must be an instance of DOMNode, null given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 35 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:12
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(35): replaceNode(NULL, Object(DOMElement))
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(38): showDOMNode(Object(DOMElement), Object(DOMDocument))
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(38): showDOMNode(Object(DOMElement), Object(DOMDocument))
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(29): showDOMNode(Object(DOMDocument), Object(DOMDocument))
+#4 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 12
+[05-Mar-2019 22:33:03 UTC] PHP Notice:  Undefined variable: domNode in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 77
+[05-Mar-2019 22:33:03 UTC] PHP Stack trace:
+[05-Mar-2019 22:33:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 22:33:39 UTC] PHP Fatal error:  Uncaught DOMException: Wrong Document Error in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:79
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(79): DOMNode->appendChild(Object(DOMDocumentType))
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 79
+[05-Mar-2019 22:33:39 UTC] PHP Stack trace:
+[05-Mar-2019 22:33:39 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 22:33:39 UTC] PHP   2. DOMElement->appendChild(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:79
+[05-Mar-2019 22:34:51 UTC] PHP Fatal error:  Uncaught DOMException: Wrong Document Error in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:80
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(80): DOMNode->appendChild(Object(DOMDocumentType))
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 80
+[05-Mar-2019 22:35:07 UTC] PHP Notice:  Undefined variable: doc1 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 79
+[05-Mar-2019 22:35:07 UTC] PHP Stack trace:
+[05-Mar-2019 22:35:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 22:35:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function importNode() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:79
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 79
+[05-Mar-2019 22:35:18 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to DOMNode::appendChild() must be an instance of DOMNode, bool given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:80
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(80): DOMNode->appendChild(false)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 80
+[05-Mar-2019 22:46:44 UTC] PHP Notice:  Undefined variable: node1 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 104
+[05-Mar-2019 22:46:44 UTC] PHP Stack trace:
+[05-Mar-2019 22:46:44 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 22:46:55 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to DOMNode::appendChild() must be an instance of DOMNode, bool given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:105
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(105): DOMNode->appendChild(false)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 105
+[05-Mar-2019 22:51:01 UTC] PHP Warning:  DOMDocument::importNode(): Cannot import: Node Type Not Supported in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 101
+[05-Mar-2019 22:51:01 UTC] PHP Stack trace:
+[05-Mar-2019 22:51:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 22:51:01 UTC] PHP   2. DOMDocument->importNode(*uninitialized*, *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:101
+[05-Mar-2019 22:51:40 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to DOMDocument::importNode() must be an instance of DOMNode, instance of DOMNodeList given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:101
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(101): DOMDocument->importNode(Object(DOMNodeList), true)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 101
+[05-Mar-2019 22:51:40 UTC] PHP Stack trace:
+[05-Mar-2019 22:51:40 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 22:54:15 UTC] PHP Notice:  Undefined variable: node in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 73
+[05-Mar-2019 22:54:15 UTC] PHP Stack trace:
+[05-Mar-2019 22:54:15 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 22:54:15 UTC] PHP   2. importHTML($doc = *uninitialized*, $file = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:78
+[05-Mar-2019 23:07:51 UTC] PHP Notice:  Undefined variable: domNode in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 85
+[05-Mar-2019 23:07:51 UTC] PHP Stack trace:
+[05-Mar-2019 23:07:51 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:07:51 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:07:51 UTC] PHP Notice:  Trying to get property 'childNodes' of non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 85
+[05-Mar-2019 23:07:51 UTC] PHP Stack trace:
+[05-Mar-2019 23:07:51 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:07:51 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:07:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 85
+[05-Mar-2019 23:07:51 UTC] PHP Stack trace:
+[05-Mar-2019 23:07:51 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:07:51 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:10:05 UTC] PHP Notice:  Undefined variable: doc in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 88
+[05-Mar-2019 23:10:05 UTC] PHP Stack trace:
+[05-Mar-2019 23:10:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:10:05 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:98
+[05-Mar-2019 23:10:05 UTC] PHP   3. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:91
+[05-Mar-2019 23:10:05 UTC] PHP   4. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:91
+[05-Mar-2019 23:10:05 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to importHTML() must be an instance of DOMDocument, null given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 88 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:69
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(88): importHTML(NULL, Object(DOMElement), '<span>\r\n    Tes...')
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(91): processNode(Object(DOMElement))
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(91): processNode(Object(DOMElement))
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(98): processNode(Object(DOMDocument))
+#4 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 69
+[05-Mar-2019 23:15:07 UTC] PHP Warning:  DOMNode::appendChild(): Couldn't fetch DOMElement in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 37
+[05-Mar-2019 23:15:07 UTC] PHP Stack trace:
+[05-Mar-2019 23:15:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:15:07 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:99
+[05-Mar-2019 23:15:07 UTC] PHP   3. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   4. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   5. replaceNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:90
+[05-Mar-2019 23:15:07 UTC] PHP   6. DOMElement->appendChild() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:37
+[05-Mar-2019 23:15:07 UTC] PHP Warning:  DOMNode::appendChild(): Couldn't fetch DOMElement in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 37
+[05-Mar-2019 23:15:07 UTC] PHP Stack trace:
+[05-Mar-2019 23:15:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:15:07 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:99
+[05-Mar-2019 23:15:07 UTC] PHP   3. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   4. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   5. replaceNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:90
+[05-Mar-2019 23:15:07 UTC] PHP   6. DOMElement->appendChild() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:37
+[05-Mar-2019 23:15:07 UTC] PHP Warning:  DOMNode::appendChild(): Couldn't fetch DOMElement in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 37
+[05-Mar-2019 23:15:07 UTC] PHP Stack trace:
+[05-Mar-2019 23:15:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:15:07 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:99
+[05-Mar-2019 23:15:07 UTC] PHP   3. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   4. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   5. replaceNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:90
+[05-Mar-2019 23:15:07 UTC] PHP   6. DOMElement->appendChild() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:37
+[05-Mar-2019 23:15:07 UTC] PHP Warning:  DOMNode::replaceChild(): Couldn't fetch DOMElement in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 41
+[05-Mar-2019 23:15:07 UTC] PHP Stack trace:
+[05-Mar-2019 23:15:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:15:07 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:99
+[05-Mar-2019 23:15:07 UTC] PHP   3. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   4. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   5. replaceNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:90
+[05-Mar-2019 23:15:07 UTC] PHP   6. DOMElement->replaceChild() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:41
+[05-Mar-2019 23:15:07 UTC] PHP Warning:  DOMNode::appendChild(): Couldn't fetch DOMElement in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 37
+[05-Mar-2019 23:15:07 UTC] PHP Stack trace:
+[05-Mar-2019 23:15:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:15:07 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:99
+[05-Mar-2019 23:15:07 UTC] PHP   3. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   4. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   5. replaceNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:90
+[05-Mar-2019 23:15:07 UTC] PHP   6. DOMElement->appendChild() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:37
+[05-Mar-2019 23:15:07 UTC] PHP Warning:  DOMNode::replaceChild(): Couldn't fetch DOMElement in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 41
+[05-Mar-2019 23:15:07 UTC] PHP Stack trace:
+[05-Mar-2019 23:15:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:15:07 UTC] PHP   2. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:99
+[05-Mar-2019 23:15:07 UTC] PHP   3. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   4. processNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:94
+[05-Mar-2019 23:15:07 UTC] PHP   5. replaceNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:90
+[05-Mar-2019 23:15:07 UTC] PHP   6. DOMElement->replaceChild() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:41
+[05-Mar-2019 23:33:37 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 110
+[05-Mar-2019 23:33:37 UTC] PHP Stack trace:
+[05-Mar-2019 23:33:37 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:33:37 UTC] PHP   2. processNodes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:118
+[05-Mar-2019 23:33:37 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 113
+[05-Mar-2019 23:33:37 UTC] PHP Stack trace:
+[05-Mar-2019 23:33:37 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:33:37 UTC] PHP   2. processNodes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:118
+[05-Mar-2019 23:33:37 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 110
+[05-Mar-2019 23:33:37 UTC] PHP Stack trace:
+[05-Mar-2019 23:33:37 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:33:37 UTC] PHP   2. processNodes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:118
+[05-Mar-2019 23:33:37 UTC] PHP Warning:  Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 113
+[05-Mar-2019 23:33:37 UTC] PHP Stack trace:
+[05-Mar-2019 23:33:37 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[05-Mar-2019 23:33:37 UTC] PHP   2. processNodes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:118
+[06-Mar-2019 16:08:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function saveHTML() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:156
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 156
+[06-Mar-2019 16:08:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function saveHTML() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:156
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 156
+[06-Mar-2019 16:08:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DOMElement::saveHTML() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:155
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 155
+[06-Mar-2019 16:20:12 UTC] PHP Notice:  Undefined variable: doc in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 151
+[06-Mar-2019 16:20:12 UTC] PHP Stack trace:
+[06-Mar-2019 16:20:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:20:12 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:20:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function createElement() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:151
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php(165): htmlTag->render()
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 151
+[06-Mar-2019 16:20:51 UTC] PHP Notice:  Undefined variable: doc in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 151
+[06-Mar-2019 16:20:51 UTC] PHP Stack trace:
+[06-Mar-2019 16:20:51 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:20:51 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:21:13 UTC] PHP Warning:  Creating default object from empty value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 154
+[06-Mar-2019 16:21:13 UTC] PHP Stack trace:
+[06-Mar-2019 16:21:13 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:21:13 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:21:35 UTC] PHP Warning:  Use of undefined constant model - assumed 'model' (this will throw an Error in a future version of PHP) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\test.php on line 2
+[06-Mar-2019 16:21:35 UTC] PHP Stack trace:
+[06-Mar-2019 16:21:35 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:21:35 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:21:35 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:159
+[06-Mar-2019 16:21:35 UTC] PHP   4. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:38
+[06-Mar-2019 16:21:35 UTC] PHP Warning:  Illegal string offset 'test' in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\test.php on line 2
+[06-Mar-2019 16:21:35 UTC] PHP Stack trace:
+[06-Mar-2019 16:21:35 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:21:35 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:21:35 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:159
+[06-Mar-2019 16:21:35 UTC] PHP   4. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:38
+[06-Mar-2019 16:22:04 UTC] PHP Warning:  Use of undefined constant model - assumed 'model' (this will throw an Error in a future version of PHP) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\test.php on line 2
+[06-Mar-2019 16:22:04 UTC] PHP Stack trace:
+[06-Mar-2019 16:22:04 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:22:04 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:22:04 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:159
+[06-Mar-2019 16:22:04 UTC] PHP   4. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:38
+[06-Mar-2019 16:22:21 UTC] PHP Notice:  Undefined variable: model in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\test.php on line 2
+[06-Mar-2019 16:22:21 UTC] PHP Stack trace:
+[06-Mar-2019 16:22:21 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:22:21 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:22:21 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:159
+[06-Mar-2019 16:22:21 UTC] PHP   4. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:38
+[06-Mar-2019 16:23:05 UTC] PHP Notice:  Undefined variable: model in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\test.php on line 2
+[06-Mar-2019 16:23:05 UTC] PHP Stack trace:
+[06-Mar-2019 16:23:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:23:05 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:23:05 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:159
+[06-Mar-2019 16:23:05 UTC] PHP   4. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:38
+[06-Mar-2019 16:23:19 UTC] PHP Notice:  Undefined variable: model in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\test.php on line 2
+[06-Mar-2019 16:23:19 UTC] PHP Stack trace:
+[06-Mar-2019 16:23:19 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:23:19 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:165
+[06-Mar-2019 16:23:19 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:159
+[06-Mar-2019 16:23:19 UTC] PHP   4. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:38
+[06-Mar-2019 16:26:25 UTC] PHP Notice:  Undefined variable: template in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 160
+[06-Mar-2019 16:26:25 UTC] PHP Stack trace:
+[06-Mar-2019 16:26:25 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:26:25 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:168
+[06-Mar-2019 16:30:02 UTC] PHP Notice:  Undefined variable: res in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 169
+[06-Mar-2019 16:30:02 UTC] PHP Stack trace:
+[06-Mar-2019 16:30:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:30:02 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:177
+[06-Mar-2019 16:30:02 UTC] PHP   3. htmlTag->getInnerHTML($node = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:158
+[06-Mar-2019 16:30:18 UTC] PHP Warning:  Use of undefined constant res - assumed 'res' (this will throw an Error in a future version of PHP) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 171
+[06-Mar-2019 16:30:18 UTC] PHP Stack trace:
+[06-Mar-2019 16:30:18 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:30:18 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:177
+[06-Mar-2019 16:30:18 UTC] PHP   3. htmlTag->getInnerHTML($node = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:158
+[06-Mar-2019 16:30:35 UTC] PHP Notice:  Undefined variable: res in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php on line 169
+[06-Mar-2019 16:30:35 UTC] PHP Stack trace:
+[06-Mar-2019 16:30:35 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:0
+[06-Mar-2019 16:30:35 UTC] PHP   2. htmlTag->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:177
+[06-Mar-2019 16:30:35 UTC] PHP   3. htmlTag->getInnerHTML($node = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\test1.php:158
+[06-Mar-2019 16:45:17 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[06-Mar-2019 16:45:23 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\renderPage() must be an instance of template\PageModel, string given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 26 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:86
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(26): template\renderPage('index', '\r\n<div>Test1</d...', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 86
+[06-Mar-2019 16:45:23 UTC] PHP Stack trace:
+[06-Mar-2019 16:45:23 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:0
+[06-Mar-2019 16:45:23 UTC] PHP   2. template\renderPage($model = *uninitialized*, *uninitialized*, *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:26
+[06-Mar-2019 16:59:00 UTC] PHP Fatal error:  Uncaught Error: Non-static method DateTime::getTimestamp() cannot be called statically in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php on line 9

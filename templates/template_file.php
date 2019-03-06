@@ -19,8 +19,8 @@ class PageModel{
         $this->model['static']['<!--Title-->'] = $this->title;
         $this->model['static']['<!--Header-->'] = $this->header;
         $this->model['static']['<!--Body-->'] = $this->body;
-        $this->model['static']['<!--Resources_Header--'] = array_key_exists('header',$this->resources) ? addResource($this->resources['header']) : NULL;
-        $this->model['static']['<!--Resources_Body-->'] = array_key_exists('body',$this->resources) ? addResource($this->resources['body']) : NULL;
+        $this->model['static']['<!--Resources_Header-->'] = array_key_exists('header',$this->resources) ? $this->addResource($this->resources['header']) : NULL;
+        $this->model['static']['<!--Resources_Body-->'] = array_key_exists('body',$this->resources) ? $this->addResource($this->resources['body']) : NULL;
     }
 
     function getModel(){
@@ -52,39 +52,15 @@ class PageModel{
     function render(){
         echo $this->setUpTemplate();
     }
-}
 
-function setUpTemplate(String $file, $model){
-    ob_start();
-    require_once($file);
-    $contents = ob_get_contents();
-    ob_end_clean();
-
-    $out = $contents;
-    if(array_key_exists('static',$model)){
-        foreach ($model['static'] as $key => $value) {
-            $out = preg_replace('/'.$key.'/',$value,$out);
+    function addResource($values){
+        foreach ($values as $key => $value) {
+            $model = array(
+                'type' => $key,
+                'value' => $value
+            );
+            return setUpTemplate(ROOT.'/templates/layouts/resources.php',$model);   
         }
     }
-    return $out;
 }
-
-function renderTemplate(String $file, $model){
-    echo setUpTemplate($file, $model);
-}
-
-function addResource($values){
-    foreach ($values as $key => $value) {
-        $model = array(
-            'type' => $key,
-            'value' => $value
-        );
-        return setUpTemplate(ROOT.'/templates/layouts/resources.php',$model);   
-    }
-}
-
-function renderPage(PageModel $model){
-    renderTemplate(ROOT . $model->templateFile,$model->getModel());
-}
-
 ?>

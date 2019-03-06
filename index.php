@@ -6,22 +6,21 @@
 	require_once(ROOT."/private/session.php");
 	require_once(ROOT."/templates/template_file.php");
 
+	$test = new DateTime();
 	$body_model = array(
-		'<!--Test1-->' => 'Test1',
-		'<!--Test2-->' => 'Test2',
-		'<!--Test3-->' => 'Test3',
+		'static' => array(
+			'<!--Test1-->' => 'Test1',
+			'<!--Test2-->' => 'Test2',
+			'<!--Test3-->' => 'Test3'
+		),
+		'time' => $test
 	);
+	$innerBody = new template\PageModel();
+	$innerBody->model = $body_model;
+	$innerBody->templateFile = '/templates/index/main_body.php';
 
-	$model_body = array(
-		'static' => $body_model
-	);
-
-	$body = template\setUpTemplate("test.html",$model_body);
-
-
-	$model = array(
-		'test' => 'TESTING STUFF'
-	);
-
-	template\renderPage('index',$body,$model);
+	$modelTest = new template\PageModel();
+    $modelTest->title = L::index_title;
+    $modelTest->body = $innerBody->setUpTemplate();
+    $modelTest->render();
 ?>
