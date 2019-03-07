@@ -34,13 +34,13 @@ class PageModel{
     }
 
     function setUpTemplate(){
+        $model = $this->getModel();
         ob_start();
         require(ROOT . $this->templateFile);
         $contents = ob_get_contents();
         ob_end_clean();
     
         $out = $contents;
-        $model = $this->getModel();
         if(array_key_exists('static',$model)){
             foreach ($model['static'] as $key => $value) {
                 $out = preg_replace('/'.$key.'/',$value,$out);
