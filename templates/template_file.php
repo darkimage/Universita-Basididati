@@ -8,6 +8,7 @@ require_once(ROOT.'/private/utils.php');
 require_once(ROOT.'/private/tagProcessor.php');
 
 class PageModel{
+    private $fromString = false;
     public $resources = [];
     public $title = "";
     public $body = NULL;
@@ -24,6 +25,11 @@ class PageModel{
         $this->model['static']['<!--Resources_Body-->'] = array_key_exists('body',$this->resources) ? $this->addResource($this->resources['body']) : NULL;
     }
 
+    function setSourceString(String $source){
+        $this->fromString = true;
+        $this->templateFile = $source;
+    }
+
     function getModel(){
         if(array_key_exists('static',$this->model)){
             $this->generateStaticModel();
@@ -38,12 +44,23 @@ class PageModel{
         return $this->model['static']['<!--'.$attr.'-->'];
     }
 
-    function setUpTemplate(){
+    private function setUp(){
         $this->getModel();
         ob_start();
-        require(ROOT . $this->templateFile);
+        if(!$this->fromString){
+            require(ROOT . $this->templateFile);
+        }else{
+            eval('?>'.$this->templateFile);
+        }
         $contents = ob_get_contents();
         ob_end_clean();
+        // $contents = '';
+        // if(!$this->fromString){
+        //     $contents = file_get_contents(ROOT . $this->templateFile);
+        // }else{
+        //     $contents = $this->templateFile;
+        // }
+
 
         $out = $contents;
         if(array_key_exists('static',$this->model)){
@@ -53,8 +70,20 @@ class PageModel{
         }
 
         $processor = new \TagProcessor($out,$this);
-        $out = $processor->processTags();
-        return $out;
+        // if(!$this->fromString){
+        //     $out = $processor->processTags();
+        // }else{
+        //     $out = $processor->processTagsDOM();
+        // }
+        return $processor;
+    }
+
+    function setUpTemplateDOM(){
+        return $this->setUp()->processTagsDOM();
+    }
+
+    function setUpTemplate(){
+        return $this->setUp()->processTags();
     }
 
     function render(){

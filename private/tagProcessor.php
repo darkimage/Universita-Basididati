@@ -23,35 +23,51 @@ class TagProcessor{
             $path = ROOT.'/private/tags/'.$filename;
             if (is_file($path)) {
                 require_once($path);
+                preg_match_all('/(.+)Tag/',pathinfo($filename)['filename'],$matches);
+                $this->addTag('t-'.$matches[1][0],pathinfo($filename)['filename']);
             }
         }
     }
 
-    public function addTag(String $nodeName, String $className){
+    private function addTag(String $nodeName, String $className){
         $this->tags[$nodeName] = $className;
     }
 
-    private function processDOMNode($iter) {
-        if($iter >= 256){
-            return;
-        }
-        $found = 0;
-        foreach ($this->tags as $key => $value) {
-            $nodes = $this->doc->getElementsByTagName($key);
-            if(count($nodes) > 0){
-                $testTAG = new $value($this->doc,$nodes[0],$this->pageModel);
-                $testTAG->renderTag();
-                $found += 1;
+    private function processDOMNode(DOMNode $node,$iter) {
+        $test = $this->doc->saveHTML($node);
+        foreach($node->childNodes as $curr){
+            $tagnode = NULL;
+            foreach ($this->tags as $name => $tagClass) {
+                if($curr->nodeName == $name){
+                    $tag = new $tagClass($this->doc,$curr,$this->pageModel);
+                    $tagnode = $tag->renderTag();
+                    break;
+                }
             }
-        }
-        if($found > 0){
-            $this->processDOMNode($iter+1);
+            if($tagnode){
+                if($tagnode->hasChildNodes()) {
+                    $this->processDOMNode($tagnode,$iter+1);
+                }/*else{
+                    $this->evalNode();
+                }*/
+            }else{
+                if($curr->hasChildNodes()) {
+                    $this->processDOMNode($curr,$iter+1);
+                }/*else{
+                    $this->evalNode();
+                }*/
+            }
         }
     }
 
     public function processTags(){
-        $this->processDOMNode(0);
+        $this->processTagsDOM();
         return $this->doc->saveHTML();
+    }
+
+    public function processTagsDOM(){
+        $this->processDOMNode($this->doc,0);
+        return $this->doc;
     }
     
 }
@@ -115,7 +131,12 @@ abstract class htmlTag{
         $tagModel->model = $this->model;
         $tagModel->body = $this->getInnerHTML($this->node);
         $this->tagNode = $this->importHTML($this->doc,$this->node, $tagModel->setUpTemplate());
-        $this->node->parentNode->replaceChild($this->tagNode, $this->node);
+        $res = $this->node->parentNode->replaceChild($this->tagNode, $this->node);
+        if($res){
+            return $this->tagNode;
+        }else{
+            return NULL; //NEED ERROR
+        }
     }
 
     private function importHTML(DOMDocument $doc,DOMNode $node,String $file){

@@ -13363,3 +13363,702 @@ Stack trace:
 #1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\index.php(21): template\PageModel->setUpTemplate()
 #2 {main}
   thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\index\main_body.php on line 4
+[09-Mar-2019 19:22:17 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 19:22:17 UTC] PHP Stack trace:
+[09-Mar-2019 19:22:17 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:22:17 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:10
+[09-Mar-2019 19:22:17 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:22:25 UTC] PHP Warning:  require(&lt;div&gt;&lt;?php echo &quot;test&quot;; ?&gt;&lt;/div&gt;): failed to open stream: No error in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 53
+[09-Mar-2019 19:22:25 UTC] PHP Stack trace:
+[09-Mar-2019 19:22:25 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:22:25 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:10
+[09-Mar-2019 19:22:25 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:24:16 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 19:24:16 UTC] PHP Stack trace:
+[09-Mar-2019 19:24:16 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:24:16 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:10
+[09-Mar-2019 19:24:16 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:24:36 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 19:24:36 UTC] PHP Stack trace:
+[09-Mar-2019 19:24:36 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:24:36 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:10
+[09-Mar-2019 19:24:36 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:36:38 UTC] PHP Parse error:  syntax error, unexpected '$template' (T_VARIABLE) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 8
+[09-Mar-2019 19:37:27 UTC] PHP Notice:  Undefined index: collection in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 2
+[09-Mar-2019 19:37:27 UTC] PHP Stack trace:
+[09-Mar-2019 19:37:27 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:37:27 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:37:27 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:37:27 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:66
+[09-Mar-2019 19:37:27 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:37:27 UTC] PHP   6. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:37:27 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:117
+[09-Mar-2019 19:37:27 UTC] PHP   8. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:37:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 2
+[09-Mar-2019 19:37:27 UTC] PHP Stack trace:
+[09-Mar-2019 19:37:27 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:37:27 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:37:27 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:37:27 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:66
+[09-Mar-2019 19:37:27 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:37:27 UTC] PHP   6. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:37:27 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:117
+[09-Mar-2019 19:37:27 UTC] PHP   8. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:37:45 UTC] PHP Notice:  Undefined index: key in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 5
+[09-Mar-2019 19:37:45 UTC] PHP Stack trace:
+[09-Mar-2019 19:37:45 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:37:45 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:37:45 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:37:45 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:66
+[09-Mar-2019 19:37:45 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:37:45 UTC] PHP   6. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:37:45 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:117
+[09-Mar-2019 19:37:45 UTC] PHP   8. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:37:45 UTC] PHP Notice:  Undefined index: item in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 6
+[09-Mar-2019 19:37:45 UTC] PHP Stack trace:
+[09-Mar-2019 19:37:45 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:37:45 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:37:45 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:37:45 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:66
+[09-Mar-2019 19:37:45 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:37:45 UTC] PHP   6. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:37:45 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:117
+[09-Mar-2019 19:37:45 UTC] PHP   8. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:37:45 UTC] PHP Notice:  Undefined property: template\PageModel::$getStatic in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 8
+[09-Mar-2019 19:37:45 UTC] PHP Stack trace:
+[09-Mar-2019 19:37:45 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:37:45 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:37:45 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:37:45 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:66
+[09-Mar-2019 19:37:45 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:37:45 UTC] PHP   6. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:37:45 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:117
+[09-Mar-2019 19:37:45 UTC] PHP   8. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:37:45 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\PageModel::setSourceString() must be of the type string, null given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 8 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:28
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php(8): template\PageModel->setSourceString(NULL)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(51): require('C:\\Users\\luc-a\\...')
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(117): template\PageModel->setUpTemplate()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(43): htmlTag->renderTag()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(53): TagProcessor->processDOMNode(0)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\p in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 28
+[09-Mar-2019 19:38:15 UTC] PHP Notice:  Undefined property: template\PageModel::$getStatic in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 8
+[09-Mar-2019 19:38:15 UTC] PHP Stack trace:
+[09-Mar-2019 19:38:15 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:38:15 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:38:15 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:71
+[09-Mar-2019 19:38:15 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:66
+[09-Mar-2019 19:38:15 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:38:15 UTC] PHP   6. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:38:15 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:117
+[09-Mar-2019 19:38:15 UTC] PHP   8. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:38:15 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to template\PageModel::setSourceString() must be of the type string, null given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 8 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:28
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php(8): template\PageModel->setSourceString(NULL)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(51): require('C:\\Users\\luc-a\\...')
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(117): template\PageModel->setUpTemplate()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(43): htmlTag->renderTag()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(53): TagProcessor->processDOMNode(0)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\p in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 28
+[09-Mar-2019 19:47:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method TagProcessor::processDOM() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:69
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(75): template\PageModel->setUpTemplate()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php(13): template\PageModel->render()
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 69
+[09-Mar-2019 19:47:48 UTC] PHP Stack trace:
+[09-Mar-2019 19:47:48 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:47:48 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:47:48 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:75
+[09-Mar-2019 19:47:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DOMElement::saveHTML() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:10
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(51): require()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(122): template\PageModel->setUpTemplate()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(43): htmlTag->renderTag()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(58): TagProcessor->processDOMNode(0)
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(69): TagProcessor->processTagsDOM()
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(75): template\PageModel->setUpTemplate()
+#6 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php(13): template\PageModel->render()
+#7 {main}
+  in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 10
+[09-Mar-2019 19:48:34 UTC] PHP Catchable fatal error:  Object of class DOMDocument could not be converted to string in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 75
+[09-Mar-2019 19:48:34 UTC] PHP Stack trace:
+[09-Mar-2019 19:48:34 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:48:34 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:51:52 UTC] PHP Notice:  Undefined variable: processor in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 71
+[09-Mar-2019 19:51:52 UTC] PHP Stack trace:
+[09-Mar-2019 19:51:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:51:52 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:51:52 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:51:52 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:51:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function processTags() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(83): template\PageModel->setUpTemplate()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php(13): template\PageModel->render()
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 79
+[09-Mar-2019 19:51:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function saveHTML() on string in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:10
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(51): require()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): template\PageModel->setUp()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(122): template\PageModel->setUpTemplate()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(43): htmlTag->renderTag()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(58): TagProcessor->processDOMNode(0)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(53): TagProcessor->processTagsDOM()
+#6 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): TagProcessor->processTags()
+#7 C:\User in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 10
+[09-Mar-2019 19:52:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getElementsByTagName() on string in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:10
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(51): require()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): template\PageModel->setUp()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(122): template\PageModel->setUpTemplate()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(43): htmlTag->renderTag()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(58): TagProcessor->processDOMNode(0)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(53): TagProcessor->processTagsDOM()
+#6 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): TagProcessor->processTags( in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 10
+[09-Mar-2019 19:52:41 UTC] PHP Stack trace:
+[09-Mar-2019 19:52:41 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:52:41 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:52:41 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:52:41 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:52:41 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:52:41 UTC] PHP   6. TagProcessor->processDOMNode($iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 19:52:41 UTC] PHP   7. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:52:41 UTC] PHP   8. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:122
+[09-Mar-2019 19:52:41 UTC] PHP   9. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:52:41 UTC] PHP  10. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:53:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getElementsByTagName() on string in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:10
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(51): require()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): template\PageModel->setUp()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(122): template\PageModel->setUpTemplate()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(43): htmlTag->renderTag()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(58): TagProcessor->processDOMNode(0)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(53): TagProcessor->processTagsDOM()
+#6 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): TagProcessor->processTags( in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 10
+[09-Mar-2019 19:53:16 UTC] PHP Stack trace:
+[09-Mar-2019 19:53:16 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:53:16 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:53:16 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:53:16 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:53:16 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:53:16 UTC] PHP   6. TagProcessor->processDOMNode($iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 19:53:16 UTC] PHP   7. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:53:16 UTC] PHP   8. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:122
+[09-Mar-2019 19:53:16 UTC] PHP   9. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:53:16 UTC] PHP  10. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:53:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getElementsByTagName() on string in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:10
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(51): require()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): template\PageModel->setUp()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(122): template\PageModel->setUpTemplate()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(43): htmlTag->renderTag()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(58): TagProcessor->processDOMNode(0)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(53): TagProcessor->processTagsDOM()
+#6 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): TagProcessor->processTags( in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php on line 10
+[09-Mar-2019 19:53:38 UTC] PHP Stack trace:
+[09-Mar-2019 19:53:38 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:53:38 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:53:38 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:53:38 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:53:38 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 19:53:38 UTC] PHP   6. TagProcessor->processDOMNode($iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 19:53:38 UTC] PHP   7. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 19:53:38 UTC] PHP   8. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:122
+[09-Mar-2019 19:53:38 UTC] PHP   9. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:53:38 UTC] PHP  10. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 19:56:14 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 19:56:14 UTC] PHP Stack trace:
+[09-Mar-2019 19:56:14 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:56:14 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:56:14 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:56:14 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:56:14 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 19:58:05 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 19:58:05 UTC] PHP Stack trace:
+[09-Mar-2019 19:58:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:58:05 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:58:05 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:58:05 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:58:05 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 19:58:13 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 19:58:13 UTC] PHP Stack trace:
+[09-Mar-2019 19:58:13 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:58:13 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:58:13 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:58:13 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:58:13 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 19:59:22 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 19:59:22 UTC] PHP Stack trace:
+[09-Mar-2019 19:59:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:59:22 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:59:22 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:59:22 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:59:22 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 19:59:22 UTC] PHP Parse error:  syntax error, unexpected '?', expecting end of file in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 10
+[09-Mar-2019 19:59:39 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 19:59:39 UTC] PHP Stack trace:
+[09-Mar-2019 19:59:39 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 19:59:39 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 19:59:39 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 19:59:39 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 19:59:39 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 19:59:39 UTC] PHP Parse error:  syntax error, unexpected '?', expecting end of file in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 10
+[09-Mar-2019 20:00:05 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 20:00:05 UTC] PHP Stack trace:
+[09-Mar-2019 20:00:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:00:05 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:00:05 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:00:05 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:00:05 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 20:00:05 UTC] PHP Parse error:  syntax error, unexpected '?', expecting end of file in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 10
+[09-Mar-2019 20:04:00 UTC] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 20:04:00 UTC] PHP Stack trace:
+[09-Mar-2019 20:04:00 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:04:00 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:04:00 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:04:00 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:05:34 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:05:35 UTC] PHP Stack trace:
+[09-Mar-2019 20:05:35 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:05:35 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:05:35 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:05:35 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:05:35 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:05:35 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:05:35 UTC] PHP   7. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:05:35 UTC] PHP   8. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:05:35 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:05:35 UTC] PHP Stack trace:
+[09-Mar-2019 20:05:35 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:05:35 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:05:35 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:05:35 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:05:35 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:05:35 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:05:35 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:05:35 UTC] PHP   8. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:05:35 UTC] PHP   9. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:05:35 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:05:35 UTC] PHP Stack trace:
+[09-Mar-2019 20:05:35 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:05:35 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:05:35 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:05:35 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:05:35 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:05:35 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:05:35 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:05:35 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:05:35 UTC] PHP   9. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:05:35 UTC] PHP  10. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:06:55 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:06:55 UTC] PHP Stack trace:
+[09-Mar-2019 20:06:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:06:55 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:06:55 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:06:55 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:06:55 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:06:55 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:06:55 UTC] PHP   7. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:06:55 UTC] PHP   8. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:06:55 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:06:55 UTC] PHP Stack trace:
+[09-Mar-2019 20:06:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:06:55 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:06:55 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:06:55 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:06:55 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:06:55 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:06:55 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:06:55 UTC] PHP   8. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:06:55 UTC] PHP   9. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:06:55 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:06:55 UTC] PHP Stack trace:
+[09-Mar-2019 20:06:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:06:55 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:06:55 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:06:55 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:06:55 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:06:55 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:06:55 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:06:55 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:06:55 UTC] PHP   9. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:06:55 UTC] PHP  10. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:08:31 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:08:31 UTC] PHP Stack trace:
+[09-Mar-2019 20:08:31 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:08:31 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:08:31 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:08:31 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:08:31 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:08:31 UTC] PHP   6. TagProcessor->processDOMNode($iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:08:31 UTC] PHP   7. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:08:31 UTC] PHP   8. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:09:12 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:09:12 UTC] PHP Stack trace:
+[09-Mar-2019 20:09:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:09:12 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:09:12 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:09:12 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:09:12 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:09:12 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:09:12 UTC] PHP   7. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:09:12 UTC] PHP   8. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:09:12 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:09:12 UTC] PHP Stack trace:
+[09-Mar-2019 20:09:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:09:12 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:09:12 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:09:12 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:09:12 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:09:12 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:09:12 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:09:12 UTC] PHP   8. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:09:12 UTC] PHP   9. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:09:12 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:09:12 UTC] PHP Stack trace:
+[09-Mar-2019 20:09:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:09:12 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:09:12 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:09:12 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:09:12 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:09:12 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:09:12 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:09:12 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:09:12 UTC] PHP   9. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:09:12 UTC] PHP  10. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:10:54 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:10:54 UTC] PHP Stack trace:
+[09-Mar-2019 20:10:54 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:10:54 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:10:54 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:10:54 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:10:54 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:10:54 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:10:54 UTC] PHP   7. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:10:54 UTC] PHP   8. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:10:54 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:10:54 UTC] PHP Stack trace:
+[09-Mar-2019 20:10:54 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:10:54 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:10:54 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:10:54 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:10:54 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:10:54 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:10:54 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:10:54 UTC] PHP   8. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:10:54 UTC] PHP   9. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:10:54 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 87
+[09-Mar-2019 20:10:54 UTC] PHP Stack trace:
+[09-Mar-2019 20:10:54 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:10:54 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:10:54 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:10:54 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:10:54 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:53
+[09-Mar-2019 20:10:54 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:58
+[09-Mar-2019 20:10:54 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:10:54 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:48
+[09-Mar-2019 20:10:54 UTC] PHP   9. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:43
+[09-Mar-2019 20:10:54 UTC] PHP  10. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:116
+[09-Mar-2019 20:25:52 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to TagProcessor::processDOMNode() must be an instance of DOMNode, int given, called in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 75 and defined in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:52
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(75): TagProcessor->processDOMNode(0)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(70): TagProcessor->processTagsDOM()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): TagProcessor->processTags()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(83): template\PageModel->setUpTemplate()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php(13): template\PageModel->render()
+#5 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 52
+[09-Mar-2019 20:25:52 UTC] PHP Stack trace:
+[09-Mar-2019 20:25:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:25:52 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:25:52 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:25:52 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:25:52 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:70
+[09-Mar-2019 20:25:52 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:75
+[09-Mar-2019 20:26:19 UTC] PHP Notice:  Undefined variable: tag in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 61
+[09-Mar-2019 20:26:19 UTC] PHP Stack trace:
+[09-Mar-2019 20:26:19 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:26:19 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:26:19 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:26:19 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:26:19 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:70
+[09-Mar-2019 20:26:19 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:75
+[09-Mar-2019 20:27:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function processDOMNode() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:64
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(75): TagProcessor->processDOMNode(Object(DOMDocument), 0)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php(70): TagProcessor->processTagsDOM()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(79): TagProcessor->processTags()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(83): template\PageModel->setUpTemplate()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php(13): template\PageModel->render()
+#5 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 64
+[09-Mar-2019 20:27:02 UTC] PHP Stack trace:
+[09-Mar-2019 20:27:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:27:02 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:27:02 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:27:02 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:27:02 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:70
+[09-Mar-2019 20:27:02 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:75
+[09-Mar-2019 20:27:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 53
+[09-Mar-2019 20:27:09 UTC] PHP Stack trace:
+[09-Mar-2019 20:27:09 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:27:09 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:27:09 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:27:09 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:27:09 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:70
+[09-Mar-2019 20:27:09 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:75
+[09-Mar-2019 20:27:09 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:64
+[09-Mar-2019 20:32:01 UTC] PHP Notice:  Trying to get property 'length' of non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 105
+[09-Mar-2019 20:32:01 UTC] PHP Stack trace:
+[09-Mar-2019 20:32:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:32:01 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:32:01 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:32:01 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:32:01 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 20:32:01 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 20:32:01 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:32:01 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:32:01 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:65
+[09-Mar-2019 20:32:01 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:65
+[09-Mar-2019 20:32:01 UTC] PHP  11. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 20:32:01 UTC] PHP  12. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:139
+[09-Mar-2019 20:58:29 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 110
+[09-Mar-2019 20:58:29 UTC] PHP Stack trace:
+[09-Mar-2019 20:58:29 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:58:29 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:58:29 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:58:29 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:58:29 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 20:58:29 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 20:58:29 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:65
+[09-Mar-2019 20:58:29 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 20:58:29 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:139
+[09-Mar-2019 20:58:29 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 110
+[09-Mar-2019 20:58:29 UTC] PHP Stack trace:
+[09-Mar-2019 20:58:29 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:58:29 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:58:29 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:58:29 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:58:29 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 20:58:29 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 20:58:29 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:65
+[09-Mar-2019 20:58:29 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 20:58:29 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:139
+[09-Mar-2019 20:58:29 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 110
+[09-Mar-2019 20:58:29 UTC] PHP Stack trace:
+[09-Mar-2019 20:58:29 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:58:29 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:58:29 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:58:29 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:58:29 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 20:58:29 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 20:58:29 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:65
+[09-Mar-2019 20:58:29 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:58:29 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 20:58:29 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:139
+[09-Mar-2019 20:59:40 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 110
+[09-Mar-2019 20:59:40 UTC] PHP Stack trace:
+[09-Mar-2019 20:59:40 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:59:40 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:59:40 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:59:40 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:59:40 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 20:59:40 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 20:59:40 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:65
+[09-Mar-2019 20:59:40 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 20:59:40 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:139
+[09-Mar-2019 20:59:40 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 110
+[09-Mar-2019 20:59:40 UTC] PHP Stack trace:
+[09-Mar-2019 20:59:40 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:59:40 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:59:40 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:59:40 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:59:40 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 20:59:40 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 20:59:40 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:65
+[09-Mar-2019 20:59:40 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 20:59:40 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:139
+[09-Mar-2019 20:59:40 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 110
+[09-Mar-2019 20:59:40 UTC] PHP Stack trace:
+[09-Mar-2019 20:59:40 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 20:59:40 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 20:59:40 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 20:59:40 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 20:59:40 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 20:59:40 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 20:59:40 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:65
+[09-Mar-2019 20:59:40 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 20:59:40 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 20:59:40 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:139
+[09-Mar-2019 21:04:57 UTC] PHP Fatal error:  Cannot declare class eachTag, because the name is already in use in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tags\eachTag.php on line 17
+[09-Mar-2019 21:04:57 UTC] PHP Stack trace:
+[09-Mar-2019 21:04:57 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:04:57 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 21:04:57 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:04:57 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:04:57 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 21:04:57 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 21:04:57 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 21:04:57 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 21:04:57 UTC] PHP   9. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 21:04:57 UTC] PHP  10. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:145
+[09-Mar-2019 21:04:57 UTC] PHP  11. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:04:57 UTC] PHP  12. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 21:04:57 UTC] PHP  13. template\PageModel->setUpTemplateDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:9
+[09-Mar-2019 21:04:57 UTC] PHP  14. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:75
+[09-Mar-2019 21:04:57 UTC] PHP  15. TagProcessor->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:65
+[09-Mar-2019 21:04:57 UTC] PHP  16. TagProcessor->LoadTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:18
+[09-Mar-2019 21:05:17 UTC] PHP Fatal error:  Cannot declare class eachTag, because the name is already in use in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tags\eachTag.php on line 17
+[09-Mar-2019 21:05:17 UTC] PHP Stack trace:
+[09-Mar-2019 21:05:17 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:05:17 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 21:05:17 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:05:17 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:05:17 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:76
+[09-Mar-2019 21:05:17 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:81
+[09-Mar-2019 21:05:17 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 21:05:17 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[09-Mar-2019 21:05:17 UTC] PHP   9. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:59
+[09-Mar-2019 21:05:17 UTC] PHP  10. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:145
+[09-Mar-2019 21:05:17 UTC] PHP  11. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:05:17 UTC] PHP  12. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 21:05:17 UTC] PHP  13. template\PageModel->setUpTemplateDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:9
+[09-Mar-2019 21:05:17 UTC] PHP  14. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:75
+[09-Mar-2019 21:05:17 UTC] PHP  15. TagProcessor->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:65
+[09-Mar-2019 21:05:17 UTC] PHP  16. TagProcessor->LoadTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:18
+[09-Mar-2019 21:07:46 UTC] PHP Fatal error:  Cannot declare class eachTag, because the name is already in use in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tags\eachTag.php on line 17
+[09-Mar-2019 21:07:46 UTC] PHP Stack trace:
+[09-Mar-2019 21:07:46 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:07:46 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 21:07:46 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:07:46 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:07:46 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:79
+[09-Mar-2019 21:07:46 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[09-Mar-2019 21:07:46 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:07:46 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:07:46 UTC] PHP   9. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:62
+[09-Mar-2019 21:07:46 UTC] PHP  10. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:148
+[09-Mar-2019 21:07:46 UTC] PHP  11. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:07:46 UTC] PHP  12. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 21:07:46 UTC] PHP  13. template\PageModel->setUpTemplateDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:9
+[09-Mar-2019 21:07:46 UTC] PHP  14. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:75
+[09-Mar-2019 21:07:46 UTC] PHP  15. TagProcessor->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:65
+[09-Mar-2019 21:07:46 UTC] PHP  16. TagProcessor->LoadTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:18
+[09-Mar-2019 21:07:55 UTC] PHP Fatal error:  Cannot declare class eachTag, because the name is already in use in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tags\eachTag.php on line 17
+[09-Mar-2019 21:07:55 UTC] PHP Stack trace:
+[09-Mar-2019 21:07:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:07:55 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 21:07:55 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:07:55 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:07:55 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:79
+[09-Mar-2019 21:07:55 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[09-Mar-2019 21:07:55 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:07:55 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:07:55 UTC] PHP   9. eachTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:62
+[09-Mar-2019 21:07:55 UTC] PHP  10. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:148
+[09-Mar-2019 21:07:55 UTC] PHP  11. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:07:55 UTC] PHP  12. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:51
+[09-Mar-2019 21:07:55 UTC] PHP  13. template\PageModel->setUpTemplateDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_each.php:9
+[09-Mar-2019 21:07:55 UTC] PHP  14. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:75
+[09-Mar-2019 21:07:55 UTC] PHP  15. TagProcessor->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:65
+[09-Mar-2019 21:07:55 UTC] PHP  16. TagProcessor->LoadTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:18
+[09-Mar-2019 21:09:01 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 113
+[09-Mar-2019 21:09:01 UTC] PHP Stack trace:
+[09-Mar-2019 21:09:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:09:01 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 21:09:01 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:09:01 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:09:01 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:79
+[09-Mar-2019 21:09:01 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[09-Mar-2019 21:09:01 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:68
+[09-Mar-2019 21:09:01 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:62
+[09-Mar-2019 21:09:01 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:142
+[09-Mar-2019 21:09:01 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 113
+[09-Mar-2019 21:09:01 UTC] PHP Stack trace:
+[09-Mar-2019 21:09:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:09:01 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 21:09:01 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:09:01 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:09:01 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:79
+[09-Mar-2019 21:09:01 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[09-Mar-2019 21:09:01 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:68
+[09-Mar-2019 21:09:01 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:62
+[09-Mar-2019 21:09:01 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:142
+[09-Mar-2019 21:09:01 UTC] PHP Notice:  Undefined index: value in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 113
+[09-Mar-2019 21:09:01 UTC] PHP Stack trace:
+[09-Mar-2019 21:09:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:09:01 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 21:09:01 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:09:01 UTC] PHP   4. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:09:01 UTC] PHP   5. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:79
+[09-Mar-2019 21:09:01 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[09-Mar-2019 21:09:01 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:68
+[09-Mar-2019 21:09:01 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:72
+[09-Mar-2019 21:09:01 UTC] PHP  12. testTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:62
+[09-Mar-2019 21:09:01 UTC] PHP  13. testTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:142
+[09-Mar-2019 21:36:33 UTC] PHP Parse error:  syntax error, unexpected '/' in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 21:36:43 UTC] PHP Notice:  Undefined index: key in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 1
+[09-Mar-2019 21:36:43 UTC] PHP Stack trace:
+[09-Mar-2019 21:36:43 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:36:43 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:13
+[09-Mar-2019 21:36:43 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:36:43 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:36:43 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 21:36:43 UTC] PHP Parse error:  syntax error, unexpected '&' in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 10
+[09-Mar-2019 21:37:03 UTC] PHP Notice:  Undefined index: key in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 2
+[09-Mar-2019 21:37:03 UTC] PHP Stack trace:
+[09-Mar-2019 21:37:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:37:03 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:14
+[09-Mar-2019 21:37:03 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:37:03 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:37:03 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 21:37:03 UTC] PHP Parse error:  syntax error, unexpected '&' in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 12
+[09-Mar-2019 21:37:18 UTC] PHP Notice:  Undefined index: key in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 2
+[09-Mar-2019 21:37:18 UTC] PHP Stack trace:
+[09-Mar-2019 21:37:18 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:37:18 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:14
+[09-Mar-2019 21:37:18 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:37:18 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:37:18 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
+[09-Mar-2019 21:37:18 UTC] PHP Parse error:  syntax error, unexpected '?', expecting end of file in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 12
+[09-Mar-2019 21:38:10 UTC] PHP Notice:  Undefined index: key in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(53) : eval()'d code on line 2
+[09-Mar-2019 21:38:10 UTC] PHP Stack trace:
+[09-Mar-2019 21:38:10 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:0
+[09-Mar-2019 21:38:10 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\provaPage.php:14
+[09-Mar-2019 21:38:10 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:83
+[09-Mar-2019 21:38:10 UTC] PHP   4. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:79
+[09-Mar-2019 21:38:10 UTC] PHP   5. eval() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:53
