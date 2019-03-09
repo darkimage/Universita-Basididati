@@ -448,3 +448,76 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php on line 19
+[08-Mar-2019 12:46:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function template\setUpTemplate() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:69
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(23): template\PageModel->addResource(Array)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(32): template\PageModel->generateStaticModel()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(42): template\PageModel->getModel()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(60): template\PageModel->setUpTemplate()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php(28): template\PageModel->render()
+#5 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 69
+[08-Mar-2019 12:47:30 UTC] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '10000' reached, aborting! in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:28
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(28): array_key_exists('static', Array)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(42): template\PageModel->getModel()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(69): template\PageModel->setUpTemplate('C:/Users/luc-a/...', Array)
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(23): template\PageModel->addResource(Array)
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(29): template\PageModel->generateStaticModel()
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(42): template\PageModel->getModel()
+#6 C:\Users\luc-a\Deskto in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 28
+[08-Mar-2019 12:51:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function template\template\PageModel() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:69
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(23): template\PageModel->addResource(Array)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(32): template\PageModel->generateStaticModel()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(42): template\PageModel->getModel()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php(60): template\PageModel->setUpTemplate()
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php(28): template\PageModel->render()
+#5 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 69
+[08-Mar-2019 12:51:22 UTC] PHP Warning:  require(C:/Users/luc-a/Desktop/Universita/Basididati/project/sourceC:/Users/luc-a/Desktop/Universita/Basididati/project/source/template/layouts/resources.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 44
+[08-Mar-2019 12:51:22 UTC] PHP Stack trace:
+[08-Mar-2019 12:51:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:0
+[08-Mar-2019 12:51:22 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:28
+[08-Mar-2019 12:51:22 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:60
+[08-Mar-2019 12:51:22 UTC] PHP   4. template\PageModel->getModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:42
+[08-Mar-2019 12:51:22 UTC] PHP   5. template\PageModel->generateStaticModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:32
+[08-Mar-2019 12:51:22 UTC] PHP   6. template\PageModel->addResource() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:23
+[08-Mar-2019 12:51:22 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:72
+[08-Mar-2019 12:51:22 UTC] PHP Fatal error:  require(): Failed opening required 'C:/Users/luc-a/Desktop/Universita/Basididati/project/sourceC:/Users/luc-a/Desktop/Universita/Basididati/project/source/template/layouts/resources.php' (include_path='.;C:\php\pear') in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 44
+[08-Mar-2019 12:51:22 UTC] PHP Stack trace:
+[08-Mar-2019 12:51:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:0
+[08-Mar-2019 12:51:22 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:28
+[08-Mar-2019 12:51:22 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:60
+[08-Mar-2019 12:51:22 UTC] PHP   4. template\PageModel->getModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:42
+[08-Mar-2019 12:51:22 UTC] PHP   5. template\PageModel->generateStaticModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:32
+[08-Mar-2019 12:51:22 UTC] PHP   6. template\PageModel->addResource() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:23
+[08-Mar-2019 12:51:22 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:72
+[08-Mar-2019 12:51:34 UTC] PHP Warning:  require(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/template/layouts/resources.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 44
+[08-Mar-2019 12:51:34 UTC] PHP Stack trace:
+[08-Mar-2019 12:51:34 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:0
+[08-Mar-2019 12:51:34 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:28
+[08-Mar-2019 12:51:34 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:60
+[08-Mar-2019 12:51:34 UTC] PHP   4. template\PageModel->getModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:42
+[08-Mar-2019 12:51:34 UTC] PHP   5. template\PageModel->generateStaticModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:32
+[08-Mar-2019 12:51:34 UTC] PHP   6. template\PageModel->addResource() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:23
+[08-Mar-2019 12:51:34 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:72
+[08-Mar-2019 12:51:34 UTC] PHP Fatal error:  require(): Failed opening required 'C:/Users/luc-a/Desktop/Universita/Basididati/project/source/template/layouts/resources.php' (include_path='.;C:\php\pear') in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php on line 44
+[08-Mar-2019 12:51:34 UTC] PHP Stack trace:
+[08-Mar-2019 12:51:34 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:0
+[08-Mar-2019 12:51:34 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:28
+[08-Mar-2019 12:51:34 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:60
+[08-Mar-2019 12:51:34 UTC] PHP   4. template\PageModel->getModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:42
+[08-Mar-2019 12:51:34 UTC] PHP   5. template\PageModel->generateStaticModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:32
+[08-Mar-2019 12:51:34 UTC] PHP   6. template\PageModel->addResource() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:23
+[08-Mar-2019 12:51:34 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:72
+[08-Mar-2019 13:47:02 UTC] PHP Notice:  Undefined variable: model in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\layouts\resources.php on line 2
+[08-Mar-2019 13:47:02 UTC] PHP Stack trace:
+[08-Mar-2019 13:47:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:0
+[08-Mar-2019 13:47:02 UTC] PHP   2. template\PageModel->render() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\login\index.php:28
+[08-Mar-2019 13:47:02 UTC] PHP   3. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:61
+[08-Mar-2019 13:47:02 UTC] PHP   4. template\PageModel->getModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:42
+[08-Mar-2019 13:47:02 UTC] PHP   5. template\PageModel->generateStaticModel() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:32
+[08-Mar-2019 13:47:02 UTC] PHP   6. template\PageModel->addResource() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:23
+[08-Mar-2019 13:47:02 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:72
+[08-Mar-2019 13:47:02 UTC] PHP   8. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:44

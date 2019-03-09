@@ -26,6 +26,4 @@
     );
     $modelTest->body = $loginFormModel->setUpTemplate();
     $modelTest->render();
-
-    //$test = (new class{ function test(){ echo "it worked";} })->test();
 ?>

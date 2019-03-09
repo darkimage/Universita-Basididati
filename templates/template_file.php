@@ -5,6 +5,7 @@ if(!defined('ROOT')){
 }
 require_once(ROOT.'/private/i18n.php');
 require_once(ROOT.'/private/utils.php');
+require_once(ROOT.'/private/tagProcessor.php');
 
 class PageModel{
     public $resources = [];
@@ -33,19 +34,26 @@ class PageModel{
         return $this->model;
     }
 
+    function getStatic(String $attr){
+        return $this->model['static']['<!--'.$attr.'-->'];
+    }
+
     function setUpTemplate(){
-        $model = $this->getModel();
+        $this->getModel();
         ob_start();
         require(ROOT . $this->templateFile);
         $contents = ob_get_contents();
         ob_end_clean();
-    
+
         $out = $contents;
-        if(array_key_exists('static',$model)){
-            foreach ($model['static'] as $key => $value) {
+        if(array_key_exists('static',$this->model)){
+            foreach ($this->model['static'] as $key => $value) {
                 $out = preg_replace('/'.$key.'/',$value,$out);
             }
         }
+
+        $processor = new \TagProcessor($out,$this);
+        $out = $processor->processTags();
         return $out;
     }
 
@@ -54,13 +62,17 @@ class PageModel{
     }
 
     function addResource($values){
+        $res = '';
         foreach ($values as $key => $value) {
-            $model = array(
+            $resource = new PageModel();
+            $resource->templateFile = '/templates/layouts/resources.php';
+            $resource->model = array(
                 'type' => $key,
                 'value' => $value
             );
-            return setUpTemplate(ROOT.'/templates/layouts/resources.php',$model);   
+            $res .= $resource->setUpTemplate();   
         }
+        return $res;
     }
 }
 ?>

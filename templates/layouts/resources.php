@@ -1,5 +1,5 @@
 <?php
-if($model['type'] == 'css'){
-    echo "<link rel='stylesheet'", "href='", $model['value'],"'>";
+if($this->model['type'] == 'css'){
+    echo "<link rel='stylesheet'", "href='", $this->model['value'],"'>";
 }
 ?>
