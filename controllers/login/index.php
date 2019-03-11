@@ -4,7 +4,7 @@
 	}
 	
 	require_once(ROOT."/private/session.php");
-    require_once(ROOT."/templates/template_file.php");
+    require_once(ROOT."/private/template_file.php");
     require_once(ROOT."/private/utils.php");
 
     $loginFormModel = new template\PageModel();

@@ -2,16 +2,18 @@
 if(!defined('ROOT')){
     define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 }
-require_once(ROOT."/templates/template_file.php");
+require_once(ROOT."/private/template_file.php");
 
 class TagProcessor{
     private $doc;
     private $pageModel;
     private $tags = [];
+    private $model;
 
     function __construct(String $html,template\PageModel $pageModel){
         $this->doc = new DOMDocument();
         $this->pageModel = $pageModel;
+        $this->model = $pageModel->model;
         $libxmlErrors = libxml_use_internal_errors(true);
         $this->doc->loadHTML($html);
         libxml_use_internal_errors($libxmlErrors);
@@ -47,15 +49,32 @@ class TagProcessor{
             if($tagnode){
                 if($tagnode->hasChildNodes()) {
                     $this->processDOMNode($tagnode,$iter+1);
-                }/*else{
-                    $this->evalNode();
-                }*/
+                }
             }else{
                 if($curr->hasChildNodes()) {
                     $this->processDOMNode($curr,$iter+1);
-                }/*else{
-                    $this->evalNode();
-                }*/
+                }else{
+                    $this->evalNode($curr);
+                }
+            }
+        }
+    }
+
+    private function evalNode(DOMNode $baseNode){
+        $doc = new DOMDocument();
+        $test1 = $this->doc->saveHTML();
+        $test = $this->doc->saveHTML($baseNode);
+        $isPhp = preg_match_all('/\${(.+)}/s',$this->doc->saveHTML($baseNode),$matches);
+        if($isPhp){
+            ob_start();
+            eval('?><?php '.htmlspecialchars_decode($matches[1][0]).' ?>');
+            $evalued = ob_get_contents();
+            ob_end_clean();
+            if($evalued){
+                $doc->loadHTML($evalued);
+                $node = $this->doc->importNode($doc->getElementsByTagName('body')->item(0),true);
+                $baseNode->parentNode->replaceChild($node, $baseNode);
+                $test1 = $this->doc->saveHTML();
             }
         }
     }
@@ -96,6 +115,12 @@ abstract class htmlTag{
             if(!( $att->nodeName == 'static')){
                 if($pageAttr = $this->isPageAttribute($att->value)){
                     $this->model[$att->name] = $this->page->model[$pageAttr];
+                }else if($pageAttr = $this->isCompileAttribute($att->value)){
+                    ob_start();
+                    eval('?><?php '.htmlspecialchars_decode($pageAttr).' ?>');
+                    $evalued = ob_get_contents();
+                    ob_end_clean();
+                    $this->model[$att->name] = $evalued;
                 }else{
                     $this->model[$att->name] = $att->value;
                 }
@@ -104,7 +129,16 @@ abstract class htmlTag{
     }
 
     private function isPageAttribute(String $value){
-        $count = preg_match_all('/^{(.+)}$/', $value, $matches);
+        $count = preg_match_all('/^\@{(.+)}$/', $value, $matches);
+        if($count == 1){
+            return $matches[1][0];
+        }else{
+            return false;
+        }
+    }
+
+    private function isCompileAttribute(String $value){
+        $count = preg_match_all('/^\${(.+)}/s', $value, $matches);
         if($count == 1){
             return $matches[1][0];
         }else{
@@ -124,12 +158,14 @@ abstract class htmlTag{
     }
 
     public function renderTag(){
-        $this->getAttributes();
         $this->addToModel($this->getModel());
+        $this->addToModel($this->page->model);
+        $this->getAttributes();
         $tagModel = new template\PageModel();
         $tagModel->templateFile = '/templates/tags/'.'_'.$this->name.".php";
         $tagModel->model = $this->model;
         $tagModel->body = $this->getInnerHTML($this->node);
+        $tagModel->setRaw();
         $this->tagNode = $this->importHTML($this->doc,$this->node, $tagModel->setUpTemplate());
         $res = $this->node->parentNode->replaceChild($this->tagNode, $this->node);
         if($res){

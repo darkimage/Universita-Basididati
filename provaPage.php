@@ -2,14 +2,14 @@
 	if(!defined('ROOT')){
 		define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 	}
-    require_once(ROOT."/templates/template_file.php");
+    require_once(ROOT."/private/template_file.php");
 
     $modelTest = new template\PageModel();
     $modelTest->title = L::index_title;
     $modelTest->model = array(
-        'array' => array('a','b','c')
+        'array' => array('a','b','c'),
+        'array2' => array('a1','b1','c3')
     );
-    $modelTest->setSourceString('<t-each collection="{array}" key="key" item="value"><t-test test="{value}">
-    Ciao</t-test></t-each>');
+    $modelTest->templateFile = '/prova_template.php';
     $modelTest->render();
 ?>

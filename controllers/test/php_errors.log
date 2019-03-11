@@ -1,0 +1,686 @@
+[11-Mar-2019 12:04:17 UTC] PHP Fatal error:  Uncaught Exception: Error because foo in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:2
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 2
+[11-Mar-2019 12:07:12 UTC] PHP Fatal error:  Uncaught Error: Class 'database\mysqli' not found in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(18): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:22 UTC] PHP Notice:  Undefined variable: servername in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:22 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:22 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:22 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:22 UTC] PHP Notice:  Undefined variable: username in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:22 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:22 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:22 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:22 UTC] PHP Notice:  Undefined variable: password in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:22 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:22 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:22 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:22 UTC] PHP Warning:  mysqli::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:22 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:22 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:22 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:22 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:07:22 UTC] PHP Warning:  mysqli::__construct(): (HY000/2054): The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:22 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:22 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:22 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:22 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:07:22 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:13
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(18): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:07:49 UTC] PHP Notice:  Undefined variable: servername in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:49 UTC] PHP Notice:  Undefined property: database\dbConnection::$ in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:49 UTC] PHP Notice:  Undefined variable: username in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:49 UTC] PHP Notice:  Undefined property: database\dbConnection::$ in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:49 UTC] PHP Notice:  Undefined variable: password in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:49 UTC] PHP Notice:  Undefined property: database\dbConnection::$ in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:49 UTC] PHP Warning:  mysqli::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:49 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:07:49 UTC] PHP Warning:  mysqli::__construct(): (HY000/2054): The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:07:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:07:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:07:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:07:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:07:49 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:07:49 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:13
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(18): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:08:07 UTC] PHP Warning:  mysqli::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:08:07 UTC] PHP Stack trace:
+[11-Mar-2019 12:08:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:08:07 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:08:07 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:08:07 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:08:07 UTC] PHP Warning:  mysqli::__construct(): (HY000/2054): The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:08:07 UTC] PHP Stack trace:
+[11-Mar-2019 12:08:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:08:07 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:08:07 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:08:07 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:08:07 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:13
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(18): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:11:06 UTC] PHP Warning:  mysqli::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:11:06 UTC] PHP Stack trace:
+[11-Mar-2019 12:11:06 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:11:06 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:11:06 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:11:06 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:11:06 UTC] PHP Warning:  mysqli::__construct(): (HY000/2054): The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:11:06 UTC] PHP Stack trace:
+[11-Mar-2019 12:11:06 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:11:06 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:11:06 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:11:06 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:11:06 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:13
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(18): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:14:12 UTC] PHP Warning:  mysqli::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:14:12 UTC] PHP Stack trace:
+[11-Mar-2019 12:14:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:14:12 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:14:12 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:14:12 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:14:12 UTC] PHP Warning:  mysqli::__construct(): (HY000/2054): The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:14:12 UTC] PHP Stack trace:
+[11-Mar-2019 12:14:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:14:12 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:14:12 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:14:12 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:14:12 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:13
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(18): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:14:48 UTC] PHP Warning:  mysqli::__construct(): The server requested authentication method unknown to the client [caching_sha2_password] in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:14:48 UTC] PHP Stack trace:
+[11-Mar-2019 12:14:48 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:14:48 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:14:48 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:14:48 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:14:48 UTC] PHP Warning:  mysqli::__construct(): (HY000/2054): The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:14:48 UTC] PHP Stack trace:
+[11-Mar-2019 12:14:48 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:14:48 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:14:48 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:14:48 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:14:48 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: The server requested authentication method unknown to the client in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:13
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(18): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:19:02 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'luca'@'localhost' (using password: YES) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 11
+[11-Mar-2019 12:19:02 UTC] PHP Stack trace:
+[11-Mar-2019 12:19:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:19:02 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:19:02 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:19:02 UTC] PHP   4. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:11
+[11-Mar-2019 12:19:02 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: Access denied for user 'luca'@'localhost' (using password: YES) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:13
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(18): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:19:37 UTC] PHP Fatal error:  Uncaught Exception: Error because foo in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 8
+[11-Mar-2019 12:27:59 UTC] PHP Warning:  mysqli::query() expects parameter 1 to be string, array given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 18
+[11-Mar-2019 12:27:59 UTC] PHP Stack trace:
+[11-Mar-2019 12:27:59 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:27:59 UTC] PHP   2. database\dbConnection->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:27:59 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:27:59 UTC] PHP   4. mysqli->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:27:59 UTC] PHP Notice:  Undefined property: database\dbConnection::$error in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 19
+[11-Mar-2019 12:27:59 UTC] PHP Stack trace:
+[11-Mar-2019 12:27:59 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:27:59 UTC] PHP Warning:  mysqli::close() expects exactly 0 parameters, 1 given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 18
+[11-Mar-2019 12:27:59 UTC] PHP Stack trace:
+[11-Mar-2019 12:27:59 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:27:59 UTC] PHP   2. database\dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:27:59 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:27:59 UTC] PHP   4. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:18
+[11-Mar-2019 12:28:58 UTC] PHP Notice:  Undefined property: database\dbConnection::$error in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 19
+[11-Mar-2019 12:28:58 UTC] PHP Stack trace:
+[11-Mar-2019 12:28:58 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:40:09 UTC] PHP Notice:  Trying to get property 'connect_error' of non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:40:09 UTC] PHP Stack trace:
+[11-Mar-2019 12:40:09 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:40:09 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:40:09 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:33
+[11-Mar-2019 12:40:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:16
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(33): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 16
+[11-Mar-2019 12:40:59 UTC] PHP Notice:  Trying to get property 'connect_error' of non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 13
+[11-Mar-2019 12:40:59 UTC] PHP Stack trace:
+[11-Mar-2019 12:40:59 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:40:59 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:40:59 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:35
+[11-Mar-2019 12:40:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:16
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(35): database\dbConnection->__construct()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 16
+[11-Mar-2019 12:41:50 UTC] PHP Warning:  database\dbConnection::__get(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 27
+[11-Mar-2019 12:41:50 UTC] PHP Stack trace:
+[11-Mar-2019 12:41:50 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:41:50 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:19
+[11-Mar-2019 12:41:50 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 22
+[11-Mar-2019 12:41:50 UTC] PHP Stack trace:
+[11-Mar-2019 12:41:50 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:41:50 UTC] PHP   2. database\dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:41:50 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:41:50 UTC] PHP   4. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:22
+[11-Mar-2019 12:42:08 UTC] PHP Warning:  database\dbConnection::__get(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 27
+[11-Mar-2019 12:42:08 UTC] PHP Stack trace:
+[11-Mar-2019 12:42:08 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:42:08 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:19
+[11-Mar-2019 12:42:08 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 22
+[11-Mar-2019 12:42:08 UTC] PHP Stack trace:
+[11-Mar-2019 12:42:08 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:42:08 UTC] PHP   2. database\dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:42:08 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:42:08 UTC] PHP   4. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:22
+[11-Mar-2019 12:42:59 UTC] PHP Warning:  database\dbConnection::__construct(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:42:59 UTC] PHP Stack trace:
+[11-Mar-2019 12:42:59 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:42:59 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:42:59 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:31
+[11-Mar-2019 12:42:59 UTC] PHP Warning:  database\dbConnection::__construct(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:42:59 UTC] PHP Stack trace:
+[11-Mar-2019 12:42:59 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:42:59 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:42:59 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:31
+[11-Mar-2019 12:43:09 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:43:09 UTC] PHP Stack trace:
+[11-Mar-2019 12:43:09 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:43:09 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:43:09 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:31
+[11-Mar-2019 12:43:16 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:43:16 UTC] PHP Stack trace:
+[11-Mar-2019 12:43:16 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:43:16 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:43:16 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:31
+[11-Mar-2019 12:43:43 UTC] PHP Warning:  database\dbConnection::__get(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 27
+[11-Mar-2019 12:43:43 UTC] PHP Stack trace:
+[11-Mar-2019 12:43:43 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:43:43 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:19
+[11-Mar-2019 12:43:43 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 22
+[11-Mar-2019 12:43:43 UTC] PHP Stack trace:
+[11-Mar-2019 12:43:43 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:43:43 UTC] PHP   2. database\dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:43:43 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:43:43 UTC] PHP   4. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:22
+[11-Mar-2019 12:44:22 UTC] PHP Warning:  database\dbConnection::__call(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 23
+[11-Mar-2019 12:44:22 UTC] PHP Stack trace:
+[11-Mar-2019 12:44:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:44:22 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:44:22 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:44:27 UTC] PHP Warning:  database\dbConnection::__call(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 23
+[11-Mar-2019 12:44:27 UTC] PHP Stack trace:
+[11-Mar-2019 12:44:27 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:44:27 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:44:27 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:47:00 UTC] PHP Fatal error:  Uncaught Error: __clone method called on non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:23
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(16): database\dbConnection->__call('query', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 23
+[11-Mar-2019 12:47:28 UTC] PHP Warning:  database\dbConnection::__get(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 27
+[11-Mar-2019 12:47:28 UTC] PHP Stack trace:
+[11-Mar-2019 12:47:28 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:47:28 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:19
+[11-Mar-2019 12:47:28 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 22
+[11-Mar-2019 12:47:28 UTC] PHP Stack trace:
+[11-Mar-2019 12:47:28 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:47:28 UTC] PHP   2. database\dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:47:28 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:47:28 UTC] PHP   4. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:22
+[11-Mar-2019 12:50:32 UTC] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '10000' reached, aborting! in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:23
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#6 C:\Use in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 23
+[11-Mar-2019 12:50:57 UTC] PHP Warning:  database\dbConnection::__call(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:50:57 UTC] PHP Stack trace:
+[11-Mar-2019 12:50:57 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:50:57 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:50:57 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:50:58 UTC] PHP Warning:  database\dbConnection::__call(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:50:58 UTC] PHP Stack trace:
+[11-Mar-2019 12:50:58 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:50:58 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:50:58 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:00 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:00 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:00 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:00 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:00 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:01 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:01 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:01 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:01 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:02 UTC] PHP Warning:  database\dbConnection::__call(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:02 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:02 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:02 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:02 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:02 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:02 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:02 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:03 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:03 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:03 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:03 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:03 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:03 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:03 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:03 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:03 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:03 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:03 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:04 UTC] PHP Warning:  database\dbConnection::__call(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:04 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:04 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:04 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:04 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:04 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:04 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:04 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:04 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:04 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:04 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:04 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:04 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:04 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:04 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:04 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:04 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:04 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:04 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:04 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:05 UTC] PHP Warning:  database\dbConnection::__call(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:51:05 UTC] PHP Stack trace:
+[11-Mar-2019 12:51:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:51:05 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:05 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:51:21 UTC] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '10000' reached, aborting! in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:23
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#6 C:\Use in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 23
+[11-Mar-2019 12:51:40 UTC] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '10000' reached, aborting! in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:23
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(30): database\dbConnection->__call('query', Array)
+#6 C:\Use in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 23
+[11-Mar-2019 12:52:06 UTC] PHP Warning:  database\dbConnection::__call(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:52:06 UTC] PHP Stack trace:
+[11-Mar-2019 12:52:06 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:52:06 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:52:06 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:52:06 UTC] PHP Warning:  database\dbConnection::__call(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 24
+[11-Mar-2019 12:52:06 UTC] PHP Stack trace:
+[11-Mar-2019 12:52:06 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:52:06 UTC] PHP   2. database\dbConnection->query(*uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:52:06 UTC] PHP   3. database\dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:53:17 UTC] PHP Notice:  Undefined property: mysqli::$data in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 36
+[11-Mar-2019 12:53:17 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:17 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:17 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:53:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:53:46 UTC] PHP Warning:  database\dbConnection::__construct(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:46 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:46 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:46 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:46 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:49 UTC] PHP Warning:  database\dbConnection::__construct(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:49 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:49 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:49 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:49 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:52 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:52 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:52 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:52 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:52 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:52 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:52 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:52 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:53 UTC] PHP Warning:  database\dbConnection::__construct(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:53 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:53 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:53 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:53 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:53 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:53 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:53 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:53 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:53 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:54 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:54 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:54 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:54 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:54 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:54 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:54 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:54 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:54 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:54 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:54 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:54 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:54 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:54 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:54 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:55 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:55 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:55 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:55 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:56 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:56 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:56 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:56 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:56 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:57 UTC] PHP Warning:  database\dbConnection::__construct(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:57 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:57 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:57 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:57 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:57 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:57 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:57 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:57 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:57 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:58 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:58 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:58 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:58 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:58 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:58 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:58 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:58 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:58 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:58 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:53:58 UTC] PHP Warning:  database\dbConnection::__construct(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 17
+[11-Mar-2019 12:53:58 UTC] PHP Stack trace:
+[11-Mar-2019 12:53:58 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:53:58 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 12:53:58 UTC] PHP   3. database\dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:41
+[11-Mar-2019 12:54:03 UTC] PHP Notice:  Undefined property: mysqli::$data in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 36
+[11-Mar-2019 12:54:03 UTC] PHP Stack trace:
+[11-Mar-2019 12:54:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:54:03 UTC] PHP   2. database\dbConnection->__get($name = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:54:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:54:13 UTC] PHP Notice:  Undefined property: mysqli::$data in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 36
+[11-Mar-2019 12:54:13 UTC] PHP Stack trace:
+[11-Mar-2019 12:54:13 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:54:13 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:54:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:54:20 UTC] PHP Warning:  database\dbConnection::__get(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 35
+[11-Mar-2019 12:54:20 UTC] PHP Stack trace:
+[11-Mar-2019 12:54:20 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:54:20 UTC] PHP   2. database\dbConnection->__get($name = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:54:27 UTC] PHP Warning:  database\dbConnection::__get(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 35
+[11-Mar-2019 12:54:27 UTC] PHP Stack trace:
+[11-Mar-2019 12:54:27 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:54:27 UTC] PHP   2. database\dbConnection->__get($name = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:54:48 UTC] PHP Notice:  Undefined property: mysqli::$data in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 36
+[11-Mar-2019 12:54:48 UTC] PHP Stack trace:
+[11-Mar-2019 12:54:48 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:54:48 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:54:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:55:15 UTC] PHP Notice:  Undefined property: mysqli::$data in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 36
+[11-Mar-2019 12:55:15 UTC] PHP Stack trace:
+[11-Mar-2019 12:55:15 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:55:15 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:55:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:57:05 UTC] PHP Notice:  Undefined property: mysqli::$data in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 36
+[11-Mar-2019 12:57:05 UTC] PHP Stack trace:
+[11-Mar-2019 12:57:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:57:05 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:57:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:58:12 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:58:12 UTC] PHP Stack trace:
+[11-Mar-2019 12:58:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:58:12 UTC] PHP   2. mysqli->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:58:12 UTC] PHP Warning:  main(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 19
+[11-Mar-2019 12:58:12 UTC] PHP Stack trace:
+[11-Mar-2019 12:58:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:58:12 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 22
+[11-Mar-2019 12:58:12 UTC] PHP Stack trace:
+[11-Mar-2019 12:58:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:58:12 UTC] PHP   2. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:58:50 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:58:50 UTC] PHP Stack trace:
+[11-Mar-2019 12:58:50 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:58:50 UTC] PHP   2. mysqli->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:58:50 UTC] PHP Warning:  main(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 19
+[11-Mar-2019 12:58:50 UTC] PHP Stack trace:
+[11-Mar-2019 12:58:50 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:58:50 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 22
+[11-Mar-2019 12:58:50 UTC] PHP Stack trace:
+[11-Mar-2019 12:58:50 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:58:50 UTC] PHP   2. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:59:12 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 16
+[11-Mar-2019 12:59:12 UTC] PHP Stack trace:
+[11-Mar-2019 12:59:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:59:12 UTC] PHP   2. mysqli->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:59:12 UTC] PHP Warning:  main(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 19
+[11-Mar-2019 12:59:12 UTC] PHP Stack trace:
+[11-Mar-2019 12:59:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:59:12 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 22
+[11-Mar-2019 12:59:12 UTC] PHP Stack trace:
+[11-Mar-2019 12:59:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:59:12 UTC] PHP   2. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:59:33 UTC] PHP Notice:  Undefined property: database\dbConnection::$data in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 25
+[11-Mar-2019 12:59:33 UTC] PHP Stack trace:
+[11-Mar-2019 12:59:33 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:59:33 UTC] PHP   2. database\dbConnection->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:59:33 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 12:59:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:25
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(16): database\dbConnection->__call('query', Array)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 25
+[11-Mar-2019 12:59:46 UTC] PHP Notice:  Undefined property: database\dbConnection::$error in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 19
+[11-Mar-2019 12:59:46 UTC] PHP Stack trace:
+[11-Mar-2019 12:59:46 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:59:46 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 26
+[11-Mar-2019 12:59:46 UTC] PHP Stack trace:
+[11-Mar-2019 12:59:46 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 12:59:46 UTC] PHP   2. database\dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:59:46 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 12:59:46 UTC] PHP   4. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:26
+[11-Mar-2019 13:00:14 UTC] PHP Warning:  database\dbConnection::__get(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 31
+[11-Mar-2019 13:00:14 UTC] PHP Stack trace:
+[11-Mar-2019 13:00:14 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 13:00:14 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:19
+[11-Mar-2019 13:00:14 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 26
+[11-Mar-2019 13:00:14 UTC] PHP Stack trace:
+[11-Mar-2019 13:00:14 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 13:00:14 UTC] PHP   2. database\dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 13:00:14 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:22
+[11-Mar-2019 13:00:14 UTC] PHP   4. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:26
+[11-Mar-2019 13:01:57 UTC] PHP Warning:  database\dbConnection::__get(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 37
+[11-Mar-2019 13:01:57 UTC] PHP Stack trace:
+[11-Mar-2019 13:01:57 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 13:01:57 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:19
+[11-Mar-2019 13:58:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function connect() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 7
+[11-Mar-2019 13:59:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function connect() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 7
+[11-Mar-2019 13:59:32 UTC] PHP Stack trace:
+[11-Mar-2019 13:59:32 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 14:05:23 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 26
+[11-Mar-2019 14:05:23 UTC] PHP Stack trace:
+[11-Mar-2019 14:05:23 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 14:05:23 UTC] PHP   2. database\dbConnection->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 14:05:23 UTC] PHP   3. database\dbConnection->__call() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[11-Mar-2019 14:05:23 UTC] PHP   4. mysqli->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:26
+[11-Mar-2019 14:05:23 UTC] PHP Warning:  database\dbConnection::__get(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 34
+[11-Mar-2019 14:05:23 UTC] PHP Stack trace:
+[11-Mar-2019 14:05:23 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 14:05:23 UTC] PHP   2. database\dbConnection->__get() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:19
+[11-Mar-2019 14:05:23 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 21
+[11-Mar-2019 14:05:23 UTC] PHP Stack trace:
+[11-Mar-2019 14:05:23 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 14:05:23 UTC] PHP   2. database\dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:21
+[11-Mar-2019 14:05:23 UTC] PHP   3. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:21
+[11-Mar-2019 14:46:44 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function database\Domain::findAll(), 1 passed in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 59 and exactly 3 expected in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:45
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(59): database\Domain::findAll('SELECT * FROM m...')
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 45
+[11-Mar-2019 14:46:44 UTC] PHP Stack trace:
+[11-Mar-2019 14:46:44 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 14:46:44 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 14:46:44 UTC] PHP   3. database\Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:59
+[11-Mar-2019 14:47:01 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function database\Domain::findAll(), 1 passed in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 59 and at least 2 expected in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:45
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(59): database\Domain::findAll('SELECT * FROM m...')
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 45
+[11-Mar-2019 14:47:01 UTC] PHP Stack trace:
+[11-Mar-2019 14:47:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 14:47:01 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 14:47:01 UTC] PHP   3. database\Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:59
+[11-Mar-2019 14:47:20 UTC] PHP Notice:  Undefined variable: database in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 54
+[11-Mar-2019 14:47:20 UTC] PHP Stack trace:
+[11-Mar-2019 14:47:20 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 14:47:20 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 14:47:20 UTC] PHP   3. database\Domain::findAll() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:61
+[11-Mar-2019 14:47:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function connect() on null in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:54
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(61): database\Domain::findAll('SELECT * FROM m...')
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 54
+[11-Mar-2019 14:53:01 UTC] PHP Fatal error:  Uncaught Error: Class 'database\database\dbConnection' not found in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:64
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(72): database\Domain::findAll('SELECT * FROM m...')
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 64
+[11-Mar-2019 14:53:01 UTC] PHP Stack trace:
+[11-Mar-2019 14:53:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[11-Mar-2019 14:53:01 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[11-Mar-2019 14:53:01 UTC] PHP   3. database\Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:72
+[11-Mar-2019 14:58:52 UTC] PHP Fatal error:  Uncaught Error: Cannot instantiate abstract class database\Domain in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:61
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(92): database\Domain::getInstance()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(5): require_once('C:\\Users\\luc-a\\...')
+#2 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 61
+[11-Mar-2019 15:22:04 UTC] PHP Parse error:  syntax error, unexpected 'int' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 88

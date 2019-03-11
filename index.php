@@ -4,7 +4,7 @@
 	}
 	
 	require_once(ROOT."/private/session.php");
-	require_once(ROOT."/templates/template_file.php");
+	require_once(ROOT."/private/template_file.php");
 	$body_model = array(
 		'static' => array(
 			'<!--Test1-->' => 'Test1',

@@ -9,6 +9,7 @@ require_once(ROOT.'/private/tagProcessor.php');
 
 class PageModel{
     private $fromString = false;
+    private $isRaw = false;
     public $resources = [];
     public $title = "";
     public $body = NULL;
@@ -40,26 +41,33 @@ class PageModel{
         return $this->model;
     }
 
+    public function setRaw(){
+        $this->isRaw = false;
+    }
+
     function getStatic(String $attr){
         return $this->model['static']['<!--'.$attr.'-->'];
     }
 
     private function setUp(){
         $this->getModel();
-        ob_start();
-        if(!$this->fromString){
-            require(ROOT . $this->templateFile);
+        $contents = '';
+        if(!$this->isRaw){
+            ob_start();
+            if(!$this->fromString){
+                require(ROOT . $this->templateFile);
+            }else{
+                eval('?>'.$this->templateFile);
+            }
+            $contents = ob_get_contents();
+            ob_end_clean();
         }else{
-            eval('?>'.$this->templateFile);
+            if(!$this->fromString){
+                $contents = file_get_contents(ROOT . $this->templateFile);
+            }else{
+                $contents = $this->templateFile;
+            }
         }
-        $contents = ob_get_contents();
-        ob_end_clean();
-        // $contents = '';
-        // if(!$this->fromString){
-        //     $contents = file_get_contents(ROOT . $this->templateFile);
-        // }else{
-        //     $contents = $this->templateFile;
-        // }
 
 
         $out = $contents;
@@ -70,11 +78,6 @@ class PageModel{
         }
 
         $processor = new \TagProcessor($out,$this);
-        // if(!$this->fromString){
-        //     $out = $processor->processTags();
-        // }else{
-        //     $out = $processor->processTagsDOM();
-        // }
         return $processor;
     }
 
@@ -88,6 +91,13 @@ class PageModel{
 
     function render(){
         echo $this->setUpTemplate();
+    }
+
+    public function addToModel($model){
+        if($model){
+            $this->model = array_merge($model,$this->model);
+        }
+        return $this->model;
     }
 
     function addResource($values){

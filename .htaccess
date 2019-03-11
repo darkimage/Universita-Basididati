@@ -3,14 +3,15 @@ DirectorySlash Off
 
 RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.*[^/])$ $1/index.php?%{QUERY_STRING} [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(.*)$ /controllers/$1index.php?%{QUERY_STRING} [L]
+RewriteRule ^(.*)$ controllers/$1/index.php [L]
 
 # RewriteCond %{REQUEST_FILENAME} -d
 # RewriteRule (.*)/$ $1.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+[^\/(.+)\.php])$ $1.php?%{QUERY_STRING} [L]
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteRule ^(.+[^\/(.+)\.php])$ $1.php?%{QUERY_STRING} [L]
 # RewriteRule ^(.+[^/])$ $1.php?%{QUERY_STRING}
 # RewriteRule ^(.+)$ $1?%{QUERY_STRING}
 # RewriteRule ^(.+)/$ $1?%{QUERY_STRING}

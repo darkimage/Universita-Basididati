@@ -1,4 +1,4 @@
-<?php 
+<?php
 if(!defined('ROOT')){
     define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 }
@@ -10,6 +10,7 @@ foreach ($this->model['collection'] as $key => $value) {
         $this->model['key'] => $key,
         $this->model['item'] => $value
     );
+    $template->addToModel($this->model);
     $template->setSourceString($this->getStatic('Body'));
     $res = $template->setUpTemplateDOM();
     echo $res->saveHTML($res->getElementsByTagName('body')->item(0));
