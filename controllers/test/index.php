@@ -5,7 +5,7 @@
     require_once(ROOT."/private/dbConnection.php");
 
 
-    $database = database\dbConnection::getInstance();
+    $database = dbConnection::getInstance();
 
     $database->connect();
     $sql = "CREATE TABLE MyGuests (
