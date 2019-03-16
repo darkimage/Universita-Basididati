@@ -1351,3 +1351,222 @@ Stack trace:
 [11-Mar-2019 18:36:38 UTC] PHP   6. Domain::find($query = *uninitialized*, $variables = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:109
 [11-Mar-2019 18:36:38 UTC] PHP   7. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:96
 [11-Mar-2019 18:36:38 UTC] PHP   8. dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:90
+[12-Mar-2019 16:45:56 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 30
+[12-Mar-2019 16:45:56 UTC] PHP Stack trace:
+[12-Mar-2019 16:45:56 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[12-Mar-2019 16:45:56 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[12-Mar-2019 16:45:56 UTC] PHP   3. Domain::findAll() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:142
+[12-Mar-2019 16:45:56 UTC] PHP   4. dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:91
+[12-Mar-2019 16:45:56 UTC] PHP   5. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:30
+[12-Mar-2019 16:46:12 UTC] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 30
+[12-Mar-2019 16:46:12 UTC] PHP Stack trace:
+[12-Mar-2019 16:46:12 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[12-Mar-2019 16:46:12 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[12-Mar-2019 16:46:12 UTC] PHP   3. Domain::findAll() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:141
+[12-Mar-2019 16:46:12 UTC] PHP   4. dbConnection->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:90
+[12-Mar-2019 16:46:12 UTC] PHP   5. mysqli->close() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:30
+[13-Mar-2019 16:11:56 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 80
+[13-Mar-2019 16:11:56 UTC] PHP Stack trace:
+[13-Mar-2019 16:11:56 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:11:56 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[13-Mar-2019 16:11:56 UTC] PHP   3. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:140
+[13-Mar-2019 16:11:57 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 80
+[13-Mar-2019 16:11:57 UTC] PHP Stack trace:
+[13-Mar-2019 16:11:57 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:11:57 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[13-Mar-2019 16:11:57 UTC] PHP   3. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:140
+[13-Mar-2019 16:12:03 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 80
+[13-Mar-2019 16:12:03 UTC] PHP Stack trace:
+[13-Mar-2019 16:12:03 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:12:03 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[13-Mar-2019 16:12:03 UTC] PHP   3. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:140
+[13-Mar-2019 16:12:04 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 80
+[13-Mar-2019 16:12:04 UTC] PHP Stack trace:
+[13-Mar-2019 16:12:04 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:12:04 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[13-Mar-2019 16:12:04 UTC] PHP   3. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:140
+[13-Mar-2019 16:12:04 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 80
+[13-Mar-2019 16:12:04 UTC] PHP Stack trace:
+[13-Mar-2019 16:12:04 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:12:04 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[13-Mar-2019 16:12:04 UTC] PHP   3. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:140
+[13-Mar-2019 16:12:05 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 80
+[13-Mar-2019 16:12:05 UTC] PHP Stack trace:
+[13-Mar-2019 16:12:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:12:05 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[13-Mar-2019 16:12:05 UTC] PHP   3. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:140
+[13-Mar-2019 16:12:05 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 80
+[13-Mar-2019 16:12:05 UTC] PHP Stack trace:
+[13-Mar-2019 16:12:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:12:05 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:5
+[13-Mar-2019 16:12:05 UTC] PHP   3. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:140
+[13-Mar-2019 16:20:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Orders' not found in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 9
+[13-Mar-2019 16:20:55 UTC] PHP Stack trace:
+[13-Mar-2019 16:20:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:21:16 UTC] PHP Warning:  main(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 10
+[13-Mar-2019 16:21:16 UTC] PHP Stack trace:
+[13-Mar-2019 16:21:16 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:21:28 UTC] PHP Warning:  main(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 10
+[13-Mar-2019 16:21:28 UTC] PHP Stack trace:
+[13-Mar-2019 16:21:28 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:21:31 UTC] PHP Warning:  main(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 10
+[13-Mar-2019 16:21:31 UTC] PHP Stack trace:
+[13-Mar-2019 16:21:31 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:21:32 UTC] PHP Warning:  main(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 10
+[13-Mar-2019 16:21:32 UTC] PHP Stack trace:
+[13-Mar-2019 16:21:32 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:24:53 UTC] PHP Warning:  preg_replace(): No ending delimiter ':' found in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 81
+[13-Mar-2019 16:24:53 UTC] PHP Stack trace:
+[13-Mar-2019 16:24:53 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:24:53 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:24:53 UTC] PHP   3. preg_replace(*uninitialized*, *uninitialized*, *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:81
+[13-Mar-2019 16:25:52 UTC] PHP Notice:  Undefined index: offset in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 85
+[13-Mar-2019 16:25:52 UTC] PHP Stack trace:
+[13-Mar-2019 16:25:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:25:52 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:51 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:51 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:51 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:51 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:51 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:51 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:51 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:51 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:53 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:53 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:53 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:53 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:53 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:53 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:53 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:53 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:54 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:54 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:54 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:54 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:54 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:54 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:54 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:54 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:55 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:55 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:55 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:55 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:55 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:55 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:55 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:55 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:55 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:56 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:56 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:56 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:56 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:56 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:56 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:56 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:56 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:56 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:56 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:56 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:56 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:31:56 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 106
+[13-Mar-2019 16:31:56 UTC] PHP Stack trace:
+[13-Mar-2019 16:31:56 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:31:56 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:23 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 104
+[13-Mar-2019 16:34:23 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:23 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:23 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:23 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 104
+[13-Mar-2019 16:34:23 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:23 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:23 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:24 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 104
+[13-Mar-2019 16:34:24 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:24 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:24 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:25 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 104
+[13-Mar-2019 16:34:25 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:25 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:25 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:30 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 104
+[13-Mar-2019 16:34:30 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:30 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:30 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:30 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 104
+[13-Mar-2019 16:34:30 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:30 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:30 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:31 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 104
+[13-Mar-2019 16:34:31 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:31 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:31 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:32 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 104
+[13-Mar-2019 16:34:32 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:32 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:32 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:44 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 107
+[13-Mar-2019 16:34:44 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:44 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:44 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:34:44 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 107
+[13-Mar-2019 16:34:44 UTC] PHP Stack trace:
+[13-Mar-2019 16:34:44 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:34:44 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:35:24 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 105
+[13-Mar-2019 16:35:24 UTC] PHP Stack trace:
+[13-Mar-2019 16:35:24 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:35:24 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:35:26 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 105
+[13-Mar-2019 16:35:26 UTC] PHP Stack trace:
+[13-Mar-2019 16:35:26 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:35:26 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:36:15 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 107
+[13-Mar-2019 16:36:15 UTC] PHP Stack trace:
+[13-Mar-2019 16:36:15 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:36:15 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:39:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 108
+[13-Mar-2019 16:39:57 UTC] PHP Stack trace:
+[13-Mar-2019 16:39:57 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:39:57 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:40:01 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 108
+[13-Mar-2019 16:40:01 UTC] PHP Stack trace:
+[13-Mar-2019 16:40:01 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:40:01 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:41:04 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 105
+[13-Mar-2019 16:41:04 UTC] PHP Stack trace:
+[13-Mar-2019 16:41:04 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:41:04 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:41:07 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 105
+[13-Mar-2019 16:41:07 UTC] PHP Stack trace:
+[13-Mar-2019 16:41:07 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:41:07 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:41:22 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 107
+[13-Mar-2019 16:41:22 UTC] PHP Stack trace:
+[13-Mar-2019 16:41:22 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:41:22 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:41:24 UTC] PHP Warning:  Domain::findAll(): Property access is not allowed yet in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 107
+[13-Mar-2019 16:41:24 UTC] PHP Stack trace:
+[13-Mar-2019 16:41:24 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:41:24 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:41:44 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 107
+[13-Mar-2019 16:41:44 UTC] PHP Stack trace:
+[13-Mar-2019 16:41:44 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:41:44 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[13-Mar-2019 16:41:47 UTC] PHP Warning:  Domain::findAll(): Couldn't fetch mysqli in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 107
+[13-Mar-2019 16:41:47 UTC] PHP Stack trace:
+[13-Mar-2019 16:41:47 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[13-Mar-2019 16:41:47 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[14-Mar-2019 17:34:02 UTC] PHP Notice:  Undefined variable: key in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 164
+[14-Mar-2019 17:34:02 UTC] PHP Stack trace:
+[14-Mar-2019 17:34:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[14-Mar-2019 17:34:02 UTC] PHP   2. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:7
+[14-Mar-2019 17:34:02 UTC] PHP   3. Orders->__construct(...$params = variadic(*uninitialized*, *uninitialized*, *uninitialized*)) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:137
+[14-Mar-2019 17:34:02 UTC] PHP   4. Orders->mapToClass($result = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:100
+[14-Mar-2019 17:34:02 UTC] PHP   5. Orders->getKeyOfResult($result = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:150

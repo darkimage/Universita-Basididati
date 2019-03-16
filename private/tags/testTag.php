@@ -17,7 +17,4 @@ class testTag extends htmlTag{
         );
     }
 }
-
-$this->addTag('t-test','testTag');
-
 ?>

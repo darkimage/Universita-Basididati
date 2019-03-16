@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS User (
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(32) NOT NULL,
+    Cognome VARCHAR(32) NOT NULL,
+    DataNascita DATE NOT NULL,
+    NomeUtente VARCHAR(32) NOT NULL,
+    Password CHAR(60) NOT NULL
+)

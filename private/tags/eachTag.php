@@ -12,10 +12,8 @@ class eachTag extends htmlTag{
     }
 
     protected function getModel(){
-
+        
     }
 }
-
-$this->addTag('t-each','eachTag');
 
 ?>

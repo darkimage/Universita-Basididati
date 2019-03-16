@@ -16,6 +16,4 @@ class forTag extends htmlTag{
     }
 }
 
-$this->addTag('t-for','forTag');
-
 ?>

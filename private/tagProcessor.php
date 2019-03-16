@@ -4,6 +4,40 @@ if(!defined('ROOT')){
 }
 require_once(ROOT."/private/template_file.php");
 
+class TagLoader {
+    private $tags = [];
+    private static $instance = null;
+
+    public static function getInstance()
+    {
+      if(self::$instance == null)
+      {   
+         $c = __CLASS__;
+         self::$instance = new $c;
+      }
+      
+      return self::$instance;
+    }
+
+    function __construct(){
+        foreach (scandir(ROOT.'/private/tags') as $filename) {
+            $path = ROOT.'/private/tags/'.$filename;
+            if (is_file($path)) {
+                require_once($path);
+                preg_match_all('/(.+)Tag/',pathinfo($filename)['filename'],$matches);
+                $ntag ='t-'.$matches[1][0];
+                if(!array_key_exists($ntag,$this->tags)){
+                    $this->tags[$ntag] = pathinfo($filename)['filename'];
+                }
+            }
+        }
+    }
+
+    function getTags(){
+        return $this->tags;
+    }
+}
+
 class TagProcessor{
     private $doc;
     private $pageModel;
@@ -17,22 +51,7 @@ class TagProcessor{
         $libxmlErrors = libxml_use_internal_errors(true);
         $this->doc->loadHTML($html);
         libxml_use_internal_errors($libxmlErrors);
-        $this->LoadTags();
-    }
-
-    private function LoadTags(){
-        foreach (scandir(ROOT.'/private/tags') as $filename) {
-            $path = ROOT.'/private/tags/'.$filename;
-            if (is_file($path)) {
-                require_once($path);
-                preg_match_all('/(.+)Tag/',pathinfo($filename)['filename'],$matches);
-                $this->addTag('t-'.$matches[1][0],pathinfo($filename)['filename']);
-            }
-        }
-    }
-
-    private function addTag(String $nodeName, String $className){
-        $this->tags[$nodeName] = $className;
+        $this->tags = TagLoader::getInstance()->getTags();
     }
 
     private function processDOMNode(DOMNode $node,$iter) {
@@ -114,17 +133,41 @@ abstract class htmlTag{
             $att = $attributes->item($i);
             if(!( $att->nodeName == 'static')){
                 if($pageAttr = $this->isPageAttribute($att->value)){
-                    $this->model[$att->name] = $this->page->model[$pageAttr];
+                    $this->model[$att->name] = $this->processPageAttr($pageAttr);
                 }else if($pageAttr = $this->isCompileAttribute($att->value)){
-                    ob_start();
-                    eval('?><?php '.htmlspecialchars_decode($pageAttr).' ?>');
-                    $evalued = ob_get_contents();
-                    ob_end_clean();
-                    $this->model[$att->name] = $evalued;
+                    $this->model[$att->name] = $this->evaluateAttr($pageAttr);
                 }else{
                     $this->model[$att->name] = $att->value;
                 }
             }
+        }
+    }
+
+    private function evaluateAttr($val){
+        ob_start();
+        eval('?><?php '.htmlspecialchars_decode($val).' ?>');
+        $evaluated = ob_get_contents();
+        ob_end_clean();
+        return $evaluated;
+    }
+
+    private function processPageAttr($val){
+        //check per tipo di inserzione esempio method:[post] dove method e il nome dell'attributo
+        //ma se non specificato defaulta all'espressione presente tra le parentesi [] in questo caso 
+        //alla stringa post
+        $count = preg_match_all('/^(.+):\[(.+)\]$/', $val, $matches);
+        if($count == 1){
+           if(array_key_exists($matches[1][0],$this->page->model)){
+               return $this->page->model[$matches[1][0]];
+            }else{
+               if($default = $this->isCompileAttribute($matches[2][0])){
+                   return $this->evaluateAttr($default);
+                }else{
+                   return $matches[2][0];
+                }
+            }
+        }else{
+            return $this->page->model[$val];
         }
     }
 
@@ -181,7 +224,7 @@ abstract class htmlTag{
         $doc1->loadHTML($file);
         libxml_use_internal_errors($libxmlErrors);
         $container = $doc->createElement('div');//Create new <br> tag
-        $tempNode = $doc->importNode($doc1->getElementsByTagName('*')->item(0),true);
+        $tempNode = $doc->importNode($doc1->getElementsByTagName('body')->item(0),true);
         $container->appendChild($tempNode);
         return $container;
     }

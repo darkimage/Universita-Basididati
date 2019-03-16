@@ -521,3 +521,99 @@ Stack trace:
 [08-Mar-2019 13:47:02 UTC] PHP   6. template\PageModel->addResource() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:23
 [08-Mar-2019 13:47:02 UTC] PHP   7. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:72
 [08-Mar-2019 13:47:02 UTC] PHP   8. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\template_file.php:44
+[15-Mar-2019 18:22:26 UTC] PHP Notice:  Undefined index: action in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 170
+[15-Mar-2019 18:22:26 UTC] PHP Stack trace:
+[15-Mar-2019 18:22:26 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[15-Mar-2019 18:22:26 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[15-Mar-2019 18:22:26 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:89
+[15-Mar-2019 18:22:26 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:102
+[15-Mar-2019 18:22:26 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:107
+[15-Mar-2019 18:22:26 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:64
+[15-Mar-2019 18:22:26 UTC] PHP  12. formTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:206
+[15-Mar-2019 18:22:26 UTC] PHP  13. formTag->processPageAttr() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:136
+[15-Mar-2019 18:22:26 UTC] PHP Notice:  Undefined index: method in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 170
+[15-Mar-2019 18:22:26 UTC] PHP Stack trace:
+[15-Mar-2019 18:22:26 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[15-Mar-2019 18:22:26 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[15-Mar-2019 18:22:26 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:89
+[15-Mar-2019 18:22:26 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:102
+[15-Mar-2019 18:22:26 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:107
+[15-Mar-2019 18:22:26 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:26 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:64
+[15-Mar-2019 18:22:26 UTC] PHP  12. formTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:206
+[15-Mar-2019 18:22:26 UTC] PHP  13. formTag->processPageAttr() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:136
+[15-Mar-2019 18:22:27 UTC] PHP Notice:  Undefined index: action in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 170
+[15-Mar-2019 18:22:27 UTC] PHP Stack trace:
+[15-Mar-2019 18:22:27 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[15-Mar-2019 18:22:27 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[15-Mar-2019 18:22:27 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:89
+[15-Mar-2019 18:22:27 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:102
+[15-Mar-2019 18:22:27 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:107
+[15-Mar-2019 18:22:27 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:64
+[15-Mar-2019 18:22:27 UTC] PHP  12. formTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:206
+[15-Mar-2019 18:22:27 UTC] PHP  13. formTag->processPageAttr() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:136
+[15-Mar-2019 18:22:27 UTC] PHP Notice:  Undefined index: method in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php on line 170
+[15-Mar-2019 18:22:27 UTC] PHP Stack trace:
+[15-Mar-2019 18:22:27 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[15-Mar-2019 18:22:27 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[15-Mar-2019 18:22:27 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:89
+[15-Mar-2019 18:22:27 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:102
+[15-Mar-2019 18:22:27 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:107
+[15-Mar-2019 18:22:27 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:74
+[15-Mar-2019 18:22:27 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:64
+[15-Mar-2019 18:22:27 UTC] PHP  12. formTag->getAttributes() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:206
+[15-Mar-2019 18:22:27 UTC] PHP  13. formTag->processPageAttr() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:136
+[16-Mar-2019 14:59:32 UTC] PHP Fatal error:  Uncaught Exception: Error executing query (SELECT * FROM User WHERE NomeUtente=lucafaggion LIMIT 1 OFFSET 0): Unknown column 'lucafaggion' in 'where clause' in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:144
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(163): Domain::findAll('SELECT * FROM U...', Array, Array)
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php(12): Domain::find('SELECT * FROM @...', Array)
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php(17): AutheticateUser(Object(User))
+#3 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 144
+[16-Mar-2019 14:59:32 UTC] PHP Stack trace:
+[16-Mar-2019 14:59:32 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[16-Mar-2019 14:59:32 UTC] PHP   2. AutheticateUser($user = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:17
+[16-Mar-2019 14:59:32 UTC] PHP   3. Domain::find($query = *uninitialized*, $variables = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:12
+[16-Mar-2019 14:59:32 UTC] PHP   4. Domain::findAll($query = *uninitialized*, $variables = *uninitialized*, $limits = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:163
+[16-Mar-2019 15:03:52 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 163
+[16-Mar-2019 15:03:52 UTC] PHP Stack trace:
+[16-Mar-2019 15:03:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[16-Mar-2019 15:03:52 UTC] PHP   2. AutheticateUser($user = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:26
+[16-Mar-2019 15:03:52 UTC] PHP   3. Domain::find($query = *uninitialized*, $variables = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:12
+[16-Mar-2019 15:04:42 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 163
+[16-Mar-2019 15:04:42 UTC] PHP Stack trace:
+[16-Mar-2019 15:04:42 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[16-Mar-2019 15:04:42 UTC] PHP   2. AutheticateUser($user = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:26
+[16-Mar-2019 15:04:42 UTC] PHP   3. Domain::find($query = *uninitialized*, $variables = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:12
+[16-Mar-2019 15:05:17 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 163
+[16-Mar-2019 15:05:17 UTC] PHP Stack trace:
+[16-Mar-2019 15:05:17 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[16-Mar-2019 15:05:17 UTC] PHP   2. AutheticateUser() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:26
+[16-Mar-2019 15:05:17 UTC] PHP   3. Domain::find() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:12
+[16-Mar-2019 15:05:47 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 163
+[16-Mar-2019 15:05:47 UTC] PHP Stack trace:
+[16-Mar-2019 15:05:47 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[16-Mar-2019 15:05:47 UTC] PHP   2. AutheticateUser($user = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:26
+[16-Mar-2019 15:05:47 UTC] PHP   3. Domain::find($query = *uninitialized*, $variables = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:12
+[16-Mar-2019 15:11:36 UTC] PHP Notice:  Trying to get property 'Password' of non-object in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php on line 14
+[16-Mar-2019 15:11:36 UTC] PHP Stack trace:
+[16-Mar-2019 15:11:36 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[16-Mar-2019 15:11:36 UTC] PHP   2. AutheticateUser() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:26

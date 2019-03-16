@@ -11,10 +11,8 @@
     $loginFormModel->templateFile = '/templates/login/login_form.php';
     $loginFormModel->model = array(
         'referer' => array_key_exists('HTTP_REFERER',$_SERVER) ? $_SERVER['HTTP_REFERER'] : '/',
-        'static' => array(
-            '<!--Method-->' => 'post',
-            '<!--Action-->' => 'authenticate.php'
-        )
+        'method' => 'post',
+        'action' => '/login/authenticate'
     );
 
     $modelTest = new template\PageModel();

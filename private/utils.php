@@ -3,6 +3,7 @@
 if(!defined('ROOT')){
     define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 }
+
 function relativePath(String $dir,String $file){
     $root = explode("/", $_SERVER['DOCUMENT_ROOT']);
     $path = explode("\\", $dir);

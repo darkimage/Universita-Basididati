@@ -16,6 +16,4 @@ class templateTag extends htmlTag{
     }
 }
 
-$this->addTag('t-template','templateTag');
-
 ?>

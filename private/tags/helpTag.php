@@ -17,6 +17,4 @@ class helpTag extends htmlTag{
     }
 }
 
-$this->addTag('t-help','helpTag')
-
 ?>
