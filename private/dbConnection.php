@@ -32,7 +32,7 @@ class dbConnection {
       return self::$instance;
     }
 
-    function __construct(){
+    private function __construct(){
         $this->loadDomainClasses();
         $this->connect();
     }
@@ -41,7 +41,7 @@ class dbConnection {
         $this->close();
     }
 
-    function loadDomainClasses(){
+    private function loadDomainClasses(){
         foreach (scandir(ROOT.'/private/domains') as $filename) {
             $path = ROOT.'/private/domains/'.$filename;
             if (is_file($path)) {
@@ -106,6 +106,8 @@ abstract class Domain{
 
     public static function fromFormData(int $method){
         if($method == FORM_METHOD_POST){
+            if(!array_key_exists('domain',$_POST))
+                return false;
             if($_POST['domain'] != 'none'){
                 $params = [];
                 $i = 0;

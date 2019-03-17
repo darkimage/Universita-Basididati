@@ -617,3 +617,20 @@ Stack trace:
 [16-Mar-2019 15:11:36 UTC] PHP Stack trace:
 [16-Mar-2019 15:11:36 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
 [16-Mar-2019 15:11:36 UTC] PHP   2. AutheticateUser() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:26
+[17-Mar-2019 11:23:53 UTC] PHP Notice:  Undefined index: domain in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 109
+[17-Mar-2019 11:23:53 UTC] PHP Stack trace:
+[17-Mar-2019 11:23:53 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[17-Mar-2019 11:23:53 UTC] PHP   2. Domain::fromFormData() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:23
+[17-Mar-2019 11:23:53 UTC] PHP Notice:  Undefined index: domain in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 118
+[17-Mar-2019 11:23:53 UTC] PHP Stack trace:
+[17-Mar-2019 11:23:53 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[17-Mar-2019 11:23:53 UTC] PHP   2. Domain::fromFormData() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:23
+[17-Mar-2019 11:23:53 UTC] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:118
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php(23): Domain::fromFormData(0)
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 118
+[17-Mar-2019 16:17:37 UTC] PHP Notice:  Undefined variable: lifetime in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php on line 14
+[17-Mar-2019 16:17:37 UTC] PHP Stack trace:
+[17-Mar-2019 16:17:37 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[17-Mar-2019 16:17:37 UTC] PHP   2. AutheticateUser() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:29

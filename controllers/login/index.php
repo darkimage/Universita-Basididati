@@ -1,7 +1,6 @@
 <?php
-	if(!defined('ROOT')){
+	if(!defined('ROOT'))
 		define('ROOT', $_SERVER['DOCUMENT_ROOT']);
-	}
 	
 	require_once(ROOT."/private/session.php");
     require_once(ROOT."/private/template_file.php");

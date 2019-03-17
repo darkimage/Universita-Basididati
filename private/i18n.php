@@ -5,6 +5,6 @@
     require_once(ROOT."/i18n/i18n.class.php");
 	require_once(ROOT. "/private/session.php");
 
-    $i18n = new i18n(ROOT.'/lang/lang_{LANGUAGE}.ini', ROOT.'/langcache/','en');
+    $i18n = new i18n(ROOT.'/lang/lang_{LANGUAGE}.ini', ROOT.'/langcache/','it');
     $i18n->init();
 ?>

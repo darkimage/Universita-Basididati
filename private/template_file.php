@@ -16,8 +16,7 @@ class PageModel{
     public $header = NULL;
     public $templateFile = '/templates/layouts/main.php';
     public $model = [];
-
-
+    
     private function generateStaticModel(){
         $this->model['static']['<!--Title-->'] = $this->title;
         $this->model['static']['<!--Header-->'] = $this->header;
