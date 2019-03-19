@@ -13,7 +13,6 @@
         'method' => 'post',
         'action' => '/login/authenticate'
     );
-
     $modelTest = new template\PageModel();
     $modelTest->title = L::login_title;
     $modelTest->resources = array(

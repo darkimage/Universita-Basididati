@@ -15,6 +15,6 @@
         'array2' => array('a1','b1','c3'),
         'userlogged' => $Userauth->isUserLogged()
     );
-    $modelTest->templateFile = '/controllers/prova/prova_template.php';
+    $modelTest->templateFile = '/templates/prova/prova_template.php';
     $modelTest->render();
 ?>

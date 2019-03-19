@@ -48,41 +48,49 @@ class TagProcessor{
         $this->doc = new DOMDocument();
         $this->pageModel = $pageModel;
         $this->model = $pageModel->model;
-        $libxmlErrors = libxml_use_internal_errors(true);
-        $this->doc->loadHTML($html);
-        libxml_use_internal_errors($libxmlErrors);
+        if($html){
+            $libxmlErrors = libxml_use_internal_errors(true);
+            $this->doc->loadHTML($html);
+            $test = $this->doc->saveHTML();
+            libxml_use_internal_errors($libxmlErrors);
+        }
         $this->tags = TagLoader::getInstance()->getTags();
     }
 
     private function processDOMNode(DOMNode $node,$iter) {
         $test = $this->doc->saveHTML($node);
+        $rm = [];
         foreach($node->childNodes as $curr){
-            $tagnode = NULL;
+            $test = $this->doc->saveHTML($curr);
             foreach ($this->tags as $name => $tagClass) {
                 if($curr->nodeName == $name){
                     $tag = new $tagClass($this->doc,$curr,$this->pageModel);
-                    $tagnode = $tag->renderTag();
+                    $temp = $tag->renderTag();
+                    if($temp){
+                        array_push($rm, $temp);
+                    }
                     break;
                 }
             }
-            if($tagnode){
-                if($tagnode->hasChildNodes()) {
-                    $this->processDOMNode($tagnode,$iter+1);
-                }
+            if($curr->hasChildNodes()) {
+                $this->processDOMNode($curr,$iter+1);
             }else{
-                if($curr->hasChildNodes()) {
-                    $this->processDOMNode($curr,$iter+1);
-                }else{
-                    $this->evalNode($curr);
+                $temp = $this->evalNode($curr);
+                if($temp){
+                    array_push($rm, $temp);
                 }
             }
         }
+        foreach ($rm as $key => $value) {
+            $node->removeChild($value);
+        }
+
     }
 
     private function evalNode(DOMNode $baseNode){
         $doc = new DOMDocument();
-        $test1 = $this->doc->saveHTML();
-        $test = $this->doc->saveHTML($baseNode);
+        // $test1 = $this->doc->saveHTML();
+        // $test = $this->doc->saveHTML($baseNode);
         $isPhp = preg_match_all('/\${(.+)}/s',$this->doc->saveHTML($baseNode),$matches);
         if($isPhp){
             ob_start();
@@ -92,8 +100,13 @@ class TagProcessor{
             if($evalued){
                 $doc->loadHTML($evalued);
                 $node = $this->doc->importNode($doc->getElementsByTagName('body')->item(0),true);
-                $baseNode->parentNode->replaceChild($node, $baseNode);
-                $test1 = $this->doc->saveHTML();
+                $parent = $baseNode->parentNode;
+                $res = $parent->insertBefore($baseNode,$node);
+                if($res){
+                    return $node;
+                }else{
+                    return null;
+                }
             }
         }
     }
@@ -121,6 +134,7 @@ abstract class htmlTag{
     function __construct(DOMDOcument $doc,DOMNode $node,template\PageModel $page){
         $this->doc = $doc;
         $this->node = $node;
+        $test = $this->doc->saveHTML($node);
         $this->page = $page;
     }
 
@@ -132,9 +146,9 @@ abstract class htmlTag{
         for ($i=0; $i < $count; $i++) {
             $att = $attributes->item($i);
             if(!( $att->nodeName == 'static')){
-                if($pageAttr = $this->isPageAttribute($att->value)){
+                if($pageAttr = $this->isPageAttribute(urldecode($att->value))){
                     $this->model[$att->name] = $this->processPageAttr($pageAttr);
-                }else if($pageAttr = $this->isCompileAttribute($att->value)){
+                }else if($pageAttr = $this->isCompileAttribute(urldecode($att->value))){
                     $this->model[$att->name] = $this->evaluateAttr($pageAttr);
                 }else{
                     $this->model[$att->name] = $att->value;
@@ -208,13 +222,19 @@ abstract class htmlTag{
         $tagModel->templateFile = '/templates/tags/'.'_'.$this->name.".php";
         $tagModel->model = $this->model;
         $tagModel->body = $this->getInnerHTML($this->node);
-        $tagModel->setRaw();
+        // $tagModel->setRaw();
         $this->tagNode = $this->importHTML($this->doc,$this->node, $tagModel->setUpTemplate());
-        $res = $this->node->parentNode->replaceChild($this->tagNode, $this->node);
-        if($res){
-            return $this->tagNode;
-        }else{
-            return NULL; //NEED ERROR
+        if($this->tagNode){
+            $parent = $this->node->parentNode;
+            $res = $parent->insertBefore($this->tagNode,$this->node);
+            // $parent->removeChild($this->node);
+            // $res = $parent->replaceChild($this->tagNode, $this->node);
+            $test = $this->doc->saveHTML();
+            if($res){
+                return $this->node;
+            }else{
+                return null;
+            }
         }
     }
 
@@ -224,9 +244,14 @@ abstract class htmlTag{
         $doc1->loadHTML($file);
         libxml_use_internal_errors($libxmlErrors);
         $container = $doc->createElement('div');//Create new <br> tag
-        $tempNode = $doc->importNode($doc1->getElementsByTagName('body')->item(0),true);
-        $container->appendChild($tempNode);
-        return $container;
+        $importnode = $doc1->getElementsByTagName('body')->item(0);
+        if($importnode){
+            $tempNode = $doc->importNode($importnode,true);
+            $container->appendChild($tempNode);
+            return $container;
+        }else{
+            return null;
+        }
     }
 
     private function getInnerHTML(DOMNode $node){

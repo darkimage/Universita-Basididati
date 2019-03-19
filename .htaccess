@@ -3,9 +3,12 @@ DirectorySlash Off
 
 RewriteEngine On
 
+RewriteCond %{HTTP_HOST} !^m\.
+RewriteRule ^$ controllers/test/index.php [L]
+
 #base redirect rule
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule index.php controllers/test/index.php [L] 
+RewriteRule index.php controllers/test/index.php [L]
 
 #controller redirect to internal file rule
 RewriteCond %{REQUEST_FILENAME} !-f

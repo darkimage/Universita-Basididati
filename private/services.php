@@ -36,12 +36,6 @@ class Services {
             }
         }
     }
-
-    public function getService($name){
-        if(isset($this->$name)){
-            return $this->$name;
-        }else return false;
-    }
 }
 
 ?>

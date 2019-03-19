@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-primary"><!--Test1--></button>
+<button type="button" class="btn btn-primary"><a href="/login"><!--Test1--></button>
 <button type="button" class="btn btn-secondary"><!--Test2--></button>
 <button type="button" class="btn btn-success"><!--Test3--></button>
 <button type="button" class="btn btn-danger"></button>

@@ -41,7 +41,7 @@ class PageModel{
     }
 
     public function setRaw(){
-        $this->isRaw = false;
+        $this->isRaw = true;
     }
 
     function getStatic(String $attr){

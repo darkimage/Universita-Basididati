@@ -14,7 +14,6 @@ class Session{
 		
 		private function __construct() {}
 		
-		
 		/**
 		*    Returns THE instance of 'Session'.
 		*    The session is automatically initialized if it wasn't.
