@@ -7,6 +7,7 @@ require_once(ROOT."/private/dbConnection.php");
 
 class Services {
     private static $instance;
+    private $services;
     private function __construct() {}
 
     public static function getInstance()
@@ -28,12 +29,29 @@ class Services {
                 require_once($path);
                 $found = preg_match_all("/^(.+)Service.php$/",$filename,$matches);
                 if($found){
-                    if(!isset($this->{$matches[1][0]})){
-                        $class = $matches[1][0];
-                        $this->{$matches[1][0]} = new $class();
+                    if(!isset($this->services[$matches[1][0]])){
+                        $this->services[$matches[1][0]] = true;
                     }
                 }
             }
+        }
+    }
+
+    public function __get (String $name){
+        if($name != 'services'){
+            if(isset($this->services[$name])){
+                if($this->services[$name]){
+                    if(is_object($this->services[$name]))
+                        return $this->services[$name];
+                    else{
+                        $this->services[$name] = new $name();
+                        return $this->services[$name];
+                    }
+                }
+            }
+            return false;
+        }else{
+            return $this->services;
         }
     }
 }

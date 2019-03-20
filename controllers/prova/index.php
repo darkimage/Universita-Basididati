@@ -6,7 +6,8 @@
     require_once(ROOT."/private/session.php");
     require_once(ROOT."/private/services.php");
 
-    $Userauth = Services::getInstance()->UserAuth; 
+    $Userauth = Services::getInstance()->UserAuth;
+    // $Userauth->isUserAuth();
 
     $modelTest = new template\PageModel();
     $modelTest->title = L::index_title;

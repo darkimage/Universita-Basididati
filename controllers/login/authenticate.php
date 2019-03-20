@@ -20,6 +20,7 @@ function AutheticateUser($user){
             Session::getInstance()->destroy();
             $session = Session::getInstance();
             $session->auth = true;
+            $session->user = $user_db;
             if($user->referee){
                 header("location:".$user->referee);
             }else{
