@@ -14,5 +14,9 @@ class Orders extends Domain{
     }
 
     protected function hasMany(){}
+
+    public function primaryKey(){
+        return 'id';
+    }
 }
 ?>

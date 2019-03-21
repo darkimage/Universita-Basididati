@@ -4,20 +4,17 @@ if(!defined('ROOT')){
 }
 require_once(ROOT.'/private/dbConnection.php');
 
-class Persons extends Domain{
+class Role extends Domain{
     public $id;
-    public $LastName;
-    public $FirstName;
-    public $Address;
-    public $City;
-
+    public $Authority;
+    
     protected function belongsTo(){}
 
     protected function hasMany(){}
 
     public function primaryKey(){
         return 'id';
-    }   
+    }
 }
 
 ?>

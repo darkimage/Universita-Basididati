@@ -103,6 +103,7 @@ abstract class Domain{
 
     abstract protected function belongsTo();
     abstract protected function hasMany();
+    abstract public function primaryKey();
 
     public static function fromFormData(int $method){
         if($method == FORM_METHOD_POST){
@@ -130,8 +131,11 @@ abstract class Domain{
         if($variables){
             foreach ($variables as $key => $value) {
                 $query = preg_replace("/:".$key."/","'".$value."'",$query);
+                $query = preg_replace("/@".$key."/",$value,$query);
+
             }
         }
+
         if(!$query) 
             throw new Exception('Errors in query decompilation!!');
 
@@ -170,18 +174,28 @@ abstract class Domain{
 
     }
 
+    public function save(){
+        
+    }
+
     private function mapToClass($result){
         if($this->belongsTo()){
             foreach ($this->belongsTo() as $key => $value) {
                 $val = $this->getKeyOfResult($result,$key);
-                $this->$key = $value::find("SELECT * FROM ".$value." WHERE id=".$val);
+                $class = new $value();
+                $this->$key = $value::find("SELECT * FROM @table WHERE @primary=:value",
+                    ['table'=>$value,'primary'=>$class->primaryKey(),'value'=>$val]);
+                unset($class);
             }
         }
 
         if($this->hasMany()){
             foreach ($this->hasMany() as $key => $value) {
                 $val = $this->getKeyOfResult($result,$key);
-                $this->$key = $value::findAll("SELECT * FROM ".$value." WHERE id=".$val);
+                $class = new $value();
+                $this->$key = $value::findAll("SELECT * FROM @table WHERE @primary=:value",
+                    ['table'=>$value,'primary'=>$class->primaryKey(),'value'=>$val]);
+                unset($class);   
             }
         }
     }

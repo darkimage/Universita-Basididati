@@ -5,4 +5,17 @@ CREATE TABLE IF NOT EXISTS User (
     DataNascita DATE NOT NULL,
     NomeUtente VARCHAR(32) NOT NULL,
     Password CHAR(60) NOT NULL
-)
+);
+
+CREATE TABLE IF NOT EXISTS Role(
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Authority VARCHAR(32) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS UserRole(
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Userid int NOT NULL,
+    Roleid int NOT NULL,
+    FOREIGN KEY (Userid) REFERENCES User(id),
+    FOREIGN KEY (Roleid) REFERENCES Role(id)
+);

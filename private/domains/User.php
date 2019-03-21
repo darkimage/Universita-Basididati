@@ -14,6 +14,10 @@ class User extends Domain{
     protected function belongsTo(){}
 
     protected function hasMany(){}
+
+    public function primaryKey(){
+        return 'id';
+    }
 }
 
 ?>

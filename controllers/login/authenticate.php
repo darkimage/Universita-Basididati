@@ -19,7 +19,6 @@ function AutheticateUser($user){
         if(password_verify($user->Password,$user_db->Password)){
             Session::getInstance()->destroy();
             $session = Session::getInstance();
-            $session->auth = true;
             $session->user = $user_db;
             if($user->referee){
                 header("location:".$user->referee);
