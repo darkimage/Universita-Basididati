@@ -175,7 +175,69 @@ abstract class Domain{
     }
 
     public function save(){
-        
+        $class = get_called_class();
+        $pkey = $this->primaryKey();
+        $isDB = $class::findAll("SELECT * FROM @this WHERE @primary=:value",
+            ['primary'=>$pkey,'value'=>$this->{$pkey}]);
+        $database = dbConnection::getInstance();
+        $class = get_called_class();
+        if($isDB){
+            $query = "SHOW COLUMNS FROM ".$class;
+            $result = $database->query($query);
+            $resultAssoc = $result->fetch_all(MYSQLI_ASSOC);
+            if(!$resultAssoc){
+                throw new \Exception("Error executing query (".$query."): ". $database->error);
+            }
+            $query = "UPDATE ".$class." SET ";
+            foreach ($resultAssoc as $key => $value) {
+                $query .= $value['Field']."='".$this->{$value['Field']}."'";
+                if(($key+1) < count($resultAssoc))
+                    $query .= ",";
+            }
+            $query .= " WHERE ".$this->primaryKey()."='".$this->{$this->primaryKey()}."'";
+        }else{
+            $query = "SHOW COLUMNS FROM ".$class;
+            $result = $database->query($query);
+            $resultAssoc = $result->fetch_all(MYSQLI_ASSOC);
+            if(!$resultAssoc){
+                throw new \Exception("Error executing query (".$query."): ". $database->error);
+            }
+            $query = "INSERT INTO ".$class." VALUES( ";
+            foreach ($resultAssoc as $key => $value) {
+                if($this->{$value['Field']}){
+                    $query .= "'".$this->{$value['Field']}."'";
+                }else{
+                    $query .= 'null';
+                }
+                if(($key+1) < count($resultAssoc))
+                    $query .= ",";
+            }
+            $query .= ")";
+        }
+        $result = $database->query($query);
+        if(!$result){
+            throw new \Exception("Error executing query (".$query."): ". $database->error);
+        }else{
+            if($isDB)
+                return true;
+            else { 
+                $query = "SELECT * FROM ".$class." WHERE ".$this->primaryKey()."='".$database->insert_id."'";
+                if(!$result = $database->query($query)){
+                    throw new \Exception("Error executing query (".$query."): ". $database->error);
+                }
+                $resultAssoc = $result->fetch_all(MYSQLI_ASSOC);
+                if($resultAssoc)
+                    $resultAssoc = $resultAssoc[0];
+                else 
+                    return false;
+                foreach ($resultAssoc as $key => $value) {
+                    $this->$key = $value; 
+                }
+                return true;
+            }
+        }
+        return false;
+
     }
 
     private function mapToClass($result){

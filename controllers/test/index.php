@@ -5,6 +5,16 @@
 	
 	require_once(ROOT."/private/session.php");
 	require_once(ROOT."/private/template_file.php");
+	require_once(ROOT."/private/dbConnection.php");
+
+
+	$test = User::find("SELECT * FROM @this WHERE id=1");
+	$test->Nome = "Test";
+	$test->save();
+
+	$test1 = new User(['Nome','Test1'],['Cognome','TestCogn'],['DataNascita','2019-03-01'],['NomeUtente','test'],['Password',password_hash("test123",PASSWORD_BCRYPT)]);
+	$test1->save();
+
 	$body_model = array(
 		'static' => array(
 			'<!--Test1-->' => 'Test1',

@@ -1570,3 +1570,78 @@ Stack trace:
 [14-Mar-2019 17:34:02 UTC] PHP   3. Orders->__construct(...$params = variadic(*uninitialized*, *uninitialized*, *uninitialized*)) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:137
 [14-Mar-2019 17:34:02 UTC] PHP   4. Orders->mapToClass($result = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:100
 [14-Mar-2019 17:34:02 UTC] PHP   5. Orders->getKeyOfResult($result = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:150
+[22-Mar-2019 16:50:16 UTC] PHP Fatal error:  Uncaught Error: Class 'User' not found in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php on line 10
+[22-Mar-2019 16:50:16 UTC] PHP Stack trace:
+[22-Mar-2019 16:50:16 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 16:50:17 UTC] PHP Notice:  Undefined variable: query in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 188
+[22-Mar-2019 16:50:17 UTC] PHP Stack trace:
+[22-Mar-2019 16:50:17 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 16:50:17 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:12
+[22-Mar-2019 16:51:23 UTC] PHP Fatal error:  Uncaught Exception: Error executing query (DESC User):  in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:189
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(12): Domain->save()
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 189
+[22-Mar-2019 16:51:23 UTC] PHP Stack trace:
+[22-Mar-2019 16:51:23 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 16:51:23 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:12
+[22-Mar-2019 16:51:39 UTC] PHP Fatal error:  Uncaught Exception: Error executing query (DESC User;):  in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:189
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(12): Domain->save()
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 189
+[22-Mar-2019 16:53:05 UTC] PHP Fatal error:  Uncaught Exception: Error executing query (SHOW columns FROM User;):  in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:189
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(12): Domain->save()
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 189
+[22-Mar-2019 16:53:05 UTC] PHP Stack trace:
+[22-Mar-2019 16:53:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 16:53:05 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:12
+[22-Mar-2019 16:54:02 UTC] PHP Fatal error:  Uncaught Exception: Error executing query (SHOW COLUMNS FROM User):  in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:189
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(12): Domain->save()
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 189
+[22-Mar-2019 16:54:02 UTC] PHP Stack trace:
+[22-Mar-2019 16:54:02 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 16:54:02 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:12
+[22-Mar-2019 16:56:11 UTC] PHP Notice:  Undefined index: field in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 195
+[22-Mar-2019 16:56:11 UTC] PHP Stack trace:
+[22-Mar-2019 16:56:11 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 16:56:11 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:12
+[22-Mar-2019 16:57:15 UTC] PHP Notice:  Undefined property: User::$Cognome in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 195
+[22-Mar-2019 16:57:15 UTC] PHP Stack trace:
+[22-Mar-2019 16:57:15 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 16:57:15 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:12
+[22-Mar-2019 17:03:27 UTC] PHP Fatal error:  Uncaught Exception: Error executing query (UPDATE User SET 'id'='1','Nome'='Luca','Cognome'='Faggion','DataNascita'='1995-12-04','NomeUtente'='lucafaggion','Password'='$2y$10$4K7U5eQDrsWkdP3B3qYQounKJG/UDAsY/VtAPqbv4aD3nsZoZd0CK' WHERE 'id'='1'):  in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:202
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(12): Domain->save()
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 202
+[22-Mar-2019 17:03:27 UTC] PHP Stack trace:
+[22-Mar-2019 17:03:27 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 17:03:27 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:12
+[22-Mar-2019 17:13:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function primaryKey() on string in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:179
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(13): Domain->save()
+#1 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 179
+[22-Mar-2019 17:14:24 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 99
+[22-Mar-2019 17:14:24 UTC] PHP Stack trace:
+[22-Mar-2019 17:14:24 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 17:14:24 UTC] PHP   2. User->__construct(...$params = variadic(*uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*)) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:15
+[22-Mar-2019 17:29:08 UTC] PHP Warning:  mysqli::query() expects at least 1 parameter, 0 given in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 66
+[22-Mar-2019 17:29:08 UTC] PHP Stack trace:
+[22-Mar-2019 17:29:08 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 17:29:08 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[22-Mar-2019 17:29:08 UTC] PHP   3. dbConnection->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:225
+[22-Mar-2019 17:29:08 UTC] PHP   4. dbConnection->__call($name = *uninitialized*, $arguments = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:225
+[22-Mar-2019 17:29:08 UTC] PHP   5. mysqli->query() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:66
+[22-Mar-2019 17:31:40 UTC] PHP Notice:  Undefined offset: 0 in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 230
+[22-Mar-2019 17:31:40 UTC] PHP Stack trace:
+[22-Mar-2019 17:31:40 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[22-Mar-2019 17:31:40 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16

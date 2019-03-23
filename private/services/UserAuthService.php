@@ -22,7 +22,10 @@ class UserAuth {
 		$user = $this->getCurrentUser();
 		if($user)
 			return true;
-		header("location:".URL."login?referee=".$_SERVER['PHP_SELF']);
+		$url = $_SERVER['REQUEST_URI'];
+		$path = substr(parse_url($url, PHP_URL_PATH),1);
+		$query = parse_url($url, PHP_URL_QUERY);
+		header("location:".URL."login?referee=".$path.'?'.$query);
 	}
 
 	function UserHasAllAuths($auths){

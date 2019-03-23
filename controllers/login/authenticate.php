@@ -6,11 +6,10 @@ require_once(ROOT."/private/session.php");
 require_once(ROOT."/private/utils.php");
 require_once(ROOT."/private/dbConnection.php");
 
-function loginErrorAndRedirect(){
+function loginError(){
     if(!isset($_SESSION)) 
     session_start();
     $_SESSION['flash'] = L::login_error;
-
 }
 
 function AutheticateUser($user){
@@ -20,18 +19,21 @@ function AutheticateUser($user){
             Session::getInstance()->destroy();
             $session = Session::getInstance();
             $session->user = $user_db;
-            if($user->referee){
-                header("location:".$user->referee);
-            }else{
-                header("location:".URL);
+            if(isset($_GET['referer'])){
+                header("location:".URL.$_GET['referer']);
+                return;
             }
+            header("location:".URL);
+            return;
         }else{
-            loginErrorAndRedirect();
+            loginError();
             header("location:".URL.'login');
+            return;
         }
     }else{
-        loginErrorAndRedirect();
+        loginError();
         header("location:".URL.'login');
+        return;
     }
 }
 

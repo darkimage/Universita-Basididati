@@ -8,7 +8,7 @@
 
     $Userauth = Services::getInstance()->UserAuth;
     $Userauth->requireUserLogin();
-
+    
     $auth = UserRole::find("SELECT * FROM @this WHERE id=1");
 
     $modelTest = new template\PageModel();

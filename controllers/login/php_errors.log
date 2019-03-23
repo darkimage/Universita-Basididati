@@ -1431,3 +1431,10 @@ Stack trace:
 [18-Mar-2019 15:03:22 UTC] PHP  18. require() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:57
 [18-Mar-2019 15:03:22 UTC] PHP  19. session_start() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_flashmessage.php:2
 [18-Mar-2019 15:05:22 UTC] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php on line 5
+[22-Mar-2019 23:38:52 UTC] PHP Notice:  Undefined index: referee in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php on line 10
+[22-Mar-2019 23:38:52 UTC] PHP Stack trace:
+[22-Mar-2019 23:38:52 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[22-Mar-2019 23:43:29 UTC] PHP Notice:  Undefined index: referee in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php on line 26
+[22-Mar-2019 23:43:29 UTC] PHP Stack trace:
+[22-Mar-2019 23:43:29 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
+[22-Mar-2019 23:43:29 UTC] PHP   2. AutheticateUser($user = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:43

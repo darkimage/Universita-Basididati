@@ -4,19 +4,19 @@ DirectorySlash Off
 RewriteEngine On
 
 RewriteCond %{HTTP_HOST} !^m\.
-RewriteRule ^$ controllers/test/index.php [L]
+RewriteRule ^$ controllers/test/index.php?%{QUERY_STRING} [L]
 
 #base redirect rule
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule index.php controllers/test/index.php [L]
+RewriteRule index.php controllers/test/index.php?%{QUERY_STRING} [L]
 
 #controller redirect to internal file rule
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)/(.+)$ controllers/$1/$2.php [L]
+RewriteRule ^(.*)/(.+)$ controllers/$1/$2.php?%{QUERY_STRING} [L]
 
 #controller redirect rule
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*[^/])$ controllers/$1/index.php [L]
+RewriteRule ^(.*[^/])$ controllers/$1/index.php?%{QUERY_STRING} [L]
 
 
 
