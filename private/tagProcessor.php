@@ -89,24 +89,25 @@ class TagProcessor{
 
     private function evalNode(DOMNode $baseNode){
         $doc = new DOMDocument();
-        // $test1 = $this->doc->saveHTML();
-        // $test = $this->doc->saveHTML($baseNode);
+        $test1 = $this->doc->saveHTML();
+        $test = $this->doc->saveHTML($baseNode);
         $isPhp = preg_match_all('/\${(.+)}/s',$this->doc->saveHTML($baseNode),$matches);
         if($isPhp){
             ob_start();
             eval('?><?php '.htmlspecialchars_decode($matches[1][0]).' ?>');
             $evalued = ob_get_contents();
+            if(!$evalued){
+                $evalued = "<div></div>";
+            }
             ob_end_clean();
-            if($evalued){
-                $doc->loadHTML($evalued);
-                $node = $this->doc->importNode($doc->getElementsByTagName('body')->item(0),true);
-                $parent = $baseNode->parentNode;
-                $res = $parent->insertBefore($baseNode,$node);
-                if($res){
-                    return $node;
-                }else{
-                    return null;
-                }
+            $doc->loadHTML($evalued);
+            $node = $this->doc->importNode($doc->getElementsByTagName('body')->item(0),true);
+            $parent = $baseNode->parentNode;
+            $res = $parent->appendChild($node);
+            if($res){
+                return $baseNode;
+            }else{
+                return null;
             }
         }
     }
@@ -222,20 +223,12 @@ abstract class htmlTag{
         $tagModel->templateFile = '/templates/tags/'.'_'.$this->name.".php";
         $tagModel->model = $this->model;
         $tagModel->body = $this->getInnerHTML($this->node);
-        // $tagModel->setRaw();
         $this->tagNode = $this->importHTML($this->doc,$this->node, $tagModel->setUpTemplate());
         if($this->tagNode){
             $parent = $this->node->parentNode;
             $res = $parent->insertBefore($this->tagNode,$this->node);
-            // $parent->removeChild($this->node);
-            // $res = $parent->replaceChild($this->tagNode, $this->node);
-            $test = $this->doc->saveHTML();
-            if($res){
-                return $this->node;
-            }else{
-                return null;
-            }
         }
+        return $this->node;
     }
 
     private function importHTML(DOMDocument $doc,DOMNode $node,String $file){
@@ -243,7 +236,7 @@ abstract class htmlTag{
         $libxmlErrors = libxml_use_internal_errors(true);
         $doc1->loadHTML($file);
         libxml_use_internal_errors($libxmlErrors);
-        $container = $doc->createElement('div');//Create new <br> tag
+        $container = $doc->createElement('div');
         $importnode = $doc1->getElementsByTagName('body')->item(0);
         if($importnode){
             $tempNode = $doc->importNode($importnode,true);

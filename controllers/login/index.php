@@ -17,13 +17,13 @@
         'method' => 'post',
         'action' => '/login/authenticate'.'?referer='.$redirect
     );
-    $modelTest = new template\PageModel();
-    $modelTest->title = L::login_title;
-    $modelTest->resources = array(
+    $mainPage = new template\PageModel();
+    $mainPage->title = L::login_title;
+    $mainPage->resources = array(
         'header' => array(
-            'css' => relativePath(__DIR__,"login.css")
+            'css' => "login"
         )
     );
-    $modelTest->body = $loginFormModel->setUpTemplate();
-    $modelTest->render();
+    $mainPage->body = $loginFormModel->setUpTemplate();
+    $mainPage->render();
 ?>

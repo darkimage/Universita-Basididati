@@ -21,18 +21,20 @@ class UserAuth {
 	function requireUserLogin(){
 		$user = $this->getCurrentUser();
 		if($user)
-			return true;
+			return false;
 		$url = $_SERVER['REQUEST_URI'];
 		$path = substr(parse_url($url, PHP_URL_PATH),1);
 		$query = parse_url($url, PHP_URL_QUERY);
-		header("location:".URL."login?referee=".$path.'?'.$query);
+		$url = $path.(($query) ? "?".$query : "");
+		header("location:".URL."login?referee=".$url);
+		return true;
 	}
 
-	function UserHasAllAuths($auths){
-		$user = getCurrentUser();
+	function UserHasAllAuths(...$auths){
+		$user = $this->getCurrentUser();
 		if(!$user) 
 			return false;
-		$userRoles = UserRole.findAll("SELECT * FROM @this WHERE userid=:id",['id'=>$user->id]);
+		$userRoles = UserRole::findAll("SELECT * FROM @this WHERE userid=:id",['id'=>$user->id]);
 		if($userRoles){
 			$res = 0;
 			foreach ($userRoles as $key => $value) {
@@ -48,15 +50,15 @@ class UserAuth {
 		return false;
 	}
 
-	function UserHasAnyAuths($auths){
-		$user = getCurrentUser();
+	function UserHasAnyAuths(...$auths){
+		$user = $this->getCurrentUser();
 		if(!$user) 
 			return false;
-		$userRoles = UserRole.findAll("SELECT * FROM @this WHERE userid=:id",['id'=>$user->id]);
+		$userRoles = UserRole::findAll("SELECT * FROM @this WHERE userid=:id",['id'=>$user->id]);
 		if($userRoles){
 			foreach ($userRoles as $key => $value) {
-				foreach ($auths as $akey => $athority) {
-					if($value->role->authority == $athority){
+				foreach ($auths as $akey => $authority) {
+					if($value->Roleid->Authority == $authority){
 						return true;
 					}
 				}
@@ -66,7 +68,7 @@ class UserAuth {
 	}
 
 	function UserHasAuth(String $auth){
-		$user = getCurrentUser();
+		$user = $this->getCurrentUser();
 		if(!$user) 
 			return false;
 		$userRoles = UserRole.findAll("SELECT * FROM @this WHERE userid=:id",['id'=>$user->id]);

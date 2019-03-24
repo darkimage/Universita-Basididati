@@ -3,21 +3,24 @@ DirectorySlash Off
 
 RewriteEngine On
 
+#css rewrite rule
+RewriteRule ^stylesheets/(.*)\.css$ /stylesheets/scss.php/$1.scss [R=301,L]
+
 RewriteCond %{HTTP_HOST} !^m\.
-RewriteRule ^$ controllers/test/index.php?%{QUERY_STRING} [L]
+RewriteRule ^$ controllers/test/index.php [L]
 
 #base redirect rule
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule index.php controllers/test/index.php?%{QUERY_STRING} [L]
+RewriteRule index.php controllers/test/index.php [L]
 
 #controller redirect to internal file rule
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)/(.+)$ controllers/$1/$2.php?%{QUERY_STRING} [L]
+RewriteRule ^(.*)/(.+)$ controllers/$1/$2.php [L]
 
-#controller redirect rule
+
+# controller redirect rule
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*[^/])$ controllers/$1/index.php?%{QUERY_STRING} [L]
-
+RewriteRule ^(.*[^/])$ controllers/$1/index.php [L]
 
 
 <Files *.*>

@@ -1645,3 +1645,21 @@ Stack trace:
 [22-Mar-2019 17:31:40 UTC] PHP Stack trace:
 [22-Mar-2019 17:31:40 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
 [22-Mar-2019 17:31:40 UTC] PHP   2. User->save() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:16
+[24-Mar-2019 00:09:43 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+ in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 54
+[24-Mar-2019 00:09:43 UTC] PHP Stack trace:
+[24-Mar-2019 00:09:43 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:0
+[24-Mar-2019 00:09:43 UTC] PHP   2. require_once() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php:8
+[24-Mar-2019 00:09:43 UTC] PHP   3. dbConnection::getInstance() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:277
+[24-Mar-2019 00:09:43 UTC] PHP   4. dbConnection->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:29
+[24-Mar-2019 00:09:43 UTC] PHP   5. dbConnection->connect() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:37
+[24-Mar-2019 00:09:43 UTC] PHP   6. mysqli->__construct() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:54
+[24-Mar-2019 00:09:43 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+ in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php:56
+Stack trace:
+#0 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(37): dbConnection->connect()
+#1 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(29): dbConnection->__construct()
+#2 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php(277): dbConnection::getInstance()
+#3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(8): require_once('C:\\Users\\luc-a\\...')
+#4 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 56

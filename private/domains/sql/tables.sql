@@ -19,3 +19,15 @@ CREATE TABLE IF NOT EXISTS UserRole(
     FOREIGN KEY (Userid) REFERENCES User(id),
     FOREIGN KEY (Roleid) REFERENCES Role(id)
 );
+
+CREATE TABLE IF NOT EXISTS Project(
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	Nome VARCHAR(32) NOT NULL,
+    Descrizione TEXT,
+    Completato BOOL DEFAULT false,
+    DataInizio DATE DEFAULT NOW(),
+    DataCompletamento DATE NOT NULL,
+    DataScadenza DATE NOT NULL,
+    Creatore int NOT NULL,
+	FOREIGN KEY (Creatore) REFERENCES User(id)
+);
