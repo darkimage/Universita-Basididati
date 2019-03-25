@@ -1,0 +1,1 @@
+<a class="nav-link @{status}" id="@{id}-tab" data-toggle="pill" href="#content-@{id}" role="tab" aria-controls="content-@{id}" aria-selected="true"><?php echo $this->getStatic('Body') ?></a>

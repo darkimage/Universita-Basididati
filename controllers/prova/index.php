@@ -7,7 +7,7 @@
     require_once(ROOT."/private/services.php");
 
     $Userauth = Services::getInstance()->UserAuth;
-    $Userauth->requireUserLogin();
+    // $Userauth->requireUserLogin();
     
     $auth = UserRole::find("SELECT * FROM @this WHERE id=1");
 
@@ -16,7 +16,13 @@
     $modelTest->model = array(
         'array' => array('a','b','c'),
         'array2' => array('a1','b1','c3'),
-        'userlogged' => $Userauth->getCurrentUser()
+        'userlogged' => $Userauth->getCurrentUser(),
+        'false' => false,
+        'true' => true,
+        'int' => 100,
+        'float' => 99.99,
+        'string' => 'CAVABONGA',
+        'nullval' => null
     );
     $modelTest->templateFile = '/templates/prova/prova_template.php';
     $modelTest->render();

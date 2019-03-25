@@ -1438,3 +1438,113 @@ Stack trace:
 [22-Mar-2019 23:43:29 UTC] PHP Stack trace:
 [22-Mar-2019 23:43:29 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:0
 [22-Mar-2019 23:43:29 UTC] PHP   2. AutheticateUser($user = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\authenticate.php:43
+[25-Mar-2019 11:09:29 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tags\tamplateTag.php on line 18
+[25-Mar-2019 19:04:11 UTC] PHP Warning:  require(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/templates/tags/_.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php on line 57
+[25-Mar-2019 19:04:11 UTC] PHP Stack trace:
+[25-Mar-2019 19:04:11 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[25-Mar-2019 19:04:11 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[25-Mar-2019 19:04:11 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:04:11 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:125
+[25-Mar-2019 19:04:11 UTC] PHP   5. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:130
+[25-Mar-2019 19:04:11 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:11 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:11 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:11 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:11 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:11 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[25-Mar-2019 19:04:11 UTC] PHP  12. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:235
+[25-Mar-2019 19:04:11 UTC] PHP  13. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:04:15 UTC] PHP Warning:  require(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/templates/tags/_.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php on line 57
+[25-Mar-2019 19:04:15 UTC] PHP Stack trace:
+[25-Mar-2019 19:04:15 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[25-Mar-2019 19:04:15 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[25-Mar-2019 19:04:15 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:04:15 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:125
+[25-Mar-2019 19:04:15 UTC] PHP   5. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:130
+[25-Mar-2019 19:04:15 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:15 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:15 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:15 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:15 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:04:15 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[25-Mar-2019 19:04:15 UTC] PHP  12. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:235
+[25-Mar-2019 19:04:15 UTC] PHP  13. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:05:48 UTC] PHP Warning:  require(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/templates/tags/_.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php on line 57
+[25-Mar-2019 19:05:48 UTC] PHP Stack trace:
+[25-Mar-2019 19:05:48 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[25-Mar-2019 19:05:48 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[25-Mar-2019 19:05:48 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:05:48 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:125
+[25-Mar-2019 19:05:48 UTC] PHP   5. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:130
+[25-Mar-2019 19:05:48 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:48 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:48 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:48 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:48 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:48 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[25-Mar-2019 19:05:48 UTC] PHP  12. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:235
+[25-Mar-2019 19:05:48 UTC] PHP  13. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:05:53 UTC] PHP Fatal error:  require(): Failed opening required 'C:/Users/luc-a/Desktop/Universita/Basididati/project/source/templates/tags/_.php' (include_path='.;C:\php\pear') in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php on line 57
+[25-Mar-2019 19:05:53 UTC] PHP Stack trace:
+[25-Mar-2019 19:05:53 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[25-Mar-2019 19:05:53 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[25-Mar-2019 19:05:53 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:05:53 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:125
+[25-Mar-2019 19:05:53 UTC] PHP   5. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:130
+[25-Mar-2019 19:05:53 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:53 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:53 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:53 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:53 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:05:53 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[25-Mar-2019 19:05:53 UTC] PHP  12. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:235
+[25-Mar-2019 19:05:53 UTC] PHP  13. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:06:31 UTC] PHP Warning:  require(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/templates/tags/_.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php on line 57
+[25-Mar-2019 19:06:31 UTC] PHP Stack trace:
+[25-Mar-2019 19:06:31 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[25-Mar-2019 19:06:31 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[25-Mar-2019 19:06:31 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:06:31 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:125
+[25-Mar-2019 19:06:31 UTC] PHP   5. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:130
+[25-Mar-2019 19:06:31 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:06:31 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:06:31 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:06:31 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:06:31 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:06:31 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[25-Mar-2019 19:06:31 UTC] PHP  12. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:235
+[25-Mar-2019 19:06:31 UTC] PHP  13. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:07:05 UTC] PHP Warning:  require(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/templates/tags/_.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php on line 57
+[25-Mar-2019 19:07:05 UTC] PHP Stack trace:
+[25-Mar-2019 19:07:05 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[25-Mar-2019 19:07:05 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[25-Mar-2019 19:07:05 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:07:05 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:125
+[25-Mar-2019 19:07:05 UTC] PHP   5. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:130
+[25-Mar-2019 19:07:05 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:07:05 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:07:05 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:07:05 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:07:05 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:07:05 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[25-Mar-2019 19:07:05 UTC] PHP  12. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:235
+[25-Mar-2019 19:07:05 UTC] PHP  13. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:09:55 UTC] PHP Warning:  require(C:/Users/luc-a/Desktop/Universita/Basididati/project/source/templates/tags/_.php): failed to open stream: No such file or directory in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php on line 57
+[25-Mar-2019 19:09:55 UTC] PHP Stack trace:
+[25-Mar-2019 19:09:55 UTC] PHP   1. {main}() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:0
+[25-Mar-2019 19:09:55 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:27
+[25-Mar-2019 19:09:55 UTC] PHP   3. TagProcessor->processTags() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:09:55 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:125
+[25-Mar-2019 19:09:55 UTC] PHP   5. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:130
+[25-Mar-2019 19:09:55 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:09:55 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:09:55 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:09:55 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:09:55 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:84
+[25-Mar-2019 19:09:55 UTC] PHP  11. formTag->renderTag() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:69
+[25-Mar-2019 19:09:55 UTC] PHP  12. template\PageModel->setUpTemplate() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\tagProcessor.php:235
+[25-Mar-2019 19:09:55 UTC] PHP  13. template\PageModel->setUp() C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php:92
+[25-Mar-2019 19:41:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Services' not found in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\login\index.php on line 13

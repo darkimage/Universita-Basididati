@@ -1,5 +1,33 @@
 <h1><?php echo $this->title ?></h1>
-<h2><?php echo $this->title ?></h2>
-<h3><?php echo $this->title ?></h3>
-<h4><?php echo $this->title ?></h4>
-<h5><?php echo $this->title ?></h5>
+<div class="container-fluid pt-3">
+<div class="row">
+<div class="col-2">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <t-tablink id="test" status="active"><?php echo L::controlpanel_addproject ?></t-tablink>
+        <t-tablink id="home">Home</t-tablink>
+        <t-tablink id="profile">Profile</t-tablink>
+        <t-tablink id="messages">Messages</t-tablink>
+        <t-tablink id="settings">Settings</t-tablink>
+    </div>
+</div>
+<div class="col">
+    <div class="tab-content" id="v-pills-tabContent">
+        <t-tabcontent id="home">
+            <t-template path="/templates/prova/prova_template.php" model="@{templatemodel}"></t-template>
+        </t-tabcontent>
+        <t-tabcontent id="profile">
+            Profileeee
+        </t-tabcontent>
+        <t-tabcontent id="messages">
+            messages
+        </t-tabcontent>
+        <t-tabcontent id="settings">
+            Settings
+        </t-tabcontent>
+        <t-tabcontent id="test" status="show active">
+            Test
+        </t-tabcontent>
+        </div>
+    </div>
+</div>
+</div>

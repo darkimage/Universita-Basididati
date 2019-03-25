@@ -17,7 +17,19 @@
     }
     
     $controlPanel = new template\PageModel();
-    $controlPanel->model = array();
+    $controlPanel->model = array(
+        'templatemodel' => array(
+            'array' => array('a','b','c'),
+            'array2' => array('a1','b1','c3'),
+            'userlogged' => $Userauth->getCurrentUser(),
+            'false' => false,
+            'true' => true,
+            'int' => 100,
+            'float' => 99.99,
+            'string' => 'CAVABONGA',
+            'nullval' => null
+        )
+    );
     $controlPanel->title = L::controlpanel_title;
     $controlPanel->templateFile = "/templates/controlPanel/main_panel.php";
 

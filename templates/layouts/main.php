@@ -27,5 +27,6 @@
         <script src="/scripts/popper/popper.min.js"></script>
         <script src="/scripts/jquery/jquery-3.3.1.min.js"></script>
         <script src="/scripts/bootstrap/bootstrap.js"></script>
+        <!--Resources_Body-->
     </body>
 </html>

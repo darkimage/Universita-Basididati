@@ -77,7 +77,7 @@ class PageModel{
         }
 
         //Remove comments before processind HTML nodes
-        $out = preg_replace('/<!--.*-->/s',"",$out);
+        $out = preg_replace('/<!--(.*?)-->/s',"",$out);
 
 
         $processor = new \TagProcessor($out,$this);
@@ -110,7 +110,7 @@ class PageModel{
             $resource->templateFile = '/templates/layouts/resources.php';
             $resource->model = array(
                 'type' => $key,
-                'value' => "/stylesheets/".$value.".css"
+                'value' => $value
             );
             $res .= $resource->setUpTemplate();   
         }
