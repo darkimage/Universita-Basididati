@@ -14,6 +14,6 @@
     $scss->setImportPaths('assets/');
     // $compiledcss = $scss->compile('@import "bootstrap/scss/bootstrap.scss";');
     // echo $compiledcss;
-    $server = new Server('assets/', null, $scss);
+    $server = new Server('assets/',null, $scss);
     $server->serve();
 ?>

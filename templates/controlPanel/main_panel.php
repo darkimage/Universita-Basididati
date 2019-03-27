@@ -13,7 +13,7 @@
 <div class="col">
     <div class="tab-content" id="v-pills-tabContent">
         <t-tabcontent id="home">
-            <t-template path="/templates/prova/prova_template.php" model="@{templatemodel}"></t-template>
+            <t-template path="/templates/forms/project_form.php" model="@{templatemodel}"></t-template>
         </t-tabcontent>
         <t-tabcontent id="profile">
             Profileeee

@@ -1847,3 +1847,31 @@ Stack trace:
 #4 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\templates\tags\_template.php(6): template\PageModel->render()
 #5 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php(57): require('C:\\Users\\luc-a\\...')
 #6 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php(92): templat in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\template_file.php on line 21
+[27-Mar-2019 07:33:49 UTC] PHP Warning:  require(C:/Users/Luca Faggion/Universita/BasiDati/progetto//templates/forms/project_forms.php): failed to open stream: No such file or directory in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php on line 57
+[27-Mar-2019 07:33:49 UTC] PHP Stack trace:
+[27-Mar-2019 07:33:49 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:0
+[27-Mar-2019 07:33:49 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:38
+[27-Mar-2019 07:33:49 UTC] PHP   3. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 07:33:49 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 07:33:49 UTC] PHP   5. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 07:33:49 UTC] PHP   6. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP   7. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP   8. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP   9. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP  10. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP  11. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP  12. tabcontentTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 07:33:49 UTC] PHP  13. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 07:33:49 UTC] PHP  14. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 07:33:49 UTC] PHP  15. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 07:33:49 UTC] PHP  16. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 07:33:49 UTC] PHP  17. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP  18. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP  19. TagProcessor->processDOMNode($node = *uninitialized*, $iter = *uninitialized*) C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 07:33:49 UTC] PHP  20. templateTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 07:33:49 UTC] PHP  21. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 07:33:49 UTC] PHP  22. template\PageModel->setUp() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 07:33:49 UTC] PHP  23. require() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:57
+[27-Mar-2019 07:33:49 UTC] PHP  24. template\PageModel->render() C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\tags\_template.php:6
+[27-Mar-2019 07:33:49 UTC] PHP  25. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:96
+[27-Mar-2019 07:33:49 UTC] PHP  26. template\PageModel->setUp() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92

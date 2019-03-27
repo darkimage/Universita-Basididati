@@ -98,3 +98,15 @@ Stack trace:
 [23-Mar-2019 18:42:43 UTC] PHP  17. Leafo\ScssPhp\Compiler->reduce($value = *uninitialized*, $inExp = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\scssphp\src\Compiler.php:3662
 [23-Mar-2019 18:42:43 UTC] PHP  18. Leafo\ScssPhp\Compiler->get($name = *uninitialized*, $shouldThrow = *uninitialized*, $env = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\scssphp\src\Compiler.php:2166
 [23-Mar-2019 18:42:43 UTC] PHP  19. Leafo\ScssPhp\Compiler->throwError($msg = *uninitialized*) C:\Users\luc-a\Desktop\Universita\Basididati\project\source\scssphp\src\Compiler.php:3199
+[27-Mar-2019 07:28:17 UTC] PHP Warning:  filemtime(): stat failed for C:\Users\luc-a\Desktop\Universita\Basididati\project\source\stylesheets\assets\application.scss in C:\Users\Luca Faggion\Universita\BasiDati\progetto\scssphp\example\Server.php on line 138
+[27-Mar-2019 07:28:17 UTC] PHP Stack trace:
+[27-Mar-2019 07:28:17 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\stylesheets\scss.php:0
+[27-Mar-2019 07:28:17 UTC] PHP   2. Leafo\ScssPhp\Server->serve() C:\Users\Luca Faggion\Universita\BasiDati\progetto\stylesheets\scss.php:18
+[27-Mar-2019 07:28:17 UTC] PHP   3. Leafo\ScssPhp\Server->needsCompile() C:\Users\Luca Faggion\Universita\BasiDati\progetto\scssphp\example\Server.php:328
+[27-Mar-2019 07:28:17 UTC] PHP   4. filemtime() C:\Users\Luca Faggion\Universita\BasiDati\progetto\scssphp\example\Server.php:138
+[27-Mar-2019 07:28:17 UTC] PHP Warning:  filemtime(): stat failed for C:\Users\luc-a\Desktop\Universita\Basididati\project\source\stylesheets\assets\login.scss in C:\Users\Luca Faggion\Universita\BasiDati\progetto\scssphp\example\Server.php on line 138
+[27-Mar-2019 07:28:17 UTC] PHP Stack trace:
+[27-Mar-2019 07:28:17 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\stylesheets\scss.php:0
+[27-Mar-2019 07:28:17 UTC] PHP   2. Leafo\ScssPhp\Server->serve() C:\Users\Luca Faggion\Universita\BasiDati\progetto\stylesheets\scss.php:18
+[27-Mar-2019 07:28:17 UTC] PHP   3. Leafo\ScssPhp\Server->needsCompile() C:\Users\Luca Faggion\Universita\BasiDati\progetto\scssphp\example\Server.php:328
+[27-Mar-2019 07:28:17 UTC] PHP   4. filemtime() C:\Users\Luca Faggion\Universita\BasiDati\progetto\scssphp\example\Server.php:138

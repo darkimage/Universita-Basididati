@@ -6,6 +6,11 @@ const login_submit = 'Entra';
 const login_remember = 'Ricordami';
 const login_error = 'Nome utente o Password incorretti.';
 const index_title = 'Task Manager';
+const error_title = 'Errore';
+const error_notauth = 'Non possiedi le autorizzazioni per visualizzare questo contenuto.';
+const controlpanel_title = 'Panello di Controllo';
+const controlpanel_addproject = 'Aggiungi Progetto';
+const project_formname = 'Nome Progetto';
 public static function __callStatic($string, $args) {
     return vsprintf(constant("self::" . $string), $args);
 }
