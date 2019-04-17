@@ -15,4 +15,4 @@
 </div>
 </div>
 </t-form>
-<button onclick="navigateAnchor(this);" value="Test">
+<button href="#test" onclick="navigateAnchor(this,2);" value="Test">

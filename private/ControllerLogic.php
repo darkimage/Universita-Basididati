@@ -7,26 +7,38 @@
     require_once(ROOT."/private/services.php");
     require_once(ROOT."/private/utils.php");
 
-    class Method {
-        public $name;
-        public $arguments;
+    class AnnotatedMethod {
+        private $name;
+        private $caller;
+        private $args = [];
+        private $refl_method;
+        private $type;
 
-        function __construct(String $name,$arguments){
+        function __construct(String $name, Object $caller, String $args, String $type){
             $this->name = $name;
-            $this->arguments = $arguments;
-        }
-    }
-
-    class AnnotatedMethod extends Method{
-        public $pre;
-        public $post;
-
-        function __construct(String $name,$arguments,$pre,$post){
-            parent::__construct($name,$arguments);
+            $this->caller = $caller;
+            $this->type = $type;
+            if($args){
+                $args = preg_replace("/\"/","",$args);
+                $this->args = explode(",", $args);
+            }
+            $this->refl_method = new ReflectionMethod(get_class($caller), $name);
         }
 
         function call(){
-            
+            if($this->type == "void"){
+                $this->refl_method->invoke($this->caller, ...$this->args);
+                return true;
+            }else
+                return $this->refl_method->invoke($this->caller, ...$this->args);
+        }
+    }
+
+    class AnnotatedExpression {
+        private $data;
+        private $caller;
+        function __construct(String $data, Object $caller){
+
         }
     }
 
@@ -37,35 +49,37 @@
         function __construct($controller){
             $this->controller = $controller;
             $this->reflection = new ReflectionClass(get_class($controller));
-            // $methods = $reflection->getMethods();
-            // $docs = [];
-            // foreach ($methods as $method) {
-            //     $doc = $method->getDocComment());                
-            // }
-            // $test = $reflection->getMethod('test1')->getDocComment();
         }
 
         public function __call(string $name , array $arguments){
             $method = $this->reflection->getMethod($name);
             $doc = $method->getDocComment();
             $annotation = $this->processAnnotation($doc);
+
+            //Eseguiamo le PRE annotation e controlliamo che ritornino un valore true (o comunque valido)
+            $exec = true;
+            foreach ($annotation["pre"] as $value) {
+                $exec = $value->call();
+                if(!$exec) break;
+            }
+            //Eseguiamo il metodo chiamato
+            if($exec)
+                $this->controller->$name(...$arguments);
+            //Eseguiamo le POST annotation non ci interessa se ritornano vero o falso
+            foreach ($annotation["post"] as $value) {
+                $value->call();
+            }
         }
 
         private function processAnnotation(String $doc){
-            $regex = "/@(method|expression)\s(pre|post)\s([^\s]+)=>({(.+)}|[^{}\s;]+)/sm";
+            $regex = "/@(method|expression)\s(pre|post)\s([^\s]+)=>({(.+)}|([^{}\s;\(]+)\(([^\)]*)\))/";
             $count = preg_match_all($regex, $doc,$matches);
-            $annotations = ['pre' => [],'post' => []];
+            $annotations = ["post" => [], "pre"=>[]];
             for ($i=0; $i < $count ; $i++) { 
-                if($matches[1][i] == "method"){
-                    if($matches[3][i] == "void"){
-                        array_push($annotations[$matches[2][i]],
-                    }else{
-
-                    }
-                }else{
-
-                }
+                $method = new AnnotatedMethod($matches[6][$i],$this->controller,$matches[7][$i],$matches[3][$i]);
+                array_push($annotations[$matches[2][$i]], $method);
             }
+            return $annotations;
         }
 
         public function serve(){
@@ -77,20 +91,9 @@
         }
     }
 
-    class Controller{
-        /**
-         * Undocumented function
-         *
-         * @method pre void=>test()
-         * @method post bool=>test1()
-         * 
-         */
-        public function index(){
-
-        }
-
-        public function test(){
-
+    abstract class Controller{
+        public function test(String $test1, String $test2){
+            return $test1.$test2;
         }
 
         protected function needUserSession($authClosure){
@@ -100,6 +103,8 @@
             }
             return $authClosure();
         }
+
+        abstract public function index();
     }
 
     class testClass extends Controller{
@@ -115,7 +120,7 @@
         /**
          * Undocumented function
          * abc
-         * @method pre void=>test()
+         * @method pre void=>test("test1","test2")
          * @method post bool=>test1()
          * 
          */
@@ -123,6 +128,8 @@
 
         }
     }
+
+
 
 
 ?>

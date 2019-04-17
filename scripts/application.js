@@ -1,6 +1,6 @@
 //PROVA A MOSTRARE LE TAB IN BASE ALLE ANCHOR SPECIFICATE 
 //NELL URL SE SONO PRESENTI
-
+let url = document.location.href;
 if(url.match(/#.*/)){
     const anchor = window.location.hash.split("#");
     console.log(anchor);
@@ -9,15 +9,18 @@ if(url.match(/#.*/)){
     });
 }
 
-//AGGIUNGE L'ANCHOR ALL URL CON LA POSSSIBILITA DI
-// SPECIFICARE IL LIVELLO
+// AGGIUNGE L'ANCHOR ALL URL CON LA POSSSIBILITA DI
+// SPECIFICARE IL LIVELLO SE NON ESISTE LO AGGIUNGE 
 function navigateAnchor(element,level=1){
-    let anchors = [];
     let url = document.location.href;
     if(url.match(/#.*/)){
         var replace = "(#.[^#]+){"+level+"}";
         var re = new RegExp(replace,"");
-        url = url.replace(re,$(element).attr("href"));
+        if(url.match(re)){
+            url = url.replace(re,$(element).attr("href"));
+        }else{
+            url = url + $(element).attr("href");
+        }
     }else{
         url = url + $(element).attr("href");
     }
