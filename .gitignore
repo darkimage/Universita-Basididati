@@ -26,5 +26,8 @@ Desktop.ini
 !/.travis.yml
 
 #scsss cache
-
 stylesheets/assets/scss_cache/*
+
+#PHP
+php_errors.log
+langcache/
