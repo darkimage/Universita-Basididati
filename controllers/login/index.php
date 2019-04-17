@@ -12,9 +12,9 @@
         $redirect = $_GET['referee'];
     }
     $UserAuth = Services::getInstance()->UserAuth;
-    // if($UserAuth->getCurrentUser()){
-    //     header("location:".URL);
-    // }
+    if($UserAuth->getCurrentUser()){
+        header("location:".$redirect);
+    }
 
     $loginFormModel = new template\PageModel();
     $loginFormModel->templateFile = '/templates/login/login_form.php';

@@ -13,6 +13,10 @@ function loginError(){
 }
 
 function AutheticateUser($user){
+    $referee = '';
+    if(isset($_GET['referer'])){
+        $referee = "?referee=".$_GET['referer'];
+    }
     $user_db = User::find("SELECT * FROM @this WHERE NomeUtente=:username",['username'=>$user->NomeUtente]);
     if($user_db){
         if(password_verify($user->Password,$user_db->Password)){
@@ -20,21 +24,16 @@ function AutheticateUser($user){
             $session = Session::getInstance();
             $session->user = $user_db;
             if(isset($_GET['referer'])){
-                header("location:".URL.$_GET['referer']);
+                header("location:".$_GET['referer']);
                 return;
             }
             header("location:".URL);
             return;
-        }else{
-            loginError();
-            header("location:".URL.'login');
-            return;
         }
-    }else{
-        loginError();
-        header("location:".URL.'login');
-        return;
     }
+    loginError();
+    header("location:".URL.'login'.$referee);
+    return;
 }
 
 
