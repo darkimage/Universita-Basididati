@@ -1875,3 +1875,161 @@ Stack trace:
 [27-Mar-2019 07:33:49 UTC] PHP  24. template\PageModel->render() C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\tags\_template.php:6
 [27-Mar-2019 07:33:49 UTC] PHP  25. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:96
 [27-Mar-2019 07:33:49 UTC] PHP  26. template\PageModel->setUp() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:20 UTC] PHP Notice:  Undefined index: nome:[] in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php on line 194
+[27-Mar-2019 12:11:20 UTC] PHP Stack trace:
+[27-Mar-2019 12:11:20 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:0
+[27-Mar-2019 12:11:20 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:38
+[27-Mar-2019 12:11:20 UTC] PHP   3. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:20 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:20 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:20 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  12. tabcontentTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 12:11:20 UTC] PHP  13. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 12:11:20 UTC] PHP  14. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:20 UTC] PHP  15. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:20 UTC] PHP  16. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:20 UTC] PHP  17. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  18. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  19. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  20. templateTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 12:11:20 UTC] PHP  21. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 12:11:20 UTC] PHP  22. template\PageModel->setUp() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:20 UTC] PHP  23. require() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:57
+[27-Mar-2019 12:11:20 UTC] PHP  24. template\PageModel->render() C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\tags\_template.php:6
+[27-Mar-2019 12:11:20 UTC] PHP  25. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:96
+[27-Mar-2019 12:11:20 UTC] PHP  26. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:20 UTC] PHP  27. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:20 UTC] PHP  28. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:20 UTC] PHP  29. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  30. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  31. formTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 12:11:20 UTC] PHP  32. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 12:11:20 UTC] PHP  33. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:20 UTC] PHP  34. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:20 UTC] PHP  35. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:20 UTC] PHP  36. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  37. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  38. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  39. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  40. standardTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:80
+[27-Mar-2019 12:11:20 UTC] PHP  41. standardTag->getAttributes() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:305
+[27-Mar-2019 12:11:20 UTC] PHP  42. standardTag->processPageAttr() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:284
+[27-Mar-2019 12:11:20 UTC] PHP Notice:  Undefined index: nome:[] in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php on line 194
+[27-Mar-2019 12:11:20 UTC] PHP Stack trace:
+[27-Mar-2019 12:11:20 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:0
+[27-Mar-2019 12:11:20 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:38
+[27-Mar-2019 12:11:20 UTC] PHP   3. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:20 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:20 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:20 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:20 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  12. tabcontentTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 12:11:21 UTC] PHP  13. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 12:11:21 UTC] PHP  14. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:21 UTC] PHP  15. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:21 UTC] PHP  16. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:21 UTC] PHP  17. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  18. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  19. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  20. templateTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 12:11:21 UTC] PHP  21. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 12:11:21 UTC] PHP  22. template\PageModel->setUp() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:21 UTC] PHP  23. require() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:57
+[27-Mar-2019 12:11:21 UTC] PHP  24. template\PageModel->render() C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\tags\_template.php:6
+[27-Mar-2019 12:11:21 UTC] PHP  25. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:96
+[27-Mar-2019 12:11:21 UTC] PHP  26. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:21 UTC] PHP  27. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:21 UTC] PHP  28. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:21 UTC] PHP  29. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  30. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  31. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  32. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:21 UTC] PHP  33. standardTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:80
+[27-Mar-2019 12:11:21 UTC] PHP  34. standardTag->getAttributes() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:305
+[27-Mar-2019 12:11:21 UTC] PHP  35. standardTag->processPageAttr() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:284
+[27-Mar-2019 12:11:22 UTC] PHP Notice:  Undefined index: nome:[] in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php on line 194
+[27-Mar-2019 12:11:22 UTC] PHP Stack trace:
+[27-Mar-2019 12:11:22 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:0
+[27-Mar-2019 12:11:22 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:38
+[27-Mar-2019 12:11:22 UTC] PHP   3. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:22 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:22 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:22 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  12. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  13. templateTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 12:11:22 UTC] PHP  14. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 12:11:22 UTC] PHP  15. template\PageModel->setUp() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:22 UTC] PHP  16. require() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:57
+[27-Mar-2019 12:11:22 UTC] PHP  17. template\PageModel->render() C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\tags\_template.php:6
+[27-Mar-2019 12:11:22 UTC] PHP  18. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:96
+[27-Mar-2019 12:11:22 UTC] PHP  19. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:22 UTC] PHP  20. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:22 UTC] PHP  21. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:22 UTC] PHP  22. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  23. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  24. formTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 12:11:22 UTC] PHP  25. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 12:11:22 UTC] PHP  26. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:22 UTC] PHP  27. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:22 UTC] PHP  28. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:22 UTC] PHP  29. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  30. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  31. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  32. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  33. standardTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:80
+[27-Mar-2019 12:11:22 UTC] PHP  34. standardTag->getAttributes() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:305
+[27-Mar-2019 12:11:22 UTC] PHP  35. standardTag->processPageAttr() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:284
+[27-Mar-2019 12:11:22 UTC] PHP Notice:  Undefined index: nome:[] in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php on line 194
+[27-Mar-2019 12:11:22 UTC] PHP Stack trace:
+[27-Mar-2019 12:11:22 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:0
+[27-Mar-2019 12:11:22 UTC] PHP   2. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\controlPanel\index.php:38
+[27-Mar-2019 12:11:22 UTC] PHP   3. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:22 UTC] PHP   4. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:22 UTC] PHP   5. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:22 UTC] PHP   6. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP   7. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP   8. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP   9. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  10. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  11. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  12. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  13. templateTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:69
+[27-Mar-2019 12:11:22 UTC] PHP  14. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:235
+[27-Mar-2019 12:11:22 UTC] PHP  15. template\PageModel->setUp() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:22 UTC] PHP  16. require() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:57
+[27-Mar-2019 12:11:22 UTC] PHP  17. template\PageModel->render() C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\tags\_template.php:6
+[27-Mar-2019 12:11:22 UTC] PHP  18. template\PageModel->setUpTemplate() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:96
+[27-Mar-2019 12:11:22 UTC] PHP  19. TagProcessor->processTags() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php:92
+[27-Mar-2019 12:11:22 UTC] PHP  20. TagProcessor->processTagsDOM() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:125
+[27-Mar-2019 12:11:22 UTC] PHP  21. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:130
+[27-Mar-2019 12:11:22 UTC] PHP  22. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  23. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  24. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  25. TagProcessor->processDOMNode() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:84
+[27-Mar-2019 12:11:22 UTC] PHP  26. standardTag->renderTag() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:80
+[27-Mar-2019 12:11:22 UTC] PHP  27. standardTag->getAttributes() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:305
+[27-Mar-2019 12:11:23 UTC] PHP  28. standardTag->processPageAttr() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php:284
+[27-Mar-2019 12:20:52 UTC] PHP Fatal error:  Uncaught Error: Undefined class constant 'project_formdescription' in C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\forms\project_form.php:8
+Stack trace:
+#0 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php(57): require()
+#1 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php(92): template\PageModel->setUp()
+#2 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php(96): template\PageModel->setUpTemplate()
+#3 C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\tags\_template.php(6): template\PageModel->render()
+#4 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php(57): require('C:\\Users\\Luca F...')
+#5 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\template_file.php(92): template\PageModel->setUp()
+#6 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\tagProcessor.php(235): template\PageModel->setUpTemplate()
+#7 C:\Users\Luca Faggion\Universita\BasiDati\progetto\priva in C:\Users\Luca Faggion\Universita\BasiDati\progetto\templates\forms\project_form.php on line 8

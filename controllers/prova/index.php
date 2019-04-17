@@ -5,11 +5,16 @@
     require_once(ROOT."/private/template_file.php");
     require_once(ROOT."/private/session.php");
     require_once(ROOT."/private/services.php");
+    require_once(ROOT."/private/ControllerLogic.php");
+
 
     $Userauth = Services::getInstance()->UserAuth;
     // $Userauth->requireUserLogin();
     
-    $auth = UserRole::find("SELECT * FROM @this WHERE id=1");
+    // $auth = UserRole::find("SELECT * FROM @this WHERE id=1");
+    $test = new testClass();
+    $controller = new ControllerDecorator($test);
+    $controller->index();
 
     $modelTest = new template\PageModel();
     $modelTest->title = L::index_title;

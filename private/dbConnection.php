@@ -91,6 +91,7 @@ class dbConnection {
 /   la tabella Orders ha una foreign key in una sua colonna questa proprieta viene mappata nella classe
 /   non come valore dell'id della foreign key ma con una istanza della classe di dominio alla quale quella tabella
 /   e mappata (es: Orders FK PersonID -> (PersonID,'Persons') viene ritornata una istanza della classe Persons)
+/   con questa tipologia di implementazione e necessario evitare tabelle cicliche
 */
 abstract class Domain{
 

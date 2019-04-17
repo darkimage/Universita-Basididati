@@ -1663,3 +1663,39 @@ Stack trace:
 #3 C:\Users\luc-a\Desktop\Universita\Basididati\project\source\controllers\test\index.php(8): require_once('C:\\Users\\luc-a\\...')
 #4 {main}
   thrown in C:\Users\luc-a\Desktop\Universita\Basididati\project\source\private\dbConnection.php on line 56
+[09-Apr-2019 10:33:24 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+ in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php on line 54
+[09-Apr-2019 10:33:25 UTC] PHP Stack trace:
+[09-Apr-2019 10:33:25 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\test\index.php:0
+[09-Apr-2019 10:33:25 UTC] PHP   2. require_once() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\test\index.php:8
+[09-Apr-2019 10:33:25 UTC] PHP   3. dbConnection::getInstance() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:277
+[09-Apr-2019 10:33:25 UTC] PHP   4. dbConnection->__construct() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:29
+[09-Apr-2019 10:33:25 UTC] PHP   5. dbConnection->connect() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:37
+[09-Apr-2019 10:33:25 UTC] PHP   6. mysqli->__construct() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:54
+[09-Apr-2019 10:33:25 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+ in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:56
+Stack trace:
+#0 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php(37): dbConnection->connect()
+#1 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php(29): dbConnection->__construct()
+#2 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php(277): dbConnection::getInstance()
+#3 C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\test\index.php(8): require_once('C:\\Users\\Luca F...')
+#4 {main}
+  thrown in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php on line 56
+[10-Apr-2019 11:11:26 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+ in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php on line 54
+[10-Apr-2019 11:11:26 UTC] PHP Stack trace:
+[10-Apr-2019 11:11:26 UTC] PHP   1. {main}() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\test\index.php:0
+[10-Apr-2019 11:11:26 UTC] PHP   2. require_once() C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\test\index.php:8
+[10-Apr-2019 11:11:26 UTC] PHP   3. dbConnection::getInstance() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:277
+[10-Apr-2019 11:11:26 UTC] PHP   4. dbConnection->__construct() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:29
+[10-Apr-2019 11:11:26 UTC] PHP   5. dbConnection->connect() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:37
+[10-Apr-2019 11:11:26 UTC] PHP   6. mysqli->__construct() C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:54
+[10-Apr-2019 11:11:26 UTC] PHP Fatal error:  Uncaught Exception: Cannot connect to database: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+ in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php:56
+Stack trace:
+#0 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php(37): dbConnection->connect()
+#1 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php(29): dbConnection->__construct()
+#2 C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php(277): dbConnection::getInstance()
+#3 C:\Users\Luca Faggion\Universita\BasiDati\progetto\controllers\test\index.php(8): require_once('C:\\Users\\Luca F...')
+#4 {main}
+  thrown in C:\Users\Luca Faggion\Universita\BasiDati\progetto\private\dbConnection.php on line 56
