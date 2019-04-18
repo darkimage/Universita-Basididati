@@ -18,11 +18,23 @@
             $this->name = $name;
             $this->caller = $caller;
             $this->type = $type;
-            if($args){
-                $args = preg_replace("/\"/","",$args);
-                $this->args = explode(",", $args);
-            }
+            // if($args){
+            //     $args = preg_replace("/\"/","",$args);
+            //     $this->args = explode(",", $args);
+            // }
+            $test = $this->evalArgs($args);
             $this->refl_method = new ReflectionMethod(get_class($caller), $name);
+        }
+
+        private function evalArgs($args){
+            $arguments = [];
+            $count = preg_match_all("/{([^\}]+)}|[^\,]+/",$args,$matches,PREG_SET_ORDER);
+            if($count){
+                foreach ($matches as $key=>$value) {
+                    $arguments[$key] = eval("return ". ((count($value)-1) ? $value[1] : $value[0]) .";?>");
+                }
+            }
+            return $arguments;
         }
 
         function call(){
@@ -31,6 +43,13 @@
                 return true;
             }else
                 return $this->refl_method->invoke($this->caller, ...$this->args);
+        }
+    }
+
+    class ServiceMethod extends AnnotatedMethod{
+
+        function __construct(String $name, Object $caller, String $args, String $type){
+            parent::__construct(explode("->",$name)[1],$caller->{explode("->",$name)[0]},$args,$type);
         }
     }
 
@@ -70,12 +89,18 @@
         }
 
         private function processAnnotation(String $doc){
-            $regex = "/@method\s(pre|post)\s(bool|void)\s([^\s\(]+)\(([^\)]*)\)/";
+            $regex = "/@(service|method)\s(pre|post)\s(bool|void)\s([^\s\(]+)\((.+)\)/";
             $count = preg_match_all($regex, $doc,$matches);
             $annotations = ["post" => [], "pre"=>[]];
             for ($i=0; $i < $count ; $i++) {
-                $method = new AnnotatedMethod($matches[3][$i],$this->controller,$matches[4][$i],$matches[2][$i]);
-                array_push($annotations[$matches[1][$i]], $method);
+                $params = [$matches[4][$i],$this->controller,$matches[5][$i],$matches[3][$i]];
+                $method = null;
+                if($matches[1][$i] == "method"){
+                    $method = new AnnotatedMethod(...$params);
+                }else{
+                    $method = new ServiceMethod(...$params);
+                }
+                array_push($annotations[$matches[2][$i]], $method);
             }
             return $annotations;
         }
@@ -126,7 +151,9 @@
             $params = [];
             for ($i=0; $i < count($paramsArray); $i++) {
                 $keys = explode("=",$paramsArray[$i]);
-                $params[$keys[0]] = $keys[1];
+                if($keys[0]){
+                    $params[$keys[0]] = $keys[1];
+                }
             }
             return $params;
         }

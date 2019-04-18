@@ -19,7 +19,8 @@
 
         /**
          * @method pre bool test("test1","test2")
-         * @method post void redirect("prova","test",array("test"=>"test","test1"=>"test1"))
+         * @service post void UserAuth->getCurrentUser()
+         * @method post void redirect("prova","test",{array("test"=>"test","test1"=>"test1")})
          */
         public function index(){
             $innerBody = new template\PageModel();
