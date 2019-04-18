@@ -12,9 +12,9 @@
     // $Userauth->requireUserLogin();
     
     // $auth = UserRole::find("SELECT * FROM @this WHERE id=1");
-    $test = new testClass();
-    $controller = new ControllerDecorator($test);
-    $controller->index();
+    // $test = new testClass();
+    // $controller = new ControllerDecorator($test);
+    // $controller->index();
 
     $modelTest = new template\PageModel();
     $modelTest->title = L::index_title;

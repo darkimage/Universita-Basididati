@@ -34,14 +34,6 @@
         }
     }
 
-    class AnnotatedExpression {
-        private $data;
-        private $caller;
-        function __construct(String $data, Object $caller){
-
-        }
-    }
-
     class ControllerDecorator {
         private $reflection;
         private $controller;
@@ -49,6 +41,11 @@
         function __construct($controller){
             $this->controller = $controller;
             $this->reflection = new ReflectionClass(get_class($controller));
+            foreach (Services::getInstance()->services as $key => $value) {
+                if($this->reflection->hasProperty($key)){
+                    $this->controller->$key = Services::getInstance()->$key;
+                }
+            }
         }
 
         public function __call(string $name , array $arguments){
@@ -62,22 +59,23 @@
                 $exec = $value->call();
                 if(!$exec) break;
             }
-            //Eseguiamo il metodo chiamato
+            //Eseguiamo il metodo chiamato se uno degli 
             if($exec)
                 $this->controller->$name(...$arguments);
-            //Eseguiamo le POST annotation non ci interessa se ritornano vero o falso
-            foreach ($annotation["post"] as $value) {
-                $value->call();
-            }
+            //Eseguiamo le POST SOLO SE LE PRE FALLISCONO
+            else
+                foreach ($annotation["post"] as $value) {
+                    $value->call();
+                }
         }
 
         private function processAnnotation(String $doc){
-            $regex = "/@(method|expression)\s(pre|post)\s([^\s]+)=>({(.+)}|([^{}\s;\(]+)\(([^\)]*)\))/";
+            $regex = "/@method\s(pre|post)\s(bool|void)\s([^\s\(]+)\(([^\)]*)\)/";
             $count = preg_match_all($regex, $doc,$matches);
             $annotations = ["post" => [], "pre"=>[]];
-            for ($i=0; $i < $count ; $i++) { 
-                $method = new AnnotatedMethod($matches[6][$i],$this->controller,$matches[7][$i],$matches[3][$i]);
-                array_push($annotations[$matches[2][$i]], $method);
+            for ($i=0; $i < $count ; $i++) {
+                $method = new AnnotatedMethod($matches[3][$i],$this->controller,$matches[4][$i],$matches[2][$i]);
+                array_push($annotations[$matches[1][$i]], $method);
             }
             return $annotations;
         }
@@ -92,44 +90,45 @@
     }
 
     abstract class Controller{
-        public function test(String $test1, String $test2){
-            return $test1.$test2;
-        }
+        protected $params = [];
 
-        protected function needUserSession($authClosure){
-            $Userauth = Services::getInstance()->UserAuth;
-            if($Userauth->requireUserLogin()){
-                return false;
-            }
-            return $authClosure();
+        public function __construct(){
+            $this->params = $this->getCurrentParams();
         }
 
         abstract public function index();
-    }
 
-    class testClass extends Controller{
-        /**
-         * Undocumented function
-         *
-         * @return void
-         */
-         function test1(){
+        public function render(String $title,template\PageModel $pageModel){
+            $mainPage = new template\PageModel();
+            $mainPage->title = $title;
+            $mainPage->resources = $pageModel->resources;
+            $mainPage->body = $pageModel->setUpTemplate();
+            $mainPage->render();
+        }
 
-         }
+        public function redirect(String $controller,String $action="index",$params=[]){
+            $query = '';
+            foreach ($params as $key => $value) {
+                $query .= $key."=".$value;
+                if($key != array_key_last($params)){
+                    $query .= '&';
+                }
+            }
+            if($query)
+                $query = "&".$query;
+            header("location: /".$controller."?action=".$action.$query);
+            exit;
+        }
 
-        /**
-         * Undocumented function
-         * abc
-         * @method pre void=>test("test1","test2")
-         * @method post bool=>test1()
-         * 
-         */
-        public function index(){
-
+        protected function getCurrentParams(){
+            $query = $_SERVER['QUERY_STRING'];
+            $paramsArray = explode('&',$query);
+            $params = [];
+            for ($i=0; $i < count($paramsArray); $i++) {
+                $keys = explode("=",$paramsArray[$i]);
+                $params[$keys[0]] = $keys[1];
+            }
+            return $params;
         }
     }
-
-
-
-
 ?>

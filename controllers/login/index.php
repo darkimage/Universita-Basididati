@@ -1,11 +1,10 @@
 <?php
-	if(!defined('ROOT'))
-		define('ROOT', $_SERVER['DOCUMENT_ROOT']);
-	
-	require_once(ROOT."/private/session.php");
-    require_once(ROOT."/private/template_file.php");
-    require_once(ROOT."/private/utils.php");
-    require_once(ROOT."/private/services.php");
+    if(!defined('ROOT')){
+        define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+    }
+    require_once(ROOT."/private/session.php");
+    require_once(ROOT."/private/ControllerLogic.php");
+    require_once(ROOT."/private/i18n.php");
 
     $redirect = array_key_exists('HTTP_REFERER',$_SERVER) ? $_SERVER['HTTP_REFERER'] : '';
     if(isset($_GET['referee'])){
@@ -31,4 +30,8 @@
     );
     $mainPage->body = $loginFormModel->setUpTemplate();
     $mainPage->render();
+
+
+
+    
 ?>
