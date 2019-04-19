@@ -26,4 +26,25 @@ function redirectToError(String $error){
     header('location:'.URL."error");
 }
 
+function getReferee($fromquery=true){
+    $redirect = "";
+    if(!$fromquery)
+        $redirect = array_key_exists('HTTP_REFERER',$_SERVER) ? $_SERVER['HTTP_REFERER'] : '';
+    if(!$redirect){
+        if(isset($_GET['referee'])){
+            foreach ($_GET as $key => $value) {
+                if($key == 'referee'){
+                    $startpath = explode("?",$value);
+                    foreach ($startpath as $key => $value) {
+                        $redirect .= (!$key) ? $value."?" : $value;
+                    }
+                }
+                else
+                    $redirect .= "&".$key."=".$value;
+            }
+        }
+    }
+    return $redirect;
+}
+
 ?>

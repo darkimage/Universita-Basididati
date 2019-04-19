@@ -89,7 +89,7 @@
         }
 
         private function processAnnotation(String $doc){
-            $regex = "/@(service|method)\s(pre|post)\s(bool|void)\s([^\s\(]+)\((.+)\)/";
+            $regex = "/@(service|method)\s(pre|post)\s(bool|void)\s([^\s\(]+)\((.*)\)/";
             $count = preg_match_all($regex, $doc,$matches);
             $annotations = ["post" => [], "pre"=>[]];
             for ($i=0; $i < $count ; $i++) {
@@ -106,8 +106,8 @@
         }
 
         public function serve(){
-            if(isset($_GET)){
-                $this->$_GET['action']();
+            if(isset($_GET['action'])){
+                $this->{$_GET['action']}();
             }else{
                 $this->index();
             }
@@ -154,6 +154,9 @@
                 if($keys[0]){
                     $params[$keys[0]] = $keys[1];
                 }
+            }
+            foreach ($_POST as $key => $value) {
+                $params[$key] = $value;
             }
             return $params;
         }

@@ -9,18 +9,10 @@
     class testcontroller extends Controller{
         public $UserAuth;
 
-        function test1(){
-            return "ciao";
-        }
-
-        public function test(String $test1, String $test2){
-            return false;
-        }
-
         /**
-         * @method pre bool test("test1","test2")
-         * @service post void UserAuth->getCurrentUser()
-         * @method post void redirect("prova","test",{array("test"=>"test","test1"=>"test1")})
+         * @service pre bool UserAuth->requireUserLogin()
+         * @service pre bool UserAuth->UserHasAllAuths("ADMIN")
+         * @method post void redirect("error")
          */
         public function index(){
             $innerBody = new template\PageModel();
@@ -31,9 +23,13 @@
                     '<!--Test3-->' => 'Test3'
                 )
             );
-            $innerBody->templateFile = '/templates/index/main_body.php';
+            $innerBody->templateFile = '/templates/forms/project_form.php';
             $this->render(L::project_formadd,$innerBody);
             // $this->redirect('prova','test',array("test"=>'test','test1'=>'test1'));
+        }
+
+        public function logout(){
+            Session::getInstance()->destroy();
         }
     }
 

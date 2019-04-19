@@ -285,14 +285,14 @@ class standardTag extends htmlTag{
                     if(is_bool($pval)){
                         $att->value = $pageAttr[1][0].(($pval) ? 'true' : 'false').$pageAttr[3][0];
                     }else{
-                        $att->value = $pageAttr[1][0].((string)$pval).$pageAttr[3][0];
+                        $att->value = $pageAttr[1][0].((string)htmlspecialchars($pval)).$pageAttr[3][0];
                     }
                 }else if($pageAttr = $this->isCompileAttribute(urldecode($att->value))){
                     $pval = $this->evaluateAttr($pageAttr[2][0]);
                     if(is_bool($pval)){
                         $att->value = $pageAttr[1][0].(($pval) ? 'true' : 'false').$pageAttr[3][0];
                     }else{
-                        $att->value = $pageAttr[1][0].((string)$pval).$pageAttr[3][0];
+                        $att->value = $pageAttr[1][0].((string)htmlspecialchars($pval)).$pageAttr[3][0];
                     }
                 }
             }

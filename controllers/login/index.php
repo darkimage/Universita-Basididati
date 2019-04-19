@@ -6,11 +6,8 @@
     require_once(ROOT."/private/ControllerLogic.php");
     require_once(ROOT."/private/i18n.php");
 
-    $redirect = array_key_exists('HTTP_REFERER',$_SERVER) ? $_SERVER['HTTP_REFERER'] : '';
-    if(isset($_GET['referee'])){
-        $redirect = $_GET['referee'];
-    }
     $UserAuth = Services::getInstance()->UserAuth;
+    $redirect = getReferee(false);
     if($UserAuth->getCurrentUser()){
         header("location:".$redirect);
     }
@@ -19,7 +16,7 @@
     $loginFormModel->templateFile = '/templates/login/login_form.php';
     $loginFormModel->model = array(
         'method' => 'post',
-        'action' => '/login/authenticate'.'?referer='.$redirect
+        'action' => '/login/authenticate?referee='.$redirect
     );
     $mainPage = new template\PageModel();
     $mainPage->title = L::login_title;

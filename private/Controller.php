@@ -7,6 +7,6 @@
     $calling_controller = $_SERVER["SCRIPT_NAME"];
     $calling_controller_name = array_reverse(explode("/",$calling_controller))[1];
     $controller = new ControllerDecorator(new $calling_controller_name);
-    $controller->index();
+    $controller->serve();
     // $controller->serve();
 ?>
