@@ -1,3 +1,6 @@
+
+ErrorDocument 500 "Oops! We can't find that pesky file. Sorry."
+
 Options -MultiViews
 DirectorySlash Off
 

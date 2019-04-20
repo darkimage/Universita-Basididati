@@ -23,10 +23,10 @@ class UserAuth {
 		if($user)
 			return true;
 		$url = $_SERVER['REQUEST_URI'];
-		$path = substr(parse_url($url, PHP_URL_PATH),1);
-		$query = parse_url($url, PHP_URL_QUERY);
-		$url = $path.(($query) ? "?".$query : "");
-		header("location:".URL."login?referee=".$url);
+		$session = Session::getInstance();
+		$session->startSession();
+		$session->referee = URL.substr($url, 1);
+		header("location:".URL."login");
 		exit;
 	}
 

@@ -5,30 +5,55 @@
     require_once(ROOT."/private/session.php");
     require_once(ROOT."/private/ControllerLogic.php");
     require_once(ROOT."/private/i18n.php");
+    require_once(ROOT."/private/ControllerLogic.php");
 
-    $UserAuth = Services::getInstance()->UserAuth;
-    $redirect = getReferee(false);
-    if($UserAuth->getCurrentUser()){
-        header("location:".$redirect);
+    class login extends Controller{
+        public $UserAuth;
+
+        public function index(){
+            $session = Session::getInstance();
+            $session->startSession();
+            if($this->UserAuth->getCurrentUser()){
+                header("location:".$session->referee);
+            }
+
+            $loginFormModel = new template\PageModel();
+            $loginFormModel->templateFile = '/templates/login/login_form.php';
+            $loginFormModel->model = array(
+                'method' => 'post',
+                'action' => '/login?action=authenticate'
+            );
+            $loginFormModel->resources = array(
+                'header' => array(
+                    'css' => "login"
+                )
+            );
+            $this->render(L::login_title,$loginFormModel);
+        }
+
+        public function authenticate(){
+            $user = Domain::fromFormData(FORM_METHOD_POST);
+            if(!$user)
+                $this->redirect("errors");
+            $session = Session::getInstance();
+            $referee = Session::getInstance()->referee;
+            $user_db = User::find("SELECT * FROM @this WHERE NomeUtente=:username",['username'=>$user->NomeUtente]);
+            if($user_db){
+                if(password_verify($user->Password,$user_db->Password)){
+                    Session::getInstance()->destroy();
+                    Session::getInstance()->startSession();
+                    $session->user = $user_db;
+                    header("location:".(($referee) ? $referee : URL));
+                    exit;
+                }
+            }
+            $session->startSession();
+            $session->flash = L::login_error;
+            $this->redirect("login");
+        }
+        
     }
 
-    $loginFormModel = new template\PageModel();
-    $loginFormModel->templateFile = '/templates/login/login_form.php';
-    $loginFormModel->model = array(
-        'method' => 'post',
-        'action' => '/login/authenticate?referee='.$redirect
-    );
-    $mainPage = new template\PageModel();
-    $mainPage->title = L::login_title;
-    $mainPage->resources = array(
-        'header' => array(
-            'css' => "login"
-        )
-    );
-    $mainPage->body = $loginFormModel->setUpTemplate();
-    $mainPage->render();
-
-
-
+    require_once(ROOT."/private/Controller.php");
     
 ?>

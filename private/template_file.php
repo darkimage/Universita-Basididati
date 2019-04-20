@@ -5,6 +5,7 @@ if(!defined('ROOT')){
 }
 require_once(ROOT.'/private/i18n.php');
 require_once(ROOT.'/private/utils.php');
+require_once(ROOT.'/private/session.php');
 require_once(ROOT.'/private/tagProcessor.php');
 
 class PageModel{

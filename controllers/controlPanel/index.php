@@ -12,7 +12,7 @@
         return;
     }
     if(!$Userauth->UserHasAnyAuths('SUPERADMIN','ADMIN','USER')){
-        redirectToError(L::error_notauth);
+        // redirectToError(L::error_notauth); deprecated
         return;
     }
     

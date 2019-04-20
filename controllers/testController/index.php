@@ -12,7 +12,7 @@
         /**
          * @service pre bool UserAuth->requireUserLogin()
          * @service pre bool UserAuth->UserHasAllAuths("ADMIN")
-         * @method post void redirect("error")
+         * @method post void redirect("errors")
          */
         public function index(){
             $innerBody = new template\PageModel();
@@ -30,6 +30,18 @@
 
         public function logout(){
             Session::getInstance()->destroy();
+        }
+
+        public function testerror(){
+            $session = Session::getInstance();
+            $session->startSession();
+            $session->error = "TESTING ERRORS";
+            $this->redirect("errors");
+        }
+
+        public function test500(){ //not funziona ancora con ErrorDocument di htaccess (troppo tardi? server config?)
+            header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
+            exit;
         }
     }
 

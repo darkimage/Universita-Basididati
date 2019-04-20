@@ -107,7 +107,10 @@
 
         public function serve(){
             if(isset($_GET['action'])){
-                $this->{$_GET['action']}();
+                $method = $this->reflection->getMethod($_GET['action']);
+                if($method->isPublic()){
+                    $this->{$_GET['action']}();
+                }
             }else{
                 $this->index();
             }
