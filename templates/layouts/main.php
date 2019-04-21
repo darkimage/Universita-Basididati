@@ -2,9 +2,9 @@
     <head>
         <title><!--Title--></title>
         <meta base="/">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/stylesheets/application.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <t-resource type="stylesheet" src="./fontawesome/css/all.css"/>
+        <t-resource type="stylesheet" src="application.css"/>
         <!--Resources_Header-->
         <!--Header-->
     </head>
@@ -24,10 +24,10 @@
                 <a href="mailto:luca.faggion@studenti.unipr.it"> Luca Faggion.</a>
             </div>
         </footer>
-        <script src="/scripts/popper/popper.min.js"></script>
-        <script src="/scripts/jquery/jquery-3.3.1.min.js"></script>
-        <script src="/scripts/bootstrap/bootstrap.js"></script>
-        <script src="/scripts/application.js"></script>
+        <t-resource type="script" src="popper/popper.min.js"/>
+        <t-resource type="script" src="jquery/jquery-3.3.1.min.js"/>
+        <t-resource type="script" src="bootstrap/bootstrap.js"/>
+        <t-resource type="script" src="application.js"/>
         <!--Resources_Body-->
     </body>
 </html>

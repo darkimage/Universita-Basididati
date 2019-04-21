@@ -51,7 +51,6 @@ class TagProcessor{
         if($html){
             $libxmlErrors = libxml_use_internal_errors(true);
             $this->doc->loadHTML($html);
-            // $test = $this->doc->saveHTML();
             libxml_use_internal_errors($libxmlErrors);
         }
         $this->tags = TagLoader::getInstance()->getTags();
@@ -61,7 +60,6 @@ class TagProcessor{
         $test = $this->doc->saveHTML($node);
         $rm = [];
         foreach($node->childNodes as $curr){
-            // $test = $this->doc->saveHTML($curr);
             $standardTag = true;
             foreach ($this->tags as $name => $tagClass) {
                 if($curr->nodeName == $name){
@@ -98,8 +96,6 @@ class TagProcessor{
     private function evalNode(DOMNode $baseNode){
         if($baseNode->nodeType == 3){
             $doc = new DOMDocument();
-            // $test1 = $this->doc->saveHTML();
-            // $test = $this->doc->saveHTML($baseNode);
             $isPhp = preg_match_all('/\${(.+)}/s',$this->doc->saveHTML($baseNode),$matches);
             if($isPhp){
                 ob_start();
@@ -137,15 +133,19 @@ abstract class htmlTag{
     private $doc;
     protected $node;
     protected $name = NULL;
-    private $model = [];
+    protected $model = [];
     private $tagNode;
     protected $page;
+    protected $sourceTag = 'body';
 
     function __construct(DOMDOcument $doc,DOMNode $node,template\PageModel $page){
         $this->doc = $doc;
         $this->node = $node;
-        // $test = $this->doc->saveHTML($node);
         $this->page = $page;
+
+        $this->addToModel($this->getModel());
+        $this->addToModel($this->page->model);
+        $this->getAttributes();
     }
 
     abstract protected function getModel();
@@ -225,11 +225,9 @@ abstract class htmlTag{
     }
 
     public function renderTag(){
-        $this->addToModel($this->getModel());
-        $this->addToModel($this->page->model);
-        $this->getAttributes();
+
         $tagModel = new template\PageModel();
-        $tagModel->templateFile = '/templates/tags/'.'_'.$this->name.".php";
+        $tagModel->templateFile = '/templates/tags/'.'_'.$this->name.'.php';
         $tagModel->model = $this->model;
         $tagModel->body = $this->getInnerHTML($this->node);
         $this->tagNode = $this->importHTML($this->doc,$this->node, $tagModel->setUpTemplate());
@@ -245,11 +243,9 @@ abstract class htmlTag{
         $libxmlErrors = libxml_use_internal_errors(true);
         $doc1->loadHTML($file);
         libxml_use_internal_errors($libxmlErrors);
-        //$container = $doc->createElement('div');
-        $importnode = $doc1->getElementsByTagName('body')->item(0);
+        $importnode = $doc1->getElementsByTagName($this->sourceTag)->item(0);
         if($importnode){
             $tempNode = $doc->importNode($importnode,true);
-            //$container->appendChild($tempNode);
             return $tempNode;
         }else{
             return null;

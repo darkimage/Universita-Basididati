@@ -18,10 +18,6 @@
             $this->name = $name;
             $this->caller = $caller;
             $this->type = $type;
-            // if($args){
-            //     $args = preg_replace("/\"/","",$args);
-            //     $this->args = explode(",", $args);
-            // }
             $test = $this->evalArgs($args);
             $this->refl_method = new ReflectionMethod(get_class($caller), $name);
         }

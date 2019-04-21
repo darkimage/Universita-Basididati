@@ -43,6 +43,12 @@
             header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
             exit;
         }
+
+        public function resource(){
+            $innerBody = new template\PageModel();
+            $innerBody->templateFile = '/templates/prova/prova_resource.php';
+            $this->render("test resource",$innerBody);
+        }
     }
 
     require_once(ROOT."/private/Controller.php");

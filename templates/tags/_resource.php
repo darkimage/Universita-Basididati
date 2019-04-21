@@ -2,8 +2,20 @@
 if(isset($this->model['type']))
 {
     $type = $this->model['type'];
+    $src = $this->model['src'];
     if($type == 'stylesheet'){
-        echo "<link rel='stylesheet' href=".$this->model['src'].">";
+        if( $src[0] != '.')
+            $src = "/stylesheets"."/".$src;
+        else
+            $src = substr($src,1);
+        echo "<link rel='stylesheet' href='".$src."'>";
+    }
+    if($type == 'script'){
+        if($this->getStatic("Body")){
+            echo "<script>".$this->getStatic("Body")."</script>";
+        }else{
+            echo "<script src='/scripts/". $src."'/>";
+        }
     }
 }
 ?>
