@@ -11,9 +11,17 @@
         public function index(){
             $errorpage = new template\PageModel();
             $errorpage->templateFile = '/templates/error/error_page.php';
+            if(isset($this->params['error'])){
+                $errorpage->model = array(
+                    "error" => $this->params['error']
+                );
+            }
             $this->render(L::error_title,$errorpage);
         }
 
+        public function notauth(){
+            $this->redirect("errors","index",array("error"=>L::error_notauth),"SESSION");
+        }
     }
 
     require_once(ROOT."/private/Controller.php");

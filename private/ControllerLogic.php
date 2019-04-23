@@ -18,7 +18,7 @@
             $this->name = $name;
             $this->caller = $caller;
             $this->type = $type;
-            $test = $this->evalArgs($args);
+            $this->args = $this->evalArgs($args);
             $this->refl_method = new ReflectionMethod(get_class($caller), $name);
         }
 
@@ -43,7 +43,6 @@
     }
 
     class ServiceMethod extends AnnotatedMethod{
-
         function __construct(String $name, Object $caller, String $args, String $type){
             parent::__construct(explode("->",$name)[1],$caller->{explode("->",$name)[0]},$args,$type);
         }
@@ -64,6 +63,7 @@
         }
 
         public function __call(string $name , array $arguments){
+            $this->controller->setParams();
             $method = $this->reflection->getMethod($name);
             $doc = $method->getDocComment();
             $annotation = $this->processAnnotation($doc);
@@ -116,7 +116,7 @@
     abstract class Controller{
         protected $params = [];
 
-        public function __construct(){
+        public function setParams(){
             $this->params = $this->getCurrentParams();
         }
 
@@ -130,21 +130,33 @@
             $mainPage->render();
         }
 
-        public function redirect(String $controller,String $action="index",$params=[]){
-            $query = '';
-            foreach ($params as $key => $value) {
-                $query .= $key."=".$value;
-                if($key != array_key_last($params)){
-                    $query .= '&';
+        public function redirect(String $controller,String $action="index",$params=[],$type="GET"){
+            if($type == "GET"){
+                $query = '';
+                foreach ($params as $key => $value) {
+                    $query .= $key."=".$value;
+                    if($key != array_key_last($params)){
+                        $query .= '&';
+                    }
                 }
+                if($query)
+                    $query = "&".$query;
+                header("location: /".$controller."?action=".$action.$query);
+                exit;
+            }else if($type == "SESSION"){
+                $sessionParams = [];
+                foreach ($params as $key => $value) {
+                    $sessionParams[$key] = $value;
+                }
+                Session::getInstance()->params = $sessionParams;
+                header("location: /".$controller."?action=".$action);
+                exit;
             }
-            if($query)
-                $query = "&".$query;
-            header("location: /".$controller."?action=".$action.$query);
-            exit;
         }
 
+        //Prende i parametri da richieste GET,POST e in SESSION['params']
         protected function getCurrentParams(){
+            unset($this->params);
             $query = $_SERVER['QUERY_STRING'];
             $paramsArray = explode('&',$query);
             $params = [];
@@ -157,6 +169,13 @@
             foreach ($_POST as $key => $value) {
                 $params[$key] = $value;
             }
+            $session = Session::getInstance();
+            if(isset($session->params)){
+                foreach ($session->params as $key => $value) {
+                    $params[$key] = $value;
+                }
+            }
+            unset($session->params);
             return $params;
         }
     }

@@ -18,32 +18,27 @@
             }
 
             $loginFormModel = new template\PageModel();
-            $loginFormModel->templateFile = '/templates/login/login_form.php';
-            $loginFormModel->model = array(
-                'method' => 'post',
-                'action' => '/login?action=authenticate'
-            );
+            $loginFormModel->templateFile = '/templates/forms/login_form.php';
             $loginFormModel->resources = array(
                 'header' => array(
-                    'css' => "login"
+                    'stylesheet' => "login.css"
                 )
             );
             $this->render(L::login_title,$loginFormModel);
         }
 
         public function authenticate(){
-            $user = Domain::fromFormData(FORM_METHOD_POST);
+            $user = User::fromData($this->params);
             if(!$user)
                 $this->redirect("errors");
             $session = Session::getInstance();
-            $referee = Session::getInstance()->referee;
             $user_db = User::find("SELECT * FROM @this WHERE NomeUtente=:username",['username'=>$user->NomeUtente]);
             if($user_db){
                 if(password_verify($user->Password,$user_db->Password)){
                     Session::getInstance()->destroy();
                     Session::getInstance()->startSession();
                     $session->user = $user_db;
-                    header("location:".(($referee) ? $referee : URL));
+                    header("location:".(($this->params['referee']) ? $this->params['referee'] : URL));
                     exit;
                 }
             }

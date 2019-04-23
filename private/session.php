@@ -3,7 +3,6 @@
 		define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 	if(!defined('URL'))
 		define('URL', 'http://localhost:8014/');
-		
 
 class Session{
 	const SESSION_STARTED = TRUE;

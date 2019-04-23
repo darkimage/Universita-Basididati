@@ -8,6 +8,9 @@ require_once(ROOT.'/private/utils.php');
 require_once(ROOT.'/private/session.php');
 require_once(ROOT.'/private/tagProcessor.php');
 
+/**
+ * permette di definire un template
+ */
 class PageModel{
     private $fromString = false;
     private $isRaw = false;
@@ -18,6 +21,36 @@ class PageModel{
     public $templateFile = '/templates/layouts/main.php';
     public $model = [];
     
+    public function __get($name){
+        if(isset($this->model[$name]))
+            return $this->model[$name];
+        else
+            return null;
+	}
+
+    /**
+     * rende piu facile accedere alle proprieta del template
+     * si puo usare $this->nomeproprieta invece di $this->model->nomeproprieta
+     * o $this->model['nomeproprieta']
+    */
+    public function __set($name, $value){
+        $this->model[$name] = $value;
+    }
+
+    public function __unset($name){
+        unset($this->model[$name]);
+    }
+
+    public function __isset($name){
+        return isset($this->model[$name]);
+    }
+
+    /**
+     * crea le proprieta statiche di un template 
+     * ovvero quelle che sono sostituite prima della 
+     * ricorsione nodo per nodo
+     * permettono di definire la struttura che poi verra compilata
+    */
     private function generateStaticModel(){
         $this->model['static']['<!--Title-->'] = $this->title;
         $this->model['static']['<!--Header-->'] = $this->header;
@@ -106,15 +139,8 @@ class PageModel{
 
     function addResource($values){
         $res = '';
-        foreach ($values as $key => $value) {
-            $resource = new PageModel();
-            $resource->templateFile = '/templates/layouts/resources.php';
-            $resource->model = array(
-                'type' => $key,
-                'value' => $value
-            );
-            $res .= $resource->setUpTemplate();   
-        }
+        foreach ($values as $key => $value) 
+            $res .= "<t-resource type='".$key."' src='".$value."'/>";
         return $res;
     }
 }

@@ -49,6 +49,12 @@
             $innerBody->templateFile = '/templates/prova/prova_resource.php';
             $this->render("test resource",$innerBody);
         }
+
+        public function project(){
+            $body = new template\PageModel();
+            $body->templateFile = '/templates/forms/project_form.php';
+            $this->render("Form Testing",$body);
+        }
     }
 
     require_once(ROOT."/private/Controller.php");

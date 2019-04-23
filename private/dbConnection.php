@@ -21,10 +21,8 @@ class dbConnection {
     private $db;
     private static $instance = null;
 
-    public static function getInstance()
-    {
-      if(self::$instance == null)
-      {   
+    public static function getInstance(){
+      if(self::$instance == null){   
          $c = __CLASS__;
          self::$instance = new $c;
       }
@@ -106,24 +104,19 @@ abstract class Domain{
     abstract protected function hasMany();
     abstract public function primaryKey();
 
-    public static function fromFormData(int $method){
-        if($method == FORM_METHOD_POST){
-            if(!array_key_exists('domain',$_POST))
-                return false;
-            if($_POST['domain'] != 'none'){
-                $params = [];
-                $i = 0;
-                foreach ($_POST as $key => $value) {
-                    if($key != 'domain'){
-                        $params[$i] = array($key, $value);
-                        $i++;
-                    }
-                }
-                return new $_POST['domain'](...$params);
-            }else{
-                return false;
+    public static function fromData($params){
+        if(!array_key_exists('domain',$params))
+            return false;
+        $reflection = new ReflectionClass($params['domain']);
+        $proprieties = $reflection->getProperties(ReflectionProperty::IS_PUBLIC);
+        $args = [];
+        foreach ($proprieties as $key => $value) {
+            $prop = $value->name;
+            if(isset($params[$prop])){
+                array_push($args,array($prop,$params[$prop]));
             }
         }
+        return new $params['domain'](...$args);
     }
 
     public static function findAll(String $query,$variables=NULL,$limits=NULL){
@@ -206,7 +199,10 @@ abstract class Domain{
             $query = "INSERT INTO ".$class." VALUES( ";
             foreach ($resultAssoc as $key => $value) {
                 if($this->{$value['Field']}){
-                    $query .= "'".$this->{$value['Field']}."'";
+                    if(isset($this->belongsTo()[$value['Field']]))
+                        $query .= "'".$this->{$value['Field']}->id."'";
+                    else
+                        $query .= "'".$this->{$value['Field']}."'";
                 }else{
                     $query .= 'null';
                 }

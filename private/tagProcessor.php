@@ -96,7 +96,7 @@ class TagProcessor{
     private function evalNode(DOMNode $baseNode){
         if($baseNode->nodeType == 3){
             $doc = new DOMDocument();
-            $isPhp = preg_match_all('/\${(.+)}/s',$this->doc->saveHTML($baseNode),$matches);
+            $isPhp = preg_match_all('/\${([^}]+)/',$this->doc->saveHTML($baseNode),$matches);
             if($isPhp){
                 ob_start();
                 eval('?><?php '.htmlspecialchars_decode($matches[1][0]).' ?>');

@@ -1,5 +1,5 @@
 <?php 
-    for ($i=0; $i < $this->model['count']; $i++) { 
+    for ($i=0; $i < $this->count; $i++) { 
         echo $this->getStatic('Body');
     }
 ?>

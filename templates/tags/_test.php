@@ -1,4 +1,4 @@
 <div>
-    <?php echo $this->model['test'] ?>
+    <?php echo $this->test ?>
     <a><!--Body--></a>
 </div>

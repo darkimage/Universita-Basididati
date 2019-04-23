@@ -39,7 +39,7 @@ class UserAuth {
 			$res = 0;
 			foreach ($userRoles as $key => $value) {
 				foreach ($auths as $akey => $athority) {
-					if($value->role->authority == $athority){
+					if($value->Roleid->Authority == $athority){
 						$res++;
 					}
 				}

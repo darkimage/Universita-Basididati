@@ -4,11 +4,11 @@ if(!defined('ROOT')){
 }
 require_once(ROOT."/private/tagProcessor.php");
 
-foreach ($this->model['collection'] as $key => $value) {
+foreach ($this->collection as $key => $value) {
     $template = new template\PageModel();
     $template->model = array(
-        $this->model['key'] => $key,
-        $this->model['item'] => $value
+        $this->key => $key,
+        $this->item => $value
     );
     $template->addToModel($this->model);
     $template->setSourceString($this->getStatic('Body'));

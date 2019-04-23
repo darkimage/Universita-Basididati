@@ -1,8 +1,8 @@
 <?php
-if(isset($this->model['type']))
+if(isset($this->type))
 {
-    $type = $this->model['type'];
-    $src = $this->model['src'];
+    $type = $this->type;
+    $src = $this->src;
     if($type == 'stylesheet'){
         if( $src[0] != '.')
             $src = "/stylesheets"."/".$src;
