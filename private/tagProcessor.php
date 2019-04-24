@@ -199,13 +199,7 @@ abstract class htmlTag{
             return $this->page->model[$val];
         }
     }
-
-    // if($matches[7][0]){
-    //     return $this->page->model[$matches[7][0]][$matches[9][0]];
-    //  }else{
-    //      return $matches[10][0];
-    //  }
-
+    
     protected function isPageAttribute(String $value){
         $count = preg_match_all('/^(.+)?\@{(.+)}(.+)?$/', $value, $matches);
         if($count == 1){
