@@ -128,9 +128,11 @@
             $mainPage->resources = $pageModel->resources;
             $mainPage->body = $pageModel->setUpTemplate();
             $mainPage->render();
+            exit;
         }
 
-        public function redirect(String $controller,String $action="index",$params=[],$type="GET"){
+        public function redirect(String $controller,String $action="index",$params=[],$type="SESSION"){
+            // $params['referee'] = $_SERVER['REQUEST_URI'];
             if($type == "GET"){
                 $query = '';
                 foreach ($params as $key => $value) {

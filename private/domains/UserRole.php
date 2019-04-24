@@ -9,11 +9,11 @@ class UserRole extends Domain{
     public $Userid;
     public $Roleid;
 
-    protected function belongsTo(){
+    public function belongsTo(){
         return array('Userid'=>'User','Roleid'=>'Role');
     }
 
-    protected function hasMany(){}
+    public function hasMany(){}
 
     public function primaryKey(){
         return 'id';

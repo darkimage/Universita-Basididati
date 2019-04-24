@@ -11,9 +11,9 @@ class User extends Domain{
     public $NomeUtente;
     public $Password;
 
-    protected function belongsTo(){}
+    public function belongsTo(){}
 
-    protected function hasMany(){}
+    public function hasMany(){}
 
     public function primaryKey(){
         return 'id';

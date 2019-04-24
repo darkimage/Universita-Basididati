@@ -2,14 +2,20 @@
     <div class ="container-fluid">
         <h1 class="border-0"><?php echo L::project_formadd; ?></h1>
         <div class="pt-3 pl-5">
+        <input type="hidden" name="id" id="id" value="@{project->id:[null]}">
+        <input type="hidden" name="Completato" id="Completato" value="@{project->Completato:[null]}">
+        <input type="hidden" name="DataInizio" id="DataInizio" value="@{project->DataInizio:[${echo date('Y-m-d');}]}">
+        <input type="hidden" name="DataScadenza" id="DataScadenza" value="@{project->DataScadenza:[null]}">
+        <input type="hidden" name="Creatore" id="Creatore" value="@{project->Creatore->id:[null]}">
+        <input type="hidden" name="update" id="update" value="@{update:[false]}">
         <label for="Nome"><?php echo L::project_formname ?>:</label>
-        <input type="text" class="form-control" required id="Nome" name="Nome" value="@{Nome:[${echo '';}]}" placeholder="<?php echo L::project_formname ?>">
+        <input type="text" class="form-control" required id="Nome" name="Nome" value="@{project->Nome:[${echo '';}]}" placeholder="<?php echo L::project_formname ?>">
 
         <label class="pt-2" for="Descrizione"><?php echo L::project_formdescription ?>:</label>
-        <textarea class="form-control" required id="Descrizione" name="Descrizione" placeholder="<?php echo L::project_formdescription ?>"><?php if(isset($this->model['Descrizione'])) echo $this->model['Descrizione']; else ""; ?></textarea>
+        <textarea class="form-control" required id="Descrizione" name="Descrizione" placeholder="<?php echo L::project_formdescription ?>"><?php if(isset($this->model['project']->Descrizione)) echo $this->model['project']->Descrizione; else ""; ?></textarea>
 
         <label class="pt-2" for="DataScadenza"><?php echo L::project_formduedate ?>:</label>
-        <input type="date" class="form-control" required id="DataScadenza" name="DataScadenza" value="@{DataScadenza:[${echo date('Y-m-d');}]}">
+        <input type="date" class="form-control" required id="DataScadenza" name="DataScadenza" value="@{project->DataScadenza:[${echo date('Y-m-d');}]}">
 
         <input type="submit" class="mt-2 btn btn-primary" value="<?php echo L::common_submit ?>" name="Submit">
         </div>

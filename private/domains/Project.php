@@ -8,17 +8,17 @@ class Project extends Domain{
     public $id;
     public $Nome;
     public $Descrizione;
-    public $Complatato;
+    public $Completato;
     public $DataInizio;
     public $DataCompletamento;
     public $DataScadenza;
     public $Creatore;
 
-    protected function belongsTo(){
+    public function belongsTo(){
         return array('Creatore'=>'User');
     }
 
-    protected function hasMany(){}
+    public function hasMany(){}
 
     public function primaryKey(){
         return 'id';

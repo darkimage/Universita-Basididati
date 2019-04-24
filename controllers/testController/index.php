@@ -6,6 +6,12 @@
     require_once(ROOT."/private/ControllerLogic.php");
     require_once(ROOT."/private/i18n.php");
 
+    class provaclass{
+        public $test;
+        public $prova; 
+    }
+    
+
     class testcontroller extends Controller{
         public $UserAuth;
 
@@ -50,10 +56,30 @@
             $this->render("test resource",$innerBody);
         }
 
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
+        * @method post void redirect("errors","notauth")
+        */
         public function project(){
             $body = new template\PageModel();
             $body->templateFile = '/templates/forms/project_form.php';
+            $body->model = array(
+                "Creatore" => Session::getInstance()->user->id
+            );
             $this->render("Form Testing",$body);
+        }
+
+        public function testAttr(){
+            $body = new template\PageModel();
+            $body->templateFile = '/templates/prova/prova_attr.php';
+            $testclass = new provaclass();
+            $testclass->test = "ciao";
+            $testclass->prova = 'ciao1';
+            $body->model = array(
+                "arr" => $testclass
+            );
+            $this->render("Attr Testing",$body);
         }
     }
 

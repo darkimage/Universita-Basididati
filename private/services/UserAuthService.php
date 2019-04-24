@@ -24,8 +24,7 @@ class UserAuth {
 			return true;
 		$url = $_SERVER['REQUEST_URI'];
 		$session = Session::getInstance();
-		$session->startSession();
-		$session->referee = URL.substr($url, 1);
+		$session->params = [ "referee" => URL.substr($url, 1)];
 		header("location:".URL."login");
 		exit;
 	}

@@ -20,7 +20,7 @@
         }
 
         public function notauth(){
-            $this->redirect("errors","index",array("error"=>L::error_notauth),"SESSION");
+            $this->redirect("errors","index",["error"=>L::error_notauth]);
         }
     }
 

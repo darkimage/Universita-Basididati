@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS Project(
 	Nome VARCHAR(32) NOT NULL,
     Descrizione TEXT,
     Completato BOOL DEFAULT false,
-    DataInizio DATE DEFAULT NOW(),
-    DataCompletamento DATE NOT NULL,
+    DataInizio DATETIME NOT NULL,
+    DataCompletamento DATE NULL,
     DataScadenza DATE NOT NULL,
     Creatore int NOT NULL,
 	FOREIGN KEY (Creatore) REFERENCES User(id)

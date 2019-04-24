@@ -178,22 +178,33 @@ abstract class htmlTag{
     protected function processPageAttr($val){
         //check per tipo di inserzione esempio method:[post] dove method e il nome dell'attributo
         //ma se non specificato defaulta all'espressione presente tra le parentesi [] in questo caso 
-        //alla stringa post
-        $count = preg_match_all('/^(.+):\[(.+)\]$/', $val, $matches);
+        //alla stringa post ^((.+)->(.+)|(.+)):\[(.+)\]$
+        // $count = preg_match_all('/^(.+):\[(.+)\]$/', $val, $matches);
+        $count = preg_match_all('/^(([^->]+)->(.+)|.+):\[(.+)\]|([^->]+)->(.+)$/', $val, $matches);
         if($count == 1){
-           if(array_key_exists($matches[1][0],$this->page->model)){
-               return $this->page->model[$matches[1][0]];
-            }else{
-               if($default = $this->isCompileAttribute($matches[2][0])){
-                   return $this->evaluateAttr($default[2][0]);
-                }else{
-                   return $matches[2][0];
-                }
+           if(array_key_exists($matches[2][0],$this->page->model)){
+               if($matches[3][0])
+                    return eval('return $this->page->model[$matches[2][0]]->'.$matches[3][0]."?>");
+                else
+                    return $this->page->model[$matches[2][0]];
+            }else if($matches[4][0]){
+               if($default = $this->isCompileAttribute($matches[4][0]))
+                    return $this->evaluateAttr($default[2][0]);
+                else
+                    return $matches[4][0];
+            }else if($matches[5][0]){
+                return eval('return $this->page->model[$matches[5][0]]->'.$matches[6][0]."?>");
             }
         }else{
             return $this->page->model[$val];
         }
     }
+
+    // if($matches[7][0]){
+    //     return $this->page->model[$matches[7][0]][$matches[9][0]];
+    //  }else{
+    //      return $matches[10][0];
+    //  }
 
     protected function isPageAttribute(String $value){
         $count = preg_match_all('/^(.+)?\@{(.+)}(.+)?$/', $value, $matches);

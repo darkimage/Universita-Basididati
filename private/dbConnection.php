@@ -100,8 +100,8 @@ abstract class Domain{
         $this->mapToClass($params);
     }
 
-    abstract protected function belongsTo();
-    abstract protected function hasMany();
+    abstract public function belongsTo();
+    abstract public function hasMany();
     abstract public function primaryKey();
 
     public static function fromData($params){
@@ -184,7 +184,11 @@ abstract class Domain{
             }
             $query = "UPDATE ".$class." SET ";
             foreach ($resultAssoc as $key => $value) {
-                $query .= $value['Field']."='".$this->{$value['Field']}."'";
+                if(isset($this->belongsTo()[$value['Field']]))
+                    $val = $this->{$value['Field']}->id;
+                else
+                    $val = $this->{$value['Field']};
+                $query .= $value['Field']."=".(($val)? "'".$val."'" : "null")."";
                 if(($key+1) < count($resultAssoc))
                     $query .= ",";
             }

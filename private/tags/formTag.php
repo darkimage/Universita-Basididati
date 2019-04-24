@@ -15,15 +15,10 @@ class formTag extends htmlTag{
     }
 
     protected function getModel(){
-        $referee = null;
-        if(isset($_SERVER['HTTP_REFERER'])) {
-            $referee = $_SERVER['HTTP_REFERER'];
-        }  
-
         return array(
             'method' => 'post',
             'domain' => 'none',
-            'referee' => $referee
+            'referee' => $_SERVER['REQUEST_URI']
         );
     }
 }

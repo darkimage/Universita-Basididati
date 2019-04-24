@@ -8,9 +8,9 @@ class Role extends Domain{
     public $id;
     public $Authority;
     
-    protected function belongsTo(){}
+    public function belongsTo(){}
 
-    protected function hasMany(){}
+    public function hasMany(){}
 
     public function primaryKey(){
         return 'id';

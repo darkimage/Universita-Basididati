@@ -9,11 +9,11 @@ class Orders extends Domain{
     public $OrderNumber;
     public $PersonID;
 
-    protected function belongsTo(){
+    public function belongsTo(){
         return array('PersonID'=>'Persons');
     }
 
-    protected function hasMany(){}
+    public function hasMany(){}
 
     public function primaryKey(){
         return 'id';

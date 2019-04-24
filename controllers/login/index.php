@@ -14,7 +14,7 @@
             $session = Session::getInstance();
             $session->startSession();
             if($this->UserAuth->getCurrentUser()){
-                header("location:".$session->referee);
+                header("location:".$this->params['referee']);
             }
 
             $loginFormModel = new template\PageModel();
@@ -23,6 +23,9 @@
                 'header' => array(
                     'stylesheet' => "login.css"
                 )
+            );
+            $loginFormModel->model = array(
+                'referee' => $this->params['referee']
             );
             $this->render(L::login_title,$loginFormModel);
         }
