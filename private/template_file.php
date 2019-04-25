@@ -21,18 +21,18 @@ class PageModel{
     public $templateFile = '/templates/layouts/main.php';
     public $model = [];
     
-    public function __get($name){
-        if(isset($this->model[$name]))
-            return $this->model[$name];
-        else
-            return null;
-	}
-
     /**
      * rende piu facile accedere alle proprieta del template
      * si puo usare $this->nomeproprieta invece di $this->model->nomeproprieta
      * o $this->model['nomeproprieta']
     */
+    public function __get($name){
+        if(isset($this->model[$name]))
+            return $this->model[$name];
+        else
+            return null;
+    }
+    
     public function __set($name, $value){
         $this->model[$name] = $value;
     }

@@ -11,7 +11,6 @@
         public $prova; 
     }
     
-
     class testcontroller extends Controller{
         public $UserAuth;
 
@@ -79,7 +78,7 @@
             $body->model = array(
                 "arr" => $testclass
             );
-            $this->render("Attr Testing",$body);
+            $this->render("Testing syntax",$body);
         }
     }
 

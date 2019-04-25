@@ -14,6 +14,24 @@ class ifTag extends htmlTag{
     protected function getModel(){
         
     }
+
+    protected function getAttributes(){
+        parent::getAttributes();
+        $attributes = $this->node->attributes;
+        $count = $attributes->length;
+        for ($i=0; $i < $count; $i++) {
+            $att = $attributes->item($i);
+            if($att->nodeName == 'test'){
+                if($pageAttr = $this->isPageAttribute(urldecode($att->value))){
+                    $this->model[$att->name] = ($this->processPageAttr($pageAttr[2][0])) ? true : false;
+                }else if($pageAttr = $this->isCompileAttribute(urldecode($att->value))){
+                    $this->model[$att->name] = eval('return ('.$pageAttr[2][0].') ? true : false; ?>');
+                }else{
+                    $this->model[$att->name] = ($att->value == 'true') ? true : false;
+                }
+            }
+        }
+    }
 }
 
 ?>

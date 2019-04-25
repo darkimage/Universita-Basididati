@@ -1,7 +1,5 @@
 <?php
-Session::getInstance();
-$test = ($this->test === 'true') ? true : false;
-if($test){
+if($this->test){
     echo $this->getStatic('Body');
 }
 ?>

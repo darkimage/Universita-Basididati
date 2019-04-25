@@ -150,6 +150,26 @@ abstract class htmlTag{
 
     abstract protected function getModel();
 
+    public function __get($name){
+        if(isset($this->model[$name]))
+            return $this->model[$name];
+        else
+            return null;
+    }
+    
+    public function __set($name, $value){
+        $this->model[$name] = $value;
+    }
+
+    public function __unset($name){
+        unset($this->model[$name]);
+    }
+
+    public function __isset($name){
+        return isset($this->model[$name]);
+    }
+
+
     protected function getAttributes(){
         $attributes = $this->node->attributes;
         $count = $attributes->length;
