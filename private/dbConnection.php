@@ -188,7 +188,7 @@ abstract class Domain{
                     $val = $this->{$value['Field']}->id;
                 else
                     $val = $this->{$value['Field']};
-                $query .= $value['Field']."=".(($val)? "'".$val."'" : "null")."";
+                $query .= $value['Field']."=".(($val != null)? "'".$val."'" : "null")."";
                 if(($key+1) < count($resultAssoc))
                     $query .= ",";
             }
@@ -202,7 +202,7 @@ abstract class Domain{
             }
             $query = "INSERT INTO ".$class." VALUES( ";
             foreach ($resultAssoc as $key => $value) {
-                if($this->{$value['Field']}){
+                if($this->{$value['Field']} != null ){
                     if(isset($this->belongsTo()[$value['Field']]))
                         $query .= "'".$this->{$value['Field']}->id."'";
                     else

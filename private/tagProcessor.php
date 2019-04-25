@@ -200,7 +200,7 @@ abstract class htmlTag{
         //ma se non specificato defaulta all'espressione presente tra le parentesi [] in questo caso 
         //alla stringa post ^((.+)->(.+)|(.+)):\[(.+)\]$
         // $count = preg_match_all('/^(.+):\[(.+)\]$/', $val, $matches);
-        $count = preg_match_all('/^(([^->]+)->(.+)|.+):\[(.+)\]|([^->]+)->(.+)$/', $val, $matches);
+        $count = preg_match_all('/^(([^->]+)->(.+)|.+):\[(.*)\]|([^->]+)->(.+)$/', $val, $matches);
         if($count == 1){
            if(array_key_exists($matches[2][0],$this->page->model)){
                if($matches[3][0])

@@ -22,6 +22,10 @@
         public function notauth(){
             $this->redirect("errors","index",["error"=>L::error_notauth]);
         }
+
+        public function notfound(){
+            $this->redirect("errors","index",["error"=>L::error_notfound]);
+        }
     }
 
     require_once(ROOT."/private/Controller.php");

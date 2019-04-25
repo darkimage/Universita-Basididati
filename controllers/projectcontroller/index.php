@@ -28,10 +28,20 @@
             try {
                 $project->save();
             } catch (Throwable $th) {
-                echo $th;
+                $this->redirect('errors');
                 exit;
             }
             $this->redirect('projectcontroller','show',['id'=>$project->id],"GET");
+        }
+
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        */
+        public function addForm(){
+            $body = new template\PageModel();
+            $body->templateFile = '/templates/forms/project_form.php';
+            $body->model = [ "user" => $this->UserAuth->getCurrentUser()];
+            $this->render(L::project_formadd,$body);
         }
 
         public function show(){

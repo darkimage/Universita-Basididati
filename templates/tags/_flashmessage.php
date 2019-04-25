@@ -1,4 +1,4 @@
-<t-if test="${(Session::getInstance()->flash) ? print('true') : print('false'); }">
+<t-if test="${Session::getInstance()->flash}">
     <div class="alert alert-danger">
         ${ echo Session::getInstance()->flash; }
     </div>

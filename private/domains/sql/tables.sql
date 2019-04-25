@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS Project(
 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	Nome VARCHAR(32) NOT NULL,
     Descrizione TEXT,
-    Completato BOOL DEFAULT false,
+    Completato BOOL,
     DataInizio DATETIME NOT NULL,
     DataCompletamento DATE NULL,
     DataScadenza DATE NOT NULL,

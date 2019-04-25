@@ -1,5 +1,6 @@
 
-ErrorDocument 500 "Oops! We can't find that pesky file. Sorry."
+ErrorDocument 500 /controllers/errors/index.php?action=index
+ErrorDocument 404 /controllers/errors/index.php?action=notfound
 
 Options -MultiViews
 DirectorySlash Off
@@ -13,17 +14,16 @@ RewriteCond %{HTTP_HOST} !^m\.
 RewriteRule ^$ controllers/test/index.php [L]
 
 #base redirect rule
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule index.php controllers/test/index.php [L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule index.php controllers/test/index.php [L]
 
 #controller redirect to internal file rule
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)/(.+)$ controllers/$1/$2.php [L]
-
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(.*)/(.+)$ controllers/$1/$2.php [L]
 
 # controller redirect rule
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*[^/])$ controllers/$1/index.php [L]
+RewriteRule ^(.*[^\/])$ controllers/$1/index.php [L]
 
 
 <Files *.*>
