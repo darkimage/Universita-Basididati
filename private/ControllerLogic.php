@@ -131,8 +131,11 @@
             exit;
         }
 
-        public function redirect(String $controller,String $action="index",$params=[],$type="SESSION"){
-            // $params['referee'] = $_SERVER['REQUEST_URI'];
+        public static function redirect(String $controller,String $action="index",$params=[],$type="SESSION"){
+            if($controller == "/"){
+                header("location:/");
+                exit;
+            }
             if($type == "GET"){
                 $query = '';
                 foreach ($params as $key => $value) {
@@ -141,9 +144,7 @@
                         $query .= '&';
                     }
                 }
-                if($query)
-                    $query = "&".$query;
-                header("location: /".$controller."?action=".$action.$query);
+                header("location: /".$controller."/".$action."?".$query);
                 exit;
             }else if($type == "SESSION"){
                 $sessionParams = [];
@@ -151,9 +152,11 @@
                     $sessionParams[$key] = $value;
                 }
                 Session::getInstance()->params = $sessionParams;
-                header("location: /".$controller."?action=".$action);
+                header("location: /".$controller."/".$action);
                 exit;
             }
+            header("location:/");
+            exit;
         }
 
         //Prende i parametri da richieste GET,POST e in SESSION['params']

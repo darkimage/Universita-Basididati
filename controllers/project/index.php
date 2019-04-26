@@ -7,7 +7,7 @@
     require_once(ROOT."/private/dbConnection.php");
     require_once(ROOT."/private/i18n.php");
 
-    class projectcontroller extends Controller{
+    class projectController extends Controller{
         public $UserAuth;
 
         public function index(){

@@ -23,8 +23,8 @@ CREATE TABLE IF NOT EXISTS UserRole(
 CREATE TABLE IF NOT EXISTS Project(
 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	Nome VARCHAR(32) NOT NULL,
-    Descrizione TEXT,
-    Completato BOOL,
+    Descrizione TEXT NOT NULL,
+    Completato BOOL NOT NULL,
     DataInizio DATETIME NOT NULL,
     DataCompletamento DATE NULL,
     DataScadenza DATE NOT NULL,

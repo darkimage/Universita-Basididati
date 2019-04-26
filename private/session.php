@@ -7,7 +7,7 @@
 class Session{
 	const SESSION_STARTED = TRUE;
 	const SESSION_NOT_STARTED = FALSE;
-	public static $lifetime = 300;
+	public static $lifetime = 60*60;
 	private $sessionState = self::SESSION_NOT_STARTED; // The state of the session
 	private static $instance; 
 	
@@ -36,7 +36,7 @@ class Session{
 	public function startSession(){
 		if ( $this->sessionState == self::SESSION_NOT_STARTED ){
 			$this->sessionState = session_start();
-			setcookie(session_name(),session_id(),time()+self::$lifetime);
+			setcookie(session_name(),session_id(),time()+self::$lifetime,'/');
 		}
 		return $this->sessionState;
 	}

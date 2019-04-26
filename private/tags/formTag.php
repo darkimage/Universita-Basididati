@@ -10,7 +10,7 @@ class formTag extends htmlTag{
         parent::__construct($doc,$node,$page);
         $this->name = "form";
         if(isset($this->model['controller']))
-            $this->model['action'] = URL.$this->model['controller']."?action=".$this->model['action'];
+            $this->model['action'] = URL.$this->model['controller']."/".$this->model['action'];
 
     }
 

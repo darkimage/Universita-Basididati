@@ -19,3 +19,7 @@
 <t-if test="@{arr:[false]}">
     ok page attr with valid attr
 </t-if>
+
+<!-- LINK EXPRESSIONS -->
+<t-link controller="project" action="addForm">Link to Project</t-link><br>
+<t-link href="/test">Link to a 404 page</t-link>

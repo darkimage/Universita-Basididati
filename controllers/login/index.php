@@ -7,14 +7,17 @@
     require_once(ROOT."/private/i18n.php");
     require_once(ROOT."/private/ControllerLogic.php");
 
-    class login extends Controller{
+    class loginController extends Controller{
         public $UserAuth;
 
         public function index(){
             $session = Session::getInstance();
             $session->startSession();
+            if(!isset($this->params['referee']))
+                Controller::redirect("/");
             if($this->UserAuth->getCurrentUser()){
                 header("location:".$this->params['referee']);
+                exit;
             }
 
             $loginFormModel = new template\PageModel();

@@ -6,15 +6,15 @@
     require_once(ROOT."/private/template_file.php");
     require_once(ROOT."/private/ControllerLogic.php");
 
-    class errors extends Controller{
+    class errorsController extends Controller{
         
         public function index(){
             $errorpage = new template\PageModel();
             $errorpage->templateFile = '/templates/error/error_page.php';
             if(isset($this->params['error'])){
-                $errorpage->model = array(
+                $errorpage->model = [ 
                     "error" => $this->params['error']
-                );
+                ];
             }
             $this->render(L::error_title,$errorpage);
         }

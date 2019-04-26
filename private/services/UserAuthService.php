@@ -6,6 +6,8 @@ require_once(ROOT."/private/session.php");
 require_once(ROOT."/private/template_file.php");
 require_once(ROOT."/private/utils.php");
 require_once(ROOT."/private/dbConnection.php");
+require_once(ROOT."/private/ControllerLogic.php");
+
 
 class UserAuth {
 
@@ -23,10 +25,7 @@ class UserAuth {
 		if($user)
 			return true;
 		$url = $_SERVER['REQUEST_URI'];
-		$session = Session::getInstance();
-		$session->params = [ "referee" => URL.substr($url, 1)];
-		header("location:".URL."login");
-		exit;
+		Controller::redirect("login","index",[ "referee" => URL.substr($url, 1)]);
 	}
 
 	function UserHasAllAuths(...$auths){

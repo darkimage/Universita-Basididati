@@ -1,0 +1,1 @@
+<a href="@{href}" class="@{class:[]}" style="@{style:[]}"><?php echo $this->getStatic("Body"); ?></a>
