@@ -4,14 +4,43 @@ if(!defined('ROOT')){
 }
 require_once(ROOT."/private/template_file.php");
 
+/**
+ * Riutilizzo di Codice per varie Classi
+ */
+trait ModelAccess{
+    /**
+     * rende piu facile accedere alle proprieta del template
+     * si puo usare $this->nomeproprieta invece di $this->model['nomeproprieta']
+    */
+    public function __get($name){
+        if(isset($this->model[$name]))
+            return $this->model[$name];
+        else
+            return null;
+    }
+    
+    public function __set($name, $value){
+        $this->model[$name] = $value;
+    }
+
+    public function __unset($name){
+        unset($this->model[$name]);
+    }
+
+    public function __isset($name){
+        return isset($this->model[$name]);
+    }
+}
+
+
+
 class TagLoader {
     private $tags = [];
     private static $instance = null;
 
     public static function getInstance()
     {
-      if(self::$instance == null)
-      {   
+      if(self::$instance == null){   
          $c = __CLASS__;
          self::$instance = new $c;
       }
@@ -43,6 +72,7 @@ class TagProcessor{
     private $pageModel;
     private $tags = [];
     private $model;
+    use ModelAccess;
 
     function __construct(String $html,template\PageModel $pageModel){
         $this->doc = new DOMDocument();
@@ -57,15 +87,19 @@ class TagProcessor{
     }
 
     private function processDOMNode(DOMNode $node,$iter) {
-        $test = $this->doc->saveHTML($node);
         $rm = [];
         foreach($node->childNodes as $curr){
+            if($curr->nodeType == 1){
+                if($curr->hasAttribute('template_node_state'))
+                    continue;
+            }
             $standardTag = true;
             foreach ($this->tags as $name => $tagClass) {
                 if($curr->nodeName == $name){
                     $tag = new $tagClass($this->doc,$curr,$this->pageModel);
                     $temp = $tag->renderTag();
                     if($temp){
+                        $this->markNodeToNotReprocess($temp);
                         array_push($rm, $temp);
                     }
                     $standardTag = false;
@@ -73,24 +107,20 @@ class TagProcessor{
                 }
             }
             if($standardTag){
-                if($curr->nodeType == 1){
-                    $tag = new standardTag($this->doc,$curr,$this->pageModel);
-                    $tag->renderTag();
-                }
+                if($curr->nodeType == 1)
+                    new standardTag($this->doc,$curr,$this->pageModel);
             }
-            if($curr->hasChildNodes()) {
+            if($curr->hasChildNodes() && $standardTag) {
                 $this->processDOMNode($curr,$iter+1);
             }else{
                 $temp = $this->evalNode($curr);
-                if($temp){
+                if($temp)
                     array_push($rm, $temp);
-                }
             }
         }
         foreach ($rm as $key => $value) {
             $node->removeChild($value);
         }
-
     }
 
     private function evalNode(DOMNode $baseNode){
@@ -105,6 +135,7 @@ class TagProcessor{
                     $evalued = "<div></div>";
                 }
                 ob_end_clean();
+                $baseNode->textContent = "";
                 $doc->loadHTML($evalued);
                 $node = $this->doc->importNode($doc->getElementsByTagName('body')->item(0),true);
                 $parent = $baseNode->parentNode;
@@ -117,6 +148,10 @@ class TagProcessor{
         return null;
     }
 
+    private function markNodeToNotReprocess(DOMNode $node){
+        $node = $node->setAttribute("template_node_state","processed");
+    }
+
     public function processTags(){
         $this->processTagsDOM();
         return $this->doc->saveHTML();
@@ -126,7 +161,7 @@ class TagProcessor{
         $this->processDOMNode($this->doc,0);
         return $this->doc;
     }
-    
+
 }
 
 abstract class htmlTag{
@@ -137,6 +172,7 @@ abstract class htmlTag{
     private $tagNode;
     protected $page;
     protected $sourceTag = 'body';
+    use ModelAccess;
 
     function __construct(DOMDOcument $doc,DOMNode $node,template\PageModel $page){
         $this->doc = $doc;
@@ -149,26 +185,6 @@ abstract class htmlTag{
     }
 
     abstract protected function getModel();
-
-    public function __get($name){
-        if(isset($this->model[$name]))
-            return $this->model[$name];
-        else
-            return null;
-    }
-    
-    public function __set($name, $value){
-        $this->model[$name] = $value;
-    }
-
-    public function __unset($name){
-        unset($this->model[$name]);
-    }
-
-    public function __isset($name){
-        return isset($this->model[$name]);
-    }
-
 
     protected function getAttributes(){
         $attributes = $this->node->attributes;
@@ -198,8 +214,7 @@ abstract class htmlTag{
     protected function processPageAttr($val){
         //check per tipo di inserzione esempio method:[post] dove method e il nome dell'attributo
         //ma se non specificato defaulta all'espressione presente tra le parentesi [] in questo caso 
-        //alla stringa post ^((.+)->(.+)|(.+)):\[(.+)\]$
-        // $count = preg_match_all('/^(.+):\[(.+)\]$/', $val, $matches);
+        //alla stringa post
         $count = preg_match_all('/^(([^->]+)->(.+)|.+):\[(.*)\]|([^->]+)->(.+)$/', $val, $matches);
         if($count == 1){
            if(array_key_exists($matches[2][0],$this->page->model)){
@@ -213,7 +228,14 @@ abstract class htmlTag{
                 else
                     return $matches[4][0];
             }else if($matches[5][0]){
-                return eval('return $this->page->model[$matches[5][0]]->'.$matches[6][0]."?>");
+                if(is_array($this->page->model[$matches[5][0]])){
+                    $keys = '';
+                    foreach (explode("->",$matches[6][0]) as $key => $value) {
+                        $keys .= '['.((is_numeric($value)) ? $value : "'".$value."'" ).']';
+                    }
+                    return eval('return $this->page->model[$matches[5][0]]'.$keys.';?>');
+                }else
+                    return eval('return $this->page->model[$matches[5][0]]->'.$matches[6][0]."?>");
             }
         }else{
             return $this->page->model[$val];
@@ -250,7 +272,6 @@ abstract class htmlTag{
     }
 
     public function renderTag(){
-
         $tagModel = new template\PageModel();
         $tagModel->templateFile = '/templates/tags/'.'_'.$this->name.'.php';
         $tagModel->model = $this->model;
@@ -321,9 +342,7 @@ class standardTag extends htmlTag{
     }
 
     public function renderTag(){
-        $this->addToModel($this->getModel());
-        $this->addToModel($this->page->model);
-        $this->getAttributes();
+        return;
     }
 }
 

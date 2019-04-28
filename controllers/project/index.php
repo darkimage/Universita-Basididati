@@ -10,10 +10,18 @@
     class projectController extends Controller{
         public $UserAuth;
 
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
+        * @method post void redirect("errors","notauth")
+        */
         public function index(){
-
+            $projects = Project::findAll("SELECT * FROM @this");
+            $body = new template\PageModel();
+            $body->templateFile = '/templates/project/list_projects.php';
+            $body->model = [ "projects" => $projects];
+            $this->render("test",$body);
         }
-
 
         /**
         * @service pre bool UserAuth->requireUserLogin()

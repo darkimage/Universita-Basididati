@@ -12,7 +12,10 @@ class eachTag extends htmlTag{
     }
 
     protected function getModel(){
-        
+        return [
+            "key" => "key",
+            "item" => "item"
+        ];
     }
 }
 

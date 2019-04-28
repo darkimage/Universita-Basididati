@@ -20,30 +20,7 @@ class PageModel{
     public $header = NULL;
     public $templateFile = '/templates/layouts/main.php';
     public $model = [];
-    
-    /**
-     * rende piu facile accedere alle proprieta del template
-     * si puo usare $this->nomeproprieta invece di $this->model->nomeproprieta
-     * o $this->model['nomeproprieta']
-    */
-    public function __get($name){
-        if(isset($this->model[$name]))
-            return $this->model[$name];
-        else
-            return null;
-    }
-    
-    public function __set($name, $value){
-        $this->model[$name] = $value;
-    }
-
-    public function __unset($name){
-        unset($this->model[$name]);
-    }
-
-    public function __isset($name){
-        return isset($this->model[$name]);
-    }
+    use \ModelAccess;
 
     /**
      * crea le proprieta statiche di un template 

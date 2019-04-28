@@ -63,13 +63,20 @@
         }
 
         public function testAttr(){
+            // $doc = new DOMDocument;
+            // $doc->loadHTMLFile(ROOT."templates/prova/prova_attr.php", LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD | LIBXML_NOERROR);
+            // $test = $doc->documentElement;
+            // $test1 = $doc->saveHTML($test);
+            // $prova = $doc->saveHTML();
+
             $body = new template\PageModel();
             $body->templateFile = '/templates/prova/prova_attr.php';
             $testclass = new provaclass();
             $testclass->test = "ciao";
             $testclass->prova = 'ciao1';
             $body->model = array(
-                "arr" => $testclass
+                "arr" => $testclass,
+                "testarr" => ["hi" => ["ciao","prova"] ,2,"test"]
             );
             $this->render("Testing syntax",$body);
         }
