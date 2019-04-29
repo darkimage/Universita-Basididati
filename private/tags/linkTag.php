@@ -10,16 +10,20 @@ class linkTag extends htmlTag{
         parent::__construct($doc,$node,$page);
         $this->name = "link";
 
+        if(is_array($this->params) && $this->overwrite == 'false'){
+            $this->params = array_merge($this->getParams(),$this->params);
+        }else if($this->overwrite){
+            $this->params = $this->getParams();
+        }
+
         if($this->controller){
             $link = "";
             $link .= $this->controller."/".$this->action;
-            if(is_array($this->params)){
-                foreach ($this->params as $key => $value) {
-                    if ($key === array_key_first($value))
-                        $link .= "?".$key."=".$value;
-                    else
-                        $link .= "&".$key."=".$value;
-                }
+            foreach ($this->params as $key => $value) {
+                if ($key === array_key_first($this->params))
+                    $link .= "?".$key."=".$value;
+                else
+                    $link .= "&".$key."=".$value;
             }
             $this->model["href"] = URL.$link;
         }else if(!$this->href){
@@ -28,7 +32,20 @@ class linkTag extends htmlTag{
     }
 
     protected function getModel(){
+        return [ 'overwrite' => 'false'];
+    }
 
+    private function getParams(){
+        $query = $_SERVER['QUERY_STRING'];
+        $paramsArray = explode('&',$query);
+        $params = [];
+        for ($i=0; $i < count($paramsArray); $i++) {
+            $keys = explode("=",$paramsArray[$i]);
+            if($keys[0] != 'action'){
+                $params[$keys[0]] = $keys[1];
+            }
+        }
+        return $params;
     }
 }
 

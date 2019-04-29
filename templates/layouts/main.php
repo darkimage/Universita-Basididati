@@ -16,7 +16,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
-        <div class="py-4 px-3">
+        <div class="py-4 px-3" id="body">
             <!--Body-->
         </div>
         <footer class="bg-light font-small blue">

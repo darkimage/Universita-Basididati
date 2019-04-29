@@ -126,6 +126,7 @@
             $mainPage = new template\PageModel();
             $mainPage->title = $title;
             $mainPage->resources = $pageModel->resources;
+            $pageModel->title = $title;
             $mainPage->body = $pageModel->setUpTemplate();
             $mainPage->render();
             exit;

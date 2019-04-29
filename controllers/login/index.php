@@ -22,11 +22,11 @@
 
             $loginFormModel = new template\PageModel();
             $loginFormModel->templateFile = '/templates/forms/login_form.php';
-            $loginFormModel->resources = array(
-                'header' => array(
+            $loginFormModel->resources = [
+                'header' => [
                     'stylesheet' => "login.css"
-                )
-            );
+                ]
+            ];
             $loginFormModel->model = array(
                 'referee' => $this->params['referee']
             );

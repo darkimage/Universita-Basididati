@@ -12,11 +12,12 @@ trait ModelAccess{
      * rende piu facile accedere alle proprieta del template
      * si puo usare $this->nomeproprieta invece di $this->model['nomeproprieta']
     */
-    public function __get($name){
+    public function &__get($name){
+        $null = null;
         if(isset($this->model[$name]))
             return $this->model[$name];
         else
-            return null;
+            return $null;
     }
     
     public function __set($name, $value){
@@ -129,7 +130,7 @@ class TagProcessor{
                 ob_start();
                 eval('?><?php '.htmlspecialchars_decode($matches[1][0]).' ?>');
                 $evalued = ob_get_contents();
-                if(!$evalued){
+                if($evalued == null || $evalued == ""){
                     $evalued = "<div></div>";
                 }
                 ob_end_clean();
@@ -202,11 +203,7 @@ abstract class htmlTag{
     }
 
     protected function evaluateAttr($val){
-        ob_start();
-        eval('?><?php '.htmlspecialchars_decode($val).' ?>');
-        $evaluated = ob_get_contents();
-        ob_end_clean();
-        return $evaluated;
+        return eval('?><?php '.htmlspecialchars_decode($val).' ?>');
     }
 
     protected function processPageAttr($val){
@@ -230,7 +227,7 @@ abstract class htmlTag{
                 }
                 $res = eval("try {
                     \$val = \$this->".$matches[1][0].";
-                    return (\$val) ? \$val : \$matches[2][0];
+                    return (\$val) ? \$val : \$default;
                     } catch (Exception \$e) {
                         return \$default;
                     } ?>");
