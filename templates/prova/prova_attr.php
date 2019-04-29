@@ -1,5 +1,5 @@
 <!-- PAGE ATTRIBUTES -->
-<div test3="@{testarr->hi->1}" test0="@{notvalid:[default]}" test="@{arr->test:[null]}" test1="@{arr->prova}">
+<div test3="@{testarr['hi'][1]}" test0="@{notvalid:[default]}" test="@{arr->test:[null]}" test1="@{arr->prova}">
     inspect div for test attributes
 </div>
 

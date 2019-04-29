@@ -79,9 +79,7 @@ class TagProcessor{
         $this->pageModel = $pageModel;
         $this->model = $pageModel->model;
         if($html){
-            $libxmlErrors = libxml_use_internal_errors(true);
-            $this->doc->loadHTML($html);
-            libxml_use_internal_errors($libxmlErrors);
+            $this->doc->loadHTML($html, LIBXML_HTML_NODEFDTD | LIBXML_NOERROR | LIBXML_COMPACT );
         }
         $this->tags = TagLoader::getInstance()->getTags();
     }
@@ -136,7 +134,7 @@ class TagProcessor{
                 }
                 ob_end_clean();
                 $baseNode->textContent = "";
-                $doc->loadHTML($evalued);
+                $doc->loadHTML($evalued, LIBXML_HTML_NODEFDTD | LIBXML_NOERROR | LIBXML_COMPACT );
                 $node = $this->doc->importNode($doc->getElementsByTagName('body')->item(0),true);
                 $parent = $baseNode->parentNode;
                 $res = $parent->appendChild($node);
@@ -215,31 +213,35 @@ abstract class htmlTag{
         //check per tipo di inserzione esempio method:[post] dove method e il nome dell'attributo
         //ma se non specificato defaulta all'espressione presente tra le parentesi [] in questo caso 
         //alla stringa post
-        $count = preg_match_all('/^(([^->]+)->(.+)|.+):\[(.*)\]|([^->]+)->(.+)$/', $val, $matches);
+        $count = preg_match_all('/^(.+):\[(.*)\]|^(.+)$/', $val, $matches);
         if($count == 1){
-           if(array_key_exists($matches[2][0],$this->page->model)){
-               if($matches[3][0])
-                    return eval('return $this->page->model[$matches[2][0]]->'.$matches[3][0]."?>");
-                else
-                    return $this->page->model[$matches[2][0]];
-            }else if($matches[4][0]){
-               if($default = $this->isCompileAttribute($matches[4][0]))
-                    return $this->evaluateAttr($default[2][0]);
-                else
-                    return $matches[4][0];
-            }else if($matches[5][0]){
-                if(is_array($this->page->model[$matches[5][0]])){
-                    $keys = '';
-                    foreach (explode("->",$matches[6][0]) as $key => $value) {
-                        $keys .= '['.((is_numeric($value)) ? $value : "'".$value."'" ).']';
-                    }
-                    return eval('return $this->page->model[$matches[5][0]]'.$keys.';?>');
-                }else
-                    return eval('return $this->page->model[$matches[5][0]]->'.$matches[6][0]."?>");
+            if($matches[3][0]){
+                return eval("return \$this->".$matches[3][0].";?>");
+            }else{
+                set_error_handler(function($errno,$errstr,$errfile,$errline) {
+                    $this->pageAttrErrorHandler($errno,$errstr, $errfile, $errline);
+                });
+                $default = $matches[2][0];
+                if($compval = $this->isCompileAttribute($matches[2][0])){
+                    $default = $this->evaluateAttr($compval[2][0]);
+                }
+                if($compval = $this->isPageAttribute($matches[2][0])){
+                    $default = $this->processPageAttr($compval[2][0]);
+                }
+                $res = eval("try {
+                    \$val = \$this->".$matches[1][0].";
+                    return (\$val) ? \$val : \$matches[2][0];
+                    } catch (Exception \$e) {
+                        return \$default;
+                    } ?>");
+                restore_error_handler();
+                return $res;
             }
-        }else{
-            return $this->page->model[$val];
         }
+    }
+    
+    private function pageAttrErrorHandler($errno, $errstr, $errfile, $errline){
+        throw new Exception("Error Processing Request", 1);
     }
     
     protected function isPageAttribute(String $value){
@@ -266,7 +268,7 @@ abstract class htmlTag{
 
     protected function addToModel($model){
         if($model){
-            $this->model = array_merge($model,$this->model);
+            $this->model = array_merge($this->model,$model);
         }
         return $this->model;
     }
@@ -280,15 +282,15 @@ abstract class htmlTag{
         if($this->tagNode){
             $parent = $this->node->parentNode;
             $res = $parent->insertBefore($this->tagNode,$this->node);
+            $ttt = $this->doc->saveHTML();
         }
         return $this->node;
     }
 
     private function importHTML(DOMDocument $doc,DOMNode $node,String $file){
         $doc1 = new DOMDocument;
-        $libxmlErrors = libxml_use_internal_errors(true);
-        $doc1->loadHTML($file);
-        libxml_use_internal_errors($libxmlErrors);
+        $doc1->loadHTML($file, LIBXML_HTML_NODEFDTD | LIBXML_NOERROR | LIBXML_COMPACT);
+        $test = $doc1->saveHTML();
         $importnode = $doc1->getElementsByTagName($this->sourceTag)->item(0);
         if($importnode){
             $tempNode = $doc->importNode($importnode,true);
