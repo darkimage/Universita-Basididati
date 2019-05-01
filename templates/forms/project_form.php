@@ -1,6 +1,6 @@
-<t-form controller="projectcontroller" action="add" domain="project">
+<t-form controller="project" action="add" domain="project">
     <div class ="container-fluid">
-        <h1 class="border-0"><?php echo L::project_formadd; ?></h1>
+        <h1 class="border-0"><!--Title--></h1>
         <div class="pt-3 pl-5">
         <input type="hidden" name="id" id="id" value="@{project->id:[]}">
         <input type="hidden" name="Completato" id="Completato" value="@{project->Completato:[0]}">
@@ -16,6 +16,20 @@
 
         <label class="pt-2" for="DataScadenza"><?php echo L::project_formduedate ?>:</label>
         <input type="date" class="form-control" required id="DataScadenza" name="DataScadenza" value="@{project->DataScadenza:[${return date('Y-m-d');}]}">
+
+        <t-if test="${$this->update == true}">
+        <div class="cust-dropdown">
+            <label for="addGroup" class="pt-2"><?php echo L::project_addgroup ?>:</label>
+            <input type="text" class="form-control" placeholder="<?php echo L::project_addgroup ?>" 
+            onkeyup="searchGroups(this,'groupdropdown')" 
+            onfocus="showDropDown('groupdropdown',this)"
+            onfocusout="hideDropDown('groupdropdown')">
+            <div id="groupdropdown" class="dropdown-content d-none">
+            </div>
+        </div>
+        <div class="group-container">
+        </div>
+        </t-if>
 
         <input type="submit" class="mt-2 btn btn-primary" value="<?php echo L::common_submit ?>" name="Submit">
         </div>

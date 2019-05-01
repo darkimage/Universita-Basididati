@@ -1,5 +1,7 @@
-//PROVA A MOSTRARE LE TAB IN BASE ALLE ANCHOR SPECIFICATE 
-//NELL URL SE SONO PRESENTI
+/**
+ *  prova a mostrare le tab in base alle anchor specificate
+ *  nell url se sono presenti
+ */
 let url = document.location.href;
 if(url.match(/#.*/)){
     const anchor = window.location.hash.split("#");
@@ -9,8 +11,10 @@ if(url.match(/#.*/)){
     });
 }
 
-// AGGIUNGE L'ANCHOR ALL URL CON LA POSSSIBILITA DI
-// SPECIFICARE IL LIVELLO SE NON ESISTE LO AGGIUNGE 
+/**
+ *  aggiunge l'anchor all url con la posssibilita di
+ *  specificare il livello se non esiste lo aggiunge 
+ */
 function navigateAnchor(element,level=1){
     let url = document.location.href;
     if(url.match(/#.*/)){
@@ -26,3 +30,12 @@ function navigateAnchor(element,level=1){
     }
     window.history.pushState(null,null,url);
 }
+
+/**
+ * Fix per i paragrafi che contengono linebreaks
+ */
+$('.multiline').each((index,element)=>{
+    text = $(element).text().replace(/$/gm,'<br>');
+    console.log(text);
+    $(element).html(text);
+}); 

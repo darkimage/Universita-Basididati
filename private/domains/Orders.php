@@ -10,7 +10,7 @@ class Orders extends Domain{
     public $PersonID;
 
     public function belongsTo(){
-        return array('PersonID'=>'Persons');
+        return ['PersonID'=>'Persons'];
     }
 
     public function hasMany(){}

@@ -24,7 +24,7 @@
                 )
             );
             $innerBody->templateFile = '/templates/index/main_body.php';
-            $this->render(L::project_formadd,$innerBody);
+            $this->render(L::project_add,$innerBody);
             // $this->redirect('prova','test',array("test"=>'test','test1'=>'test1'));
         }
 

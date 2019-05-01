@@ -7,13 +7,19 @@
     require_once(ROOT."/private/dbConnection.php");
     require_once(ROOT."/private/i18n.php");
 
-    class testAPI extends Controller{
+    class testAPIController extends Controller{
         public $UserAuth;
 
         public function index(){
             $project = Project::find("SELECT * FROM @this WHERE id=:id",["id"=>$this->params['id']]);
             $project->Creatore->Password = "*****";
             echo json_encode($project,JSON_PRETTY_PRINT);
+        }
+
+        public function testpost(){
+            $test = $this->params;
+            $prova = json_encode($test);
+            echo $prova;
         }
     }
 

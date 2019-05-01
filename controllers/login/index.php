@@ -50,7 +50,7 @@
             }
             $session->startSession();
             $session->flash = L::login_error;
-            $this->redirect("login");
+            $this->redirect("login","index",$this->params);
         }
         
     }

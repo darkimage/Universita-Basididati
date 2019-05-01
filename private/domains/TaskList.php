@@ -4,19 +4,12 @@ if(!defined('ROOT')){
 }
 require_once(ROOT.'/private/dbConnection.php');
 
-class Project extends Domain{
+class TaskList extends Domain{
     public $id;
     public $Nome;
-    public $Descrizione;
-    public $Completato;
-    public $DataInizio;
-    public $DataCompletamento;
-    public $DataScadenza;
-    public $Creatore;
-
-    public function belongsTo(){
-        return ['Creatore'=>'User'];
-    }
+    public $Completata;
+    
+    public function belongsTo(){}
 
     public function hasMany(){}
 

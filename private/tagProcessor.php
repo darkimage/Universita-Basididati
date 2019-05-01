@@ -226,8 +226,8 @@ abstract class htmlTag{
                     $default = $this->processPageAttr($compval[2][0]);
                 }
                 $res = eval("try {
-                    \$val = \$this->".$matches[1][0].";
-                    return (\$val) ? \$val : \$default;
+                    \$value = \$this->".$matches[1][0].";
+                    return (\$value) ? \$value : \$default;
                     } catch (Exception \$e) {
                         return \$default;
                     } ?>");

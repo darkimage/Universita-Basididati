@@ -4,18 +4,14 @@ if(!defined('ROOT')){
 }
 require_once(ROOT.'/private/dbConnection.php');
 
-class Project extends Domain{
+class GroupRole extends Domain{
     public $id;
-    public $Nome;
-    public $Descrizione;
-    public $Completato;
-    public $DataInizio;
-    public $DataCompletamento;
-    public $DataScadenza;
-    public $Creatore;
+    public $Userid;
+    public $Groupid;
+    public $Roleid;
 
     public function belongsTo(){
-        return ['Creatore'=>'User'];
+        return ['Userid'=>'User','Groupid'=>'tGroup','Roleid'=>'Role'];
     }
 
     public function hasMany(){}

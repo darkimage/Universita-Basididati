@@ -1,3 +1,4 @@
+<t-flashmessage />
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-8">
@@ -19,27 +20,77 @@
             <span class="badge badge-pill badge-primary ml-2">
                 ${echo L::project_enddate.": ".date("d/m/Y",strtotime($this->project->DataScadenza));}
             </span>
+            <t-if test="@{project->Completato}">
+                <span class="badge badge-pill badge-success ml-2">
+                    ${echo L::project_completed.": ".date("d/m/Y",strtotime($this->project->DataCompletamento));}
+                </span>
+            </t-if>
         </div> 
-        <div class="row pt-2">
-            <div class="col-sm pt-4 mr-2">
+        <div class="row pt-2 mr-2">
+            <div class="col-sm pt-2 mr-2">
                 <div class="text-primary font-weight-bold">
                     ${echo L::project_formdescription.":"}
                 </div>
-                ${echo $this->project->Descrizione;}
+                <div class="multiline">${echo $this->project->Descrizione;}</div>
             </div>
         </div>
+        <div class="row pt-5 mr-2 inline">
+        <t-if test="@{authorized}">
+            <t-link controller="project" action="edit" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-warning">
+                ${echo L::common_edit;}
+            </t-link>
+            <t-if test="${!$this->project->Completato}">
+            <t-link controller="project" action="complete" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-success">
+                ${echo L::project_completebutton;}
+            </t-link>
+            </t-if>
+        </t-if>
         </div>
-        <div class="col-sm-4 pt-4 material-container">
-            <div class="text-primary font-weight-bold">
-                ${echo L::project_users.":"}
-            </div>
-            <div class="user-container">
-            <t-each collection="@{users}" item="user">
-                <div class="material-container-static m-2 inline" style="width:90%">
-                    ${echo $this->user['user']->Nome}
-                    <span class="badge badge-secondary">${echo $this->user['role'];}</span>
+        </div>
+        <div class="col-sm-4 material-container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="text-primary font-weight-bold row">
+                        ${echo L::project_users.":"}
+                    </div>
+                    <div class="row">
+                        <input class="form-control" type="text" onkeyup="searchuser(this)" placeholder="<?php echo L::project_searchuser; ?>"/> 
+                    </div>
+                    <div class="user-container row">
+                    <t-if test="${Count($this->users)}">
+                        <t-each collection="@{users}" item="user">
+                            <div class="material-container-static m-2 inline user" id="${return $this->user->Nome.' ('.$this->user->NomeUtente.')'}" style="width:90%">
+                                ${echo $this->user->Nome.' ('.$this->user->NomeUtente.')'}
+                                <span class="badge badge-secondary">${echo $this->user->Authority;}</span>
+                            </div>
+                        </t-each>
+                    </t-if>
+                    <t-if test="${!Count($this->users)}">
+                        <div class="text-center alert alert-secondary" role="alert" style="width:100%">
+                        <?php echo L::project_nousers; ?>
+                        </div>
+                    </t-if>
+                    </div>
                 </div>
-            </t-each>
+            </div>
+            <div class="row pt-2">
+                <div class="col-sm">
+                    <div class="text-primary font-weight-bold row">
+                        ${echo L::project_groups.":"}
+                    </div>
+                    <div class="user-container row pt-2">
+                        <t-if test="${Count($this->groups)}">
+                            <t-each collection="@{groups}" item="group">
+                                <span class="badge badge-secondary mr-1">${echo $this->group->Nome}</span>
+                            </t-each>
+                        </t-if>
+                        <t-if test="${!Count($this->groups)}">
+                            <div class="text-center alert alert-secondary" role="alert" style="width:100%">
+                            <?php echo L::project_nogroups ?>
+                            </div>
+                        </t-if>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
