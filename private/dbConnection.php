@@ -140,8 +140,11 @@ abstract class Domain{
                 $query .= ' OFFSET '.$limits['offset'];
         }
         $database = dbConnection::getInstance();
-        if(!$result = $database->query($query))
+        $result = $database->query($query);
+        if(!$result && $database->errno)
             throw new \Exception("Error executing query (".$query."): ". $database->error);
+        if(is_bool($result))
+            return $result;
         $resultAssoc = $result->fetch_all(MYSQLI_ASSOC);
 
         $array = [];
@@ -161,11 +164,12 @@ abstract class Domain{
     public static function find(String $query,$variables=NULL){
         $class = get_called_class();
         if($result = $class::findAll($query,$variables,['max'=>1])){
+            if(is_bool($result))
+                return $result;
             return $result[0];
         }else{
             return false;
         }
-
     }
 
     public function save(){

@@ -40,6 +40,10 @@
             }else
                 return $this->refl_method->invoke($this->caller, ...$this->args);
         }
+
+        public function __call(String $name,$args){
+            return $this->caller->{$name}($args);
+        }
     }
 
     class ServiceMethod extends AnnotatedMethod{
@@ -129,6 +133,12 @@
             $pageModel->title = $title;
             $mainPage->body = $pageModel->setUpTemplate();
             $mainPage->render();
+            exit;
+        }
+
+        public function json($data){
+            header('Content-Type: application/json');
+            echo json_encode($data);
             exit;
         }
 

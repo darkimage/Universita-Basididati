@@ -1,7 +1,7 @@
 <t-flashmessage />
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8 material-container-static">
         <div class="header inline" style="width:100%">
             <div class="inline capitalize">${echo $this->project->Nome}</div>
             <t-if test="@{project->Completato}">
@@ -34,16 +34,14 @@
                 <div class="multiline">${echo $this->project->Descrizione;}</div>
             </div>
         </div>
-        <div class="row pt-5 mr-2 inline">
+        <div class="row pt-5 ml-1 inline justify-content-end d-inline-flex" style="width:100%">
         <t-if test="@{authorized}">
-            <t-link controller="project" action="edit" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-warning">
+            <t-link controller="project" action="edit" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-warning ml-2">
                 ${echo L::common_edit;}
             </t-link>
-            <t-if test="${!$this->project->Completato}">
-            <t-link controller="project" action="complete" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-success">
+            <t-link controller="project" action="complete" overwrite params="${return ['id'=>$this->project->id]}" class="${ return 'btn btn-success ml-2 '.((!$this->project->Completato)?'':'disabled')}">
                 ${echo L::project_completebutton;}
             </t-link>
-            </t-if>
         </t-if>
         </div>
         </div>
@@ -62,6 +60,7 @@
                             <div class="material-container-static m-2 inline user" id="${return $this->user->Nome.' ('.$this->user->NomeUtente.')'}" style="width:90%">
                                 ${echo $this->user->Nome.' ('.$this->user->NomeUtente.')'}
                                 <span class="badge badge-secondary">${echo $this->user->Authority;}</span>
+                                <span class="badge badge-secondary">${echo $this->user->GroupName;}</span>
                             </div>
                         </t-each>
                     </t-if>

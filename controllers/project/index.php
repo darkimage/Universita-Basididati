@@ -114,12 +114,13 @@
                 $this->redirect("errors","index",["error"=>L::project_notfound($projectid)]);
             
             /*data*/
-            $users = User::findAll("SELECT u.id,u.Nome,u.DataNascita,u.NomeUtente,r.Authority 
-            FROM User as u, Role as r, ProjectGroup as pg,GroupRole as gr, Project as p 
+            $users = User::findAll("SELECT u.id,u.Nome,u.DataNascita,u.NomeUtente,r.Authority,g.Nome as GroupName 
+            FROM User as u, Role as r, ProjectGroup as pg,GroupRole as gr, Project as p, tGroup as g 
             WHERE p.id = :projid 
             AND p.id = pg.Project 
             AND pg.tGroup = gr.Groupid 
             AND r.id = gr.Roleid 
+            AND g.id = pg.tGroup
             AND gr.Userid = u.id",['projid'=>$projectid]);
 
             $groups = tGroup::findAll("SELECT g.id,g.Nome FROM tGroup as g, Project as p, ProjectGroup as pg 
@@ -155,10 +156,12 @@
                 if($this->UserAuth->getCurrentUser()->id != $project->Creatore->id)
                     $this->redirect("errors","index",["error"=>L::error_notauth]);
                 if($project){
+                    $groups = tGroup::findAll("SELECT g.id,g.Nome FROM tGroup as g, Project as p, ProjectGroup as pg WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
                     $body = new template\PageModel();
                     $body->templateFile = '/templates/forms/project_form.php';
                     $body->model = array(
                         "project" => $project,
+                        "groups" => $groups,
                         "user" => $this->UserAuth->getCurrentUser(),
                         "update" => 'true'
                     );

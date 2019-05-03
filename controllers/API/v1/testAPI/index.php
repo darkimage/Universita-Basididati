@@ -18,8 +18,7 @@
 
         public function testpost(){
             $test = $this->params;
-            $prova = json_encode($test);
-            echo $prova;
+            $this->json($test);
         }
     }
 

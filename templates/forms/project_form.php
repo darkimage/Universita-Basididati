@@ -12,7 +12,7 @@
         <input type="text" class="form-control" required id="Nome" name="Nome" value="@{project->Nome:[]}" placeholder="<?php echo L::project_formname ?>">
 
         <label class="pt-2" for="Descrizione"><?php echo L::project_formdescription ?>:</label>
-        <textarea class="form-control" required id="Descrizione" name="Descrizione" placeholder="<?php echo L::project_formdescription ?>"><?php if(isset($this->model['project']->Descrizione)) echo $this->model['project']->Descrizione; else ""; ?></textarea>
+        <textarea class="form-control" required id="Descrizione" name="Descrizione" placeholder="<?php echo L::project_formdescription ?>"><?php if(isset($this->project->Descrizione)) echo $this->project->Descrizione; else ""; ?></textarea>
 
         <label class="pt-2" for="DataScadenza"><?php echo L::project_formduedate ?>:</label>
         <input type="date" class="form-control" required id="DataScadenza" name="DataScadenza" value="@{project->DataScadenza:[${return date('Y-m-d');}]}">
@@ -21,13 +21,24 @@
         <div class="cust-dropdown">
             <label for="addGroup" class="pt-2"><?php echo L::project_addgroup ?>:</label>
             <input type="text" class="form-control" placeholder="<?php echo L::project_addgroup ?>" 
-            onkeyup="searchGroups(this,'groupdropdown')" 
+            onkeyup="${return 'searchGroups(this,\'groupdropdown\','.$this->project->id.')'}" 
             onfocus="showDropDown('groupdropdown',this)"
             onfocusout="hideDropDown('groupdropdown')">
             <div id="groupdropdown" class="dropdown-content d-none">
             </div>
         </div>
-        <div class="group-container">
+        <div class="group-error alert alert-danger d-none mt-2">
+            <div class="inline">${echo L::error_cantaddgroup;}</div>
+        </div>
+        <div class="group-container pt-2">
+            <t-each collection="@{groups}" item="group">
+            <span id="${return 'group'.$this->group->id}" class="badge badge-secondary inline">${echo $this->group->Nome}
+                <button type="button" class="close" aria-label="Close"
+                onclick="${ return 'removeGroup(\'#group'.$this->group->id.'\','.$this->group->id.','.$this->project->id.')'}">
+                    <i class="fas fa-window-close fa-lg"></i>
+                </button>
+            </span>
+            </t-each>
         </div>
         </t-if>
 

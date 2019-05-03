@@ -17,19 +17,14 @@ function searchuser(text) {
         });
         if(!found){
             $(element).addClass('d-none');
-            console.log(element);
         }else{
             $(element).removeClass('d-none') ;
         }
     });
-    console.log($(text).val());
 }
 
-
-/**
- * 
- */
 function showDropDown(elem,input){
+    $('.group-error').addClass('d-none');
     if($(input).val() != ''){
         $('#'+elem).addClass('d-block');
         $('#'+elem).removeClass('d-none');
@@ -43,17 +38,55 @@ function hideDropDown(elem){
     }, 200);
 }
 
-function addGroup(elem,dropdown){
+function addGroup(elem,dropdown,groupid,projectid){
     console.log(elem);
-    $.post( "http://localhost:8014/API/v1/testAPI/testpost", {prova: 'test'},"json").done(function(data) {
-        console.log(JSON.parse(data).action);
-      });
     hideDropDown(dropdown);
+    $.post( API+"projects/addProjectGroup", {project: projectid,group: groupid},"json")
+    .done(function(data) {
+        if(data.error){
+            $('.group-error').removeClass('d-none');
+            console.log(data);
+            return;
+        }
+        $('.group-container').append(
+        `<span class="badge badge-secondary inline">
+        <button type="button" class="close" aria-label="Close" 
+        onclick="removeGroup(\'#group`+groupid+`\',`+groupid+`,`+projectid+`)">
+            <i class="fas fa-window-close fa-lg"></i>
+        </button>
+        <p>`+$(elem).text()+`</p>
+        </span>`);
+    });
     return true;
 }
 
-function searchGroups(elem,content){
+function removeGroup(elem,groupid,projectid){
+    $.post( API+"projects/removeProjectGroup", {project: projectid,group: groupid},"json")
+    .done(function(data) {
+        if(data.error){
+            console.log(data);
+            return;
+        }
+        $(elem).remove();
+    });
+}
+
+function searchGroups(elem,content,id){
     console.log($(elem).val());
+    if($(elem).val() == '') return;
     showDropDown(content);
-    $('#'+content).append('<div onclick="return addGroup(this,\'groupdropdown\')">PROVA</div>');
+    $.post( API+"projects/getGroups")
+    .done(function(data) {
+        if(data.error){
+            console.log(data);
+            return;
+        }
+        $('#'+content).empty();
+        regex = new RegExp(encodeURI($(elem).val()),'g');
+        for(var i in data) {
+            if(data[i].Nome.match(regex)){
+                $('#'+content).append('<div onclick="return addGroup(this,\'groupdropdown\','+data[i].id+','+id+')">'+data[i].Nome+'</div>');
+            }
+        }
+    });
 }

@@ -1,4 +1,10 @@
 /**
+ * GLOBAL VARIABLES
+ */
+var URL = 'http://localhost:8014/';
+var API = URL+'/API/v1/';
+
+/**
  *  prova a mostrare le tab in base alle anchor specificate
  *  nell url se sono presenti
  */
@@ -33,9 +39,9 @@ function navigateAnchor(element,level=1){
 
 /**
  * Fix per i paragrafi che contengono linebreaks
+ * class="multiline"
  */
 $('.multiline').each((index,element)=>{
     text = $(element).text().replace(/$/gm,'<br>');
-    console.log(text);
     $(element).html(text);
 }); 

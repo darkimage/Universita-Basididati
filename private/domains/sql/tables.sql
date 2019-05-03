@@ -48,11 +48,13 @@ CREATE TABLE IF NOT EXISTS GroupRole(
 );
 
 CREATE TABLE IF NOT EXISTS ProjectGroup(
-    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id int NOT NULL AUTO_INCREMENT,
     tGroup int NOT NULL,
     Project int NOT NULL,
     FOREIGN KEY (tGroup) REFERENCES tGroup(id),
-	FOREIGN KEY (Project) REFERENCES Project(id)
+	FOREIGN KEY (Project) REFERENCES Project(id),
+    PRIMARY KEY (tGroup, Project),
+    UNIQUE KEY (id)
 );
 
 
