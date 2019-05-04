@@ -11,7 +11,7 @@ RewriteBase /
 RewriteRule ^stylesheets/(.*)\.css$ /stylesheets/scss.php/$1.scss [QSA,R=301,L]
 
 RewriteCond %{HTTP_HOST} !^m\.
-RewriteRule ^$ controllers/test/index.php?action=index [QSA,L]
+RewriteRule ^$ controllers/project/index.php?action=index [QSA,L]
 
 # controller redirect rule
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -24,7 +24,8 @@ function searchuser(text) {
 }
 
 function showDropDown(elem,input){
-    $('.group-error').addClass('d-none');
+    $('.group-error-add').addClass('d-none');
+    $('.group-error-remove').addClass('d-none');
     if($(input).val() != ''){
         $('#'+elem).addClass('d-block');
         $('#'+elem).removeClass('d-none');
@@ -44,7 +45,7 @@ function addGroup(elem,dropdown,groupid,projectid){
     $.post( API+"projects/addProjectGroup", {project: projectid,group: groupid},"json")
     .done(function(data) {
         if(data.error){
-            $('.group-error').removeClass('d-none');
+            $('.group-error-add').removeClass('d-none');
             console.log(data);
             return;
         }
@@ -64,6 +65,7 @@ function removeGroup(elem,groupid,projectid){
     $.post( API+"projects/removeProjectGroup", {project: projectid,group: groupid},"json")
     .done(function(data) {
         if(data.error){
+            $('.group-error-remove').removeClass('d-none');
             console.log(data);
             return;
         }

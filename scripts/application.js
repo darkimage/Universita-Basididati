@@ -2,7 +2,7 @@
  * GLOBAL VARIABLES
  */
 var URL = 'http://localhost:8014/';
-var API = URL+'/API/v1/';
+var API = URL+'API/v1/';
 
 /**
  *  prova a mostrare le tab in base alle anchor specificate
@@ -45,3 +45,12 @@ $('.multiline').each((index,element)=>{
     text = $(element).text().replace(/$/gm,'<br>');
     $(element).html(text);
 }); 
+
+
+
+/**
+ * Usata per inviare i forms onchange (select e altri)
+ */
+function sendForm(formid){
+    $('#'+formid).submit();
+}

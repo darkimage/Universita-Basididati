@@ -38,11 +38,9 @@
         * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
         * @method post void redirect("errors","notauth")
         */
-        public function add(){
+        public function process(){
             $project = Project::fromData($this->params);
-            if($this->params['update'] === 'false'){
-                $project->DataInizio = date("Y-m-d");
-            }else{
+            if($this->params['update'] != 'false'){
                 $projectform = $project;
                 $project = Project::find("SELECT * FROM @this WHERE id=:id",['id'=>$project->id]);
                 $project->DataScadenza = $projectform->DataScadenza;
@@ -81,7 +79,7 @@
                 $project->save();
                 Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::project_flashcompleted($project->id)];
                 $this->redirect('project','show',['id'=>$project->id],'GET');
-            } catch (\Throwable $th) {
+            } catch (Throwable $th) {
                 $this->redirect('errors');
             }
 
@@ -90,8 +88,9 @@
 
         /**
         * @service pre bool UserAuth->requireUserLogin()
+        * @method post void redirect("errors","notauth")
         */
-        public function addForm(){
+        public function add(){
             $body = new template\PageModel();
             $body->templateFile = '/templates/forms/project_form.php';
             $body->model = [ "user" => $this->UserAuth->getCurrentUser()];
@@ -114,7 +113,7 @@
                 $this->redirect("errors","index",["error"=>L::project_notfound($projectid)]);
             
             /*data*/
-            $users = User::findAll("SELECT u.id,u.Nome,u.DataNascita,u.NomeUtente,r.Authority,g.Nome as GroupName 
+            $users = User::findAll("SELECT u.*,r.Authority,g.Nome as GroupName 
             FROM User as u, Role as r, ProjectGroup as pg,GroupRole as gr, Project as p, tGroup as g 
             WHERE p.id = :projid 
             AND p.id = pg.Project 

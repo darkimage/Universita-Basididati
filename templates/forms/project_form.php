@@ -1,4 +1,4 @@
-<t-form controller="project" action="add" domain="project">
+<t-form controller="project" action="process" domain="project">
     <div class ="container-fluid">
         <h1 class="border-0"><!--Title--></h1>
         <div class="pt-3 pl-5">
@@ -27,8 +27,11 @@
             <div id="groupdropdown" class="dropdown-content d-none">
             </div>
         </div>
-        <div class="group-error alert alert-danger d-none mt-2">
+        <div class="group-error-add alert alert-danger d-none mt-2">
             <div class="inline">${echo L::error_cantaddgroup;}</div>
+        </div>
+        <div class="group-error-remove alert alert-danger d-none mt-2">
+            <div class="inline">${echo L::error_cantremovegroup;}</div>
         </div>
         <div class="group-container pt-2">
             <t-each collection="@{groups}" item="group">
@@ -42,7 +45,9 @@
         </div>
         </t-if>
 
-        <input type="submit" class="mt-2 btn btn-primary" value="<?php echo L::common_submit ?>" name="Submit">
+        <div class="d-flex justify-content-end">
+            <input type="submit" class="mt-2 btn btn-primary" value="<?php echo L::common_submit ?>" name="Submit">
+        </div>
         </div>
     </div>
 </t-form>

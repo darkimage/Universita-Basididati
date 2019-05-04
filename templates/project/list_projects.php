@@ -1,4 +1,7 @@
 <h1><!--Title--></h1>
+<div class="d-flex justify-content-end">
+<t-link controller="project" action="add" class="btn btn-primary" overwrite params="${return []}"><?php echo L::project_add ?></t-link>
+</div>
 <t-each collection="@{projects}" item="project">
     <div class="mt-2 material-container">
         <div class="item inline" style="font-size: large; width:100%;">

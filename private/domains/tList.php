@@ -12,7 +12,7 @@ class tList extends Domain{
     public function belongsTo(){
         return ['Task'=>'Task','TaskList'=>'TaskList'];
     }
-
+    
     public function hasMany(){}
 
     public function primaryKey(){

@@ -6,7 +6,6 @@ require_once(ROOT.'/private/dbConnection.php');
 
 class TaskList extends Domain{
     public $id;
-    public $Nome;
     public $Completata;
     
     public function belongsTo(){}

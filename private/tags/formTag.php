@@ -18,6 +18,7 @@ class formTag extends htmlTag{
         return array(
             'method' => 'post',
             'domain' => 'none',
+            'hidden' => true,
             'referee' => $_SERVER['REQUEST_URI']
         );
     }
