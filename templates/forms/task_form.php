@@ -8,8 +8,8 @@
             <input type="hidden" name="User" id="User" value="@{task->User->id:[${return $this->user->id;}]}">
             <input type="hidden" name="Project" id="Project" value="@{task->Project->id:[${return $this->project->id;}]}">
             <input type="hidden" name="update" id="update" value="@{update:[false]}">
-            <input type="hidden" name="TaskList" id="TaskList" value="@{task->TaskList->id:[]}"/>
             <input type="hidden" name="Assignee" id="Assignee" value="@{task->Assignee->id:[]}"/>
+            <input type="hidden" name="TaskList" id="TaskList" value="@{tasklist->id:[]}"/>
 
             <label for="Nome"><?php echo L::task_formname ?>:</label>
             <input type="text" class="form-control" required id="Nome" name="Nome" value="@{task->Nome:[]}" placeholder="<?php echo L::task_formname ?>"/>
@@ -34,16 +34,16 @@
 
             <t-if test="@{update}">
             <div>
-                <button id='tasksadd' type="button" class="${ return 'btn mt-4 btn-primary '.(($this->task->TaskList)?'d-none':'')}" 
+                <button id='tasksadd' type="button" class="${ return 'btn mt-4 btn-primary '.(($this->tasklist)?'d-none':'')}" 
                 onclick="${return 'addTaskList(\'tasks\','.$this->task->id.','.$this->task->Project->id.')'}">
                     <i class="fas fa-plus"></i>  <?php echo L::task_addtlist ?>
                 </button>
-                <button id='tasksremove' type="button" class="${ return 'btn mt-4 btn-danger '.((!$this->task->TaskList)?'d-none':'')}"
-                onclick="${if($this->task->TaskList) return 'removeTaskList(\'tasks\','.$this->task->TaskList->id.')'}">
+                <button id='tasksremove' type="button" class="${ return 'btn mt-4 btn-danger '.((!$this->tasklist)?'d-none':'')}"
+                onclick="${if($this->tasklist) return 'removeTaskList(\'tasks\','.$this->tasklist->id.')'}">
                     <i class="fas fa-minus"></i>  <?php echo L::task_removetlist ?>
                 </button>
             </div>
-            <div id="tasks" class="${return (!$this->task->TaskList)?'d-none':''}">
+            <div id="tasks" class="${return (!$this->tasklist)?'d-none':''}">
             <label class="pt-2" for="tasks"><?php echo L::task_add ?>:</label>
             <div>
                 <input type="text" class="form-control" id="_tasks" name="_tasks" autocomplete="off"

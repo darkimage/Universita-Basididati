@@ -19,28 +19,37 @@
             if(!isset($this->params['max'])) $this->params['max'] = $max;
             $offset = isset($this->params['offset']) ? (int)$this->params['offset'] : 0;
             if(!isset($this->params['offset'])) $this->params['offset'] = $offset;
-
-            $tasksCount = (int)Task::find("SELECT Count(id) as count FROM @this")->count;
-            $tasks = Task::findAll("SELECT t.*, (SELECT COUNT(*) FROM tasklist as tl, tList as l WHERE l.TaskList = tl.id AND t.TaskList = tl.id) as TaskListCount FROM task as t",null,['max'=> $max,'offset'=>$offset]);
-            $body = new template\PageModel();
-            $body->templateFile = '/templates/task/list_task.php';
-            $body->model = [
-                "tasks" => $tasks,
-                "tasksCount" => $tasksCount,
-                "params" => $this->params
-            ];
-            $body->addToModel($this->params);
-            $this->render(L::task_list,$body);
+            try {
+                $tasksCount = (int)Task::find("SELECT Count(id) as count FROM @this")->count;
+                $tasks = Task::findAll("SELECT t.*, (SELECT COUNT(*) FROM tasklist as tl, tList as l WHERE l.TaskList = tl.id AND tl.Task = t.id) as TaskListCount FROM task as t",null,['max'=> $max,'offset'=>$offset]);
+                $body = new template\PageModel();
+                $body->templateFile = '/templates/task/list_task.php';
+                $body->model = [
+                    "tasks" => $tasks,
+                    "tasksCount" => $tasksCount,
+                    "params" => $this->params
+                ];
+                $body->addToModel($this->params);
+                $this->render(L::task_list,$body);
+            } catch (\Throwable $th) {
+                $this->redirect("errors");
+            }
         }
 
         public function process(){
             $task = Task::fromData($this->params);
+            $update = $this->params['update'];
             try {
                 $task->save();
             } catch (Throwable $th) {
                 $this->redirect('errors');
             }
-            $this->redirect('project','show',['id'=>$task->Project->id],"GET");
+            if($update != 'true')
+                $this->redirect('project','show',['id'=>$task->Project->id],"GET");
+            else{
+                Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::task_updated($task->id)];
+                $this->redirect('task','show',['id'=>$task->id],"GET");
+            }
         }
 
         /**
@@ -70,9 +79,12 @@
                 $this->redirect("errors","index",["error"=>L::task_notspecified]);
             $taskid = $this->params['id'];
             $task = null;
-            $tasklist = null;
+            $tList = null;
+            $Tasklist = null;
             try {
                 $task = Task::find("SELECT * FROM @this WHERE id=:id",['id'=>$taskid]);
+                $tList = tList::findAll("SELECT l.* FROM tList as l, TaskList as tl WHERE tl.id=l.TaskList AND tl.Task=:id",['id'=>$task->id]);
+                $Tasklist = TaskList::find("SELECT * FROM @this WHERE Task=:id",['id'=>$task->id]);
                 $auth = ($this->UserAuth->getCurrentUser()->id == $task->User->id);
                 if(!$auth)
                     $this->redirect("errors","index",["error"=>L::error_notauth]);
@@ -82,7 +94,7 @@
             }
             $body = new template\PageModel();
             $body->templateFile = '/templates/forms/task_form.php';
-            $body->model = [ "user" => $this->UserAuth->getCurrentUser(), "project"=>$task->Project, "task"=> $task , "update" => 'true'];
+            $body->model = [ "user" => $this->UserAuth->getCurrentUser(), "project"=>$task->Project, "task"=> $task, 'list'=> $tList, 'tasklist'=> $Tasklist , "update" => 'true'];
             $body->resources = ['body'=> ['script'=>'task.js']];
             $this->render(L::task_edit,$body);
         }
@@ -99,8 +111,7 @@
             $task = null;
             try {
                 $task = Task::find("SELECT * FROM @this WHERE id=:id",['id'=>$taskid]);
-                if($task->TaskList)
-                    $tList = tList::findAll("SELECT * FROM @this WHERE TaskList=:id",['id'=>$task->TaskList->id]);
+                $tList = tList::findAll("SELECT l.* FROM tList as l, TaskList as tl WHERE tl.id=l.TaskList AND tl.Task=:id",['id'=>$task->id]);
             } catch (\Throwable $th) {
                 $this->redirect("errors");
             }

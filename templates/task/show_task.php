@@ -103,6 +103,15 @@
                 </div>
             </div>
             </t-if>
+            <t-if test="${!$this->task->Assignee}">
+            <div class="row mt-2 ml-1">
+                <div class="material-container-static inline" style="width:100%">
+                <div class="alert alert-secondary text-center" role="alert">
+                    ${echo L::task_noassignee}
+                </div>
+                </div>
+            </div>
+            </t-if>
         </div>
     </div>
 </div>

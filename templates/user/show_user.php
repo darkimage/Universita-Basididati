@@ -42,43 +42,22 @@
             </div>
         </t-if>
     </div>
-    <div class="row mt-2 mr-2">
-        <t-tasklist tasks="@{tasks}" />
+    <div class="row mt-2">
+    <div class="col-sm">
+        <div class="text-primary font-weight-bold">
+            ${echo L::task_plural.":"}
+        </div>
+        <div class="task-container">
+            <t-tasklist tasks="@{tasks}"/>
+        </div>
+    </div>
     </div>
 </div>
 <div class="col-sm mt-2">
     <h2><?php echo L::project_plural ?></h2>
-    <t-if test="${Count($this->projects)}">
-    <t-each collection="@{projects}" item="project">
-    <div class="card mt-2">
-        <div class="card-header">
-            <div class="inline">
-            <t-link controller="project" action="show" class="capitalize" overwrite params="${return ['id'=>$this->project->id];}">
-                ${echo $this->project->Nome;}
-            </t-link>
-            </div>
-            <t-if test="@{project->Completato}">
-                <span class="badge badge-pill badge-success ml-2">
-                    ${echo L::project_completed.": ".date("d/m/Y",strtotime($this->project->DataCompletamento));}
-                </span>
-            </t-if>
-        </div>
-        <div class="card-body">
-            <span class="badge badge-pill badge-primary ml-2">
-                ${echo L::project_startdate.": ".date("d/m/Y",strtotime($this->project->DataInizio));}
-            </span>
-            <span class="badge badge-pill badge-primary ml-2">
-                ${echo L::project_enddate.": ".date("d/m/Y",strtotime($this->project->DataScadenza));}
-            </span>
-        </div>
+    <div class="project-container">
+        <t-listprojects projects="@{projects}" />
     </div>
-    </t-each>
-    </t-if>
-    <t-if test="${!Count($this->projects)}">
-        <div class="alert alert-secondary inline" style="width:100%" role="alert">
-            ${echo L::user_noprojects }
-        </div>
-    </t-if>
 </div>
 </div>
 </div>

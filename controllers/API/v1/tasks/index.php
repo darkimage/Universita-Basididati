@@ -18,7 +18,10 @@
         * @service post void APIerrors->json($this->notauth())
         */
         public function addTaskList(){
-            $tasklist = new TaskList(['Completata',0]);
+            if(!isset($this->params['id']))
+                $this->json($this->APIerrors->notfound());
+            $taskid = $this->params['id'];
+            $tasklist = new TaskList(['Task',$taskid],['Completata',0]);
             try {
                 $tasklist->save();
             } catch (\Throwable $th) {
@@ -38,9 +41,6 @@
                 $this->json($this->APIerrors->notfound());
             $tasklistid = $this->params['id'];
             try {
-                $res = tList::findAll("DELETE FROM @this WHERE TaskList=:id",['id'=>$tasklistid]);
-                if(!$res) 
-                    $this->json($this->APIerrors->servererror());
                 $res = TaskList::findAll("DELETE FROM @this WHERE id=:id",['id'=>$tasklistid]);
                 if(!$res) 
                     $this->json($this->APIerrors->servererror());

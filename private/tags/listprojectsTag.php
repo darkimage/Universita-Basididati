@@ -5,14 +5,14 @@ if(!defined('ROOT')){
 require_once(ROOT."/private/tagProcessor.php");
 
 
-class listUsersTag extends htmlTag{
+class listProjectsTag extends htmlTag{
     function __construct(DOMDOcument $doc,DOMNode $node,template\PageModel $page){
         parent::__construct($doc,$node,$page);
-        $this->name = "listUsers";
+        $this->name = "listProjects";
     }
 
     protected function getModel(){
-        return ['users'=>[]];
+        return ['projects'=>[]];
     }
 }
 

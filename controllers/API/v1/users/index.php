@@ -14,6 +14,30 @@
 
         /**
         * @service pre bool UserAuth->getCurrentUser()
+        * @service post void APIerrors->json($this->notauth())
+        */
+        public function getUsers(){
+            $search = null;
+            if(isset($this->params['search'])) $search = $this->params['search'];
+            if($search){
+                try {
+                    $users = User::findAll("SELECT * FROM @this WHERE Nome LIKE :src OR Cognome LIKE :src OR NomeUtente LIKE :src",['src'=> '%'.$search.'%']);
+                    $this->json($users);
+                } catch (\Throwable $th) {
+                    $this->json($this->APIerrors->servererror());
+                }
+            }else{
+                try {
+                    $users = User::findAll("SELECT * FROM @this");
+                    $this->json($users);
+                } catch (\Throwable $th) {
+                    $this->json($this->APIerrors->servererror());
+                }
+            }
+        }
+
+        /**
+        * @service pre bool UserAuth->getCurrentUser()
         * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
         * @service post void APIerrors->json($this->notauth())
         */
@@ -21,8 +45,13 @@
             if(!isset($this->params['id']))
                 $this->json($this->APIerrors->notfound());
             $projectid = $this->params['id'];
-            $users = User::findAll("SELECT DISTINCT u.* FROM User as u, projectgroup as pg, Project as p, tGroup as g, GroupRole as gr WHERE p.id = pg.Project AND pg.tGroup = g.id AND gr.Userid = u.id AND gr.Groupid = g.id AND p.id=:projid",['projid'=>$projectid]);
-            $this->json($users);
+            try {
+                $users = User::findAll("SELECT DISTINCT u.* FROM User as u, projectgroup as pg, Project as p, tGroup as g, GroupRole as gr WHERE p.id = pg.Project AND pg.tGroup = g.id AND gr.Userid = u.id AND gr.Groupid = g.id AND p.id=:projid",['projid'=>$projectid]);
+                $this->json($users);
+            } catch (\Throwable $th) {
+                $this->json($this->APIerrors->servererror());
+            }
+           
         }
 
         /**
@@ -34,8 +63,12 @@
             if(!isset($this->params['id']))
                 $this->json($this->APIerrors->notfound());
             $projectid = $this->params['id'];
-            $groups = User::findAll("SELECT g.* FROM tGroup as g, Project as p, ProjectGroup as pg WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
-            $this->json($groups);
+            try {
+                $groups = User::findAll("SELECT g.* FROM tGroup as g, Project as p, ProjectGroup as pg WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
+                $this->json($groups);
+            } catch (\Throwable $th) {
+                $this->json($this->APIerrors->servererror());
+            }
         }
 
         /**

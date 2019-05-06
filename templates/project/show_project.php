@@ -10,6 +10,9 @@
             <t-link controller="project" action="complete" overwrite params="${return ['id'=>$this->project->id]}" class="${ return 'btn btn-success ml-2 '.((!$this->project->Completato)?'':'disabled')}">
                 ${echo L::project_completebutton;}
             </t-link>
+            <t-link controller="project" action="remove" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-danger ml-2">
+                <i class="fas fa-trash-alt pt-1"></i>
+            </t-link>
         </t-if>
         </div>
         <div class="header inline" style="width:100%">
@@ -54,7 +57,14 @@
             </div>
         </div>
         <div class="row mt-2 mr-2">
-            <t-tasklist tasks="@{tasks}" />
+            <div class="col-sm">
+            <div class="text-primary font-weight-bold">
+                ${echo L::task_plural.":"}
+            </div>
+            <div class="task-container">
+                <t-tasklist tasks="@{tasks}"/>
+            </div>
+            </div>
         </div>
         </div>
         <div class="col-sm-4 material-container">

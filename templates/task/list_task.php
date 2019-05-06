@@ -1,3 +1,4 @@
+<t-flashmessage />
 <h1><!--Title--></h1>
 <div class="container-fluid">
 <t-form controller="task" method="GET" hidden="${return false;}">
@@ -43,19 +44,22 @@
             </div>
             <div class="row">
                 <div class="text-secondary font-weight-bold">${echo L::task_assignee.":"}</div>
-                <t-if test="${$this->task->Assignee->User}">
+                <t-if test="@{task->Assignee->User:[]}">
                     <span class="ml-1">
                         <t-link controller="user" action="show" overwrite params="${return ['id'=>$this->task->Assignee->User->id]}">
                             ${echo $this->task->Assignee->User->NomeUtente;}
                         </t-link>
                     </span>
                 </t-if>
-                <t-if test="${$this->task->Assignee->tGroup}">
+                <t-if test="@{task->Assignee->tGroup:[]}">
                     <span class="ml-1">
                         <t-link controller="group" action="show" overwrite params="${return ['id'=>$this->task->Assignee->tGroup->id]}">
                             ${echo $this->task->Assignee->tGroup->Nome;}
                         </t-link>
                     </span>
+                </t-if>
+                <t-if test="${!$this->task->Assignee}">
+                    <span class="ml-1 text-danger">${echo L::task_noassignee}</span>
                 </t-if>
             </div>
         </div>

@@ -76,6 +76,7 @@
                 "groups" => $groups,
                 "tasks" => $tasks
             ];
+            $body->resources = ['header'=>['stylesheet'=>'user.css']];
             $this->render(L::user_show($user->Nome),$body);
         }
 

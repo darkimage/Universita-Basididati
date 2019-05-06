@@ -1,3 +1,5 @@
+-- mysql -u root -p taskmgr < taskmgr_mod.sql
+
 -- SELEZIONA UTENTE E NOME E AUTHORITA DEL GRUPPO
 SELECT u.*,g.Nome,r.Authority FROM User as u, Role as r, ProjectGroup as pg,GroupRole as gr, Project as p WHERE p.id = 1 AND p.id = pg.Project AND pg.tGroup = gr.Groupid AND r.id = gr.Roleid AND gr.Userid = u.id;
 

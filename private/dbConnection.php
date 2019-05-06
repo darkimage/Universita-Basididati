@@ -235,9 +235,20 @@ abstract class Domain{
                     $resultAssoc = $resultAssoc[0];
                 else 
                     return false;
+            
+                //GET VALUES FROM DATABASE
                 foreach ($resultAssoc as $key => $value) {
                     $this->$key = $value; 
                 }
+
+                //MAP TO CLASS
+                $params = [];
+                $i = 0;
+                foreach ($resultAssoc as $key => $item) {
+                    $params[$i] = array($key,$item);
+                    $i++;
+                }
+                $this->mapToClass($params);
                 return true;
             }
         }

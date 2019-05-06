@@ -150,12 +150,15 @@ function addTaskToList(tasklist,task) {
 
 function initTaskList() {
     tasklist = $("#TaskList").val();
+    project = $("#Project").val();
+    task = $("#id").val();
     $.post( API+"tasks/getList", {id: tasklist}, "json")
     .done(function(data) {
         if(data.error){
             console.log(data);
             return;
         }
+        $('#_tasks').keyup(function() {searchTasks('#_tasks','tasksdropdown',tasklist,project,task,5)});
         console.log(data);
         for(var i in data) {
             $("#taskslist").prepend(

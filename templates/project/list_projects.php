@@ -1,3 +1,4 @@
+<t-flashmessage />
 <h1><!--Title--></h1>
 <div class="container-fluid">
 <t-form controller="project" method="GET" hidden="${return false;}">
