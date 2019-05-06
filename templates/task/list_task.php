@@ -1,4 +1,20 @@
 <h1><!--Title--></h1>
+<div class="container-fluid">
+<t-form controller="task" method="GET" hidden="${return false;}">
+    <div class="row justify-content-end material-container-static">
+    <div class="col-sm form-inline justify-content-end">
+        <label for="max" class="pr-2 pl-2"><?php echo L::task_max ?>:</label>
+            <select class="form-control" id="max" name="max" 
+            onchange="${return 'sendForm(\''.$this->formid.'\')'}">
+                <option <?php ($this->max == 5) ? print('selected') : ''; ?>>5</option>
+                <option <?php ($this->max == 10) ? print('selected') : ''; ?>>10</option>
+                <option <?php ($this->max == 50) ? print('selected') : ''; ?>>50</option>
+                <option <?php ($this->max == 100) ? print('selected') : ''; ?>>100</option>
+            </select>
+    </div>
+    </div>
+</t-form>
+</div>
 <t-each collection="@{tasks}" item="task">
     <div class="mt-2 material-container">
         <div class="item inline" style="font-size: large; width:100%;">

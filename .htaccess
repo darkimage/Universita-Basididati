@@ -23,7 +23,7 @@ RewriteRule ^(.+)\/([^\?]+)$ controllers/$1/index.php?action=$2 [QSA,L]
     Deny from all
 </Files>
 
-<Files ~ "\.(php|js|sql|css|svg|eot|ttf|woff|woff2)$">
+<Files ~ "\.(php|js|sql|css|svg|eot|ttf|woff|woff2|ico)$">
     Order Allow,Deny
     Allow from all
 </Files>

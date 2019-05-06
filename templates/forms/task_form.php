@@ -39,11 +39,11 @@
                     <i class="fas fa-plus"></i>  <?php echo L::task_addtlist ?>
                 </button>
                 <button id='tasksremove' type="button" class="${ return 'btn mt-4 btn-danger '.((!$this->task->TaskList)?'d-none':'')}"
-                onclick="${if($this->task->TaskList) return 'removeTaskList(\'tasks\','.$this->TaskList->id.')'}">
+                onclick="${if($this->task->TaskList) return 'removeTaskList(\'tasks\','.$this->task->TaskList->id.')'}">
                     <i class="fas fa-minus"></i>  <?php echo L::task_removetlist ?>
                 </button>
             </div>
-            <div id="tasks" class="d-none">
+            <div id="tasks" class="${return (!$this->task->TaskList)?'d-none':''}">
             <label class="pt-2" for="tasks"><?php echo L::task_add ?>:</label>
             <div>
                 <input type="text" class="form-control" id="_tasks" name="_tasks" autocomplete="off"

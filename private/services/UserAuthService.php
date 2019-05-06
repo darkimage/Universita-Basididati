@@ -69,10 +69,10 @@ class UserAuth {
 		$user = $this->getCurrentUser();
 		if(!$user) 
 			return false;
-		$userRoles = UserRole.findAll("SELECT * FROM @this WHERE userid=:id",['id'=>$user->id]);
+		$userRoles = UserRole::findAll("SELECT * FROM @this WHERE userid=:id",['id'=>$user->id]);
 		if($userRoles){
 			foreach ($userRoles as $key => $value) {
-				if($value->role->authority == $auth){
+				if($value->Roleid->Authority == $auth){
 					return true;
 				}
 			}

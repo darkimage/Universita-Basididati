@@ -29,6 +29,7 @@
                 "tasksCount" => $tasksCount,
                 "params" => $this->params
             ];
+            $body->addToModel($this->params);
             $this->render(L::task_list,$body);
         }
 
@@ -39,7 +40,7 @@
             } catch (Throwable $th) {
                 $this->redirect('errors');
             }
-            $this->redirect('project','show',['id'=>$task->id],"GET");
+            $this->redirect('project','show',['id'=>$task->Project->id],"GET");
         }
 
         /**
@@ -65,14 +66,13 @@
         * @method post void redirect("errors","notauth")
         */
         public function edit(){
-            if(!isset($this->params['project']) || !isset($this->params['id']))
-                $this->redirect("errors","index",["error"=>L::project_notspecified]);
-            $projectid = $this->params['project'];
+            if(!isset($this->params['id']))
+                $this->redirect("errors","index",["error"=>L::task_notspecified]);
             $taskid = $this->params['id'];
             $task = null;
+            $tasklist = null;
             try {
-                $task = Task::find("SELECT * FROM @this WHERE id=:id AND Project = :pid",['id'=>$taskid,'pid'=>$projectid]);
-                
+                $task = Task::find("SELECT * FROM @this WHERE id=:id",['id'=>$taskid]);
                 $auth = ($this->UserAuth->getCurrentUser()->id == $task->User->id);
                 if(!$auth)
                     $this->redirect("errors","index",["error"=>L::error_notauth]);
@@ -92,8 +92,64 @@
         * @method post void redirect("errors","notauth")
         */
         public function show(){
-
+            if(!isset($this->params['id']))
+                $this->redirect("errors","index",["error"=>L::task_notspecified]);
+            $taskid = $this->params['id'];
+            $tList = null;
+            $task = null;
+            try {
+                $task = Task::find("SELECT * FROM @this WHERE id=:id",['id'=>$taskid]);
+                if($task->TaskList)
+                    $tList = tList::findAll("SELECT * FROM @this WHERE TaskList=:id",['id'=>$task->TaskList->id]);
+            } catch (\Throwable $th) {
+                $this->redirect("errors");
+            }
+            $auth = ($task->User->id == $this->UserAuth->getCurrentUser()->id);
+            if(!$auth)
+                $auth = $this->UserAuth->UserHasAuth("SUPERADMIN");
+            $body = new template\PageModel();
+            $body->templateFile = '/templates/task/show_task.php';
+            $body->model = [ "task" => $task, 'list'=> $tList, 'authorized'=>$auth];
+            $body->resources = ['body'=> ['script'=>'task.js']];
+            $this->render(L::task_show($task->Nome),$body);
         }
+
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @method post void redirect("errors","notauth")
+        */
+        public function complete(){
+            if(!isset($this->params['id']))
+                $this->redirect("errors","index",["error"=>L::task_notspecified]);
+            $taskid = $this->params['id'];
+            $task = Task::find("SELECT * FROM @this WHERE id=:id",['id'=>$taskid]);
+            $auth = ($task->User->id == $this->UserAuth->getCurrentUser()->id);
+            if(!$auth)
+                $auth = $this->UserAuth->UserHasAuth("SUPERADMIN");
+            if(!$auth)
+                $this->redirect("errors","notauth");
+
+            if(!$task)
+                $this->redirect("errors","index",["error"=>L::task_notfound($taskid)]);
+            $task->Completata = 1;
+            $task->DataCompletamento = date("Y-m-d");
+            try {
+                $task->save();
+                Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::task_flashcompleted($task->id)];
+                $this->redirect('task','show',['id'=>$task->id],'GET');
+            } catch (\Throwable $th) {
+                $this->redirect("errors");
+            }
+        }
+
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @method post void redirect("errors","notauth")
+        */
+        public function remove(){
+            # code...
+        }
+
     }
 
     require_once(ROOT."/private/Controller.php");

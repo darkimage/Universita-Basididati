@@ -2,20 +2,34 @@ function searchUsers(elem,content,id, max){
     console.log($(elem).val());
     if($(elem).val() == '') return;
     showDropDown(content);
+
     $.post( API+"users/getUsersOfProject", {id: id}, "json")
-    .done(function(data) {
-        if(data.error){
-            console.log(data);
-            return;
-        }
-        $('#'+content).empty();
-        regex = new RegExp(encodeURI($(elem).val()),'g');
-        for(var i in data) {
-            if(i == max) {break;}
-            if(data[i].NomeUtente.match(regex)){
-                $('#'+content).append('<div onclick="return setAssignee(\''+elem.id+'\',\''+content+'\',\'Assignee\','+data[i].id+',\''+data[i].NomeUtente+' ('+data[i].Nome+')\''+')">'+data[i].NomeUtente+' ('+data[i].Nome+')</div>');
+    .done(function(users) {
+        $.post( API+"users/getGroupsOfProject", {id: id}, "json")
+        .done(function(groups) {
+            $('#'+content).empty();
+            if(groups.error){
+                console.log(groups);
+                return;
             }
-        }
+            if(users.error){
+                console.log(users);
+                return;
+            }
+            regex = new RegExp(encodeURI($(elem).val()),'g');
+            for(var i in users) {
+                if(i == max) {break;}
+                if(users[i].NomeUtente.match(regex)){
+                    $('#'+content).append('<div onclick="return setAssignee(\''+elem.id+'\',\''+content+'\',\'Assignee\','+users[i].id+',\''+data[i].NomeUtente+' ('+users[i].Nome+')\',\'user\')">'+users[i].NomeUtente+' ('+users[i].Nome+')</div>');
+                }
+            }
+            for(var i in groups) {
+                if(i == max) {break;}
+                if(groups[i].Nome.match(regex)){
+                    $('#'+content).append('<div onclick="return setAssignee(\''+elem.id+'\',\''+content+'\',\'Assignee\','+groups[i].id+',\''+groups[i].Nome+'\',\'group\')">'+groups[i].Nome+'</div>');
+                }
+            }
+        });
     });
 }
 
@@ -35,14 +49,15 @@ function hideDropDown(elem){
     }, 200);
 }
 
-function setAssignee(input,dropdown,hidden,id,text){
-    hideDropDown(dropdown);
-    $('#'+input).val(text);
-    $.post( API+"users/createAssignee", {id: id,type: 'user'}, "json")
+function setAssignee(input,dropdown,hidden,id,text,type){
+    $.post( API+"users/createAssignee", {id: id,type: type}, "json")
     .done(function(data) {
         if(data.error){
+            console.log(data);
             return;
         }
+        hideDropDown(dropdown);
+        $('#'+input).val(text);
         $('#'+hidden).val(data.id);
     });
 }
@@ -132,6 +147,39 @@ function addTaskToList(tasklist,task) {
         );
     });
 }
+
+function initTaskList() {
+    tasklist = $("#TaskList").val();
+    $.post( API+"tasks/getList", {id: tasklist}, "json")
+    .done(function(data) {
+        if(data.error){
+            console.log(data);
+            return;
+        }
+        console.log(data);
+        for(var i in data) {
+            $("#taskslist").prepend(
+                $('<li id="tasks'+data[i].Task.id+'" class="list-group-item"></li>').append(
+                $('<div class="container-fluid"></div>').append(
+                    $('<div class="row"></div>')
+                    .append('<div class="col">'+data[i].Task.Nome+'</div>')
+                    .append(
+                        $('<div class="col justify-content-end d-flex"></div>')
+                        .append(
+                            $('<button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>')
+                            .click(function(){
+                                removeTaskFromList(tasklist,data[i].Task,'tasks'+data[i].Task.id)
+                            })
+                        )
+                    )
+                ))
+            );
+        }
+    });
+}
+initTaskList();
+
+
 
 function removeTaskFromList(tasklist,task,elem){
     $.post( API+"tasks/removeTaskFromList", {id: tasklist,task: task.id}, "json")

@@ -107,7 +107,12 @@
 
         public function serve(){
             if(isset($_GET['action'])){
-                $method = $this->reflection->getMethod($_GET['action']);
+                $method = null;
+                try {
+                    $method = $this->reflection->getMethod($_GET['action']);
+                } catch (\Throwable $th) {
+                    $this->redirect("errors","notfound");
+                }
                 if($method->isPublic()){
                     $this->{$_GET['action']}();
                 }

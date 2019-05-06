@@ -28,7 +28,9 @@
         </div>
     </div>
     <div class="user-field pt-3">
-        <h2><?php echo L::group_plural ?></h2>
+        <div class="text-primary font-weight-bold">
+            <?php echo L::group_plural.':' ?>
+        </div>
         <t-if test="${Count($this->groups)}">
             <t-each collection="@{groups}" item="group">
                 <span class="badge badge-secondary mr-1">${echo $this->group->Nome}</span>
@@ -39,6 +41,9 @@
                 ${ echo L::user_nogroups }
             </div>
         </t-if>
+    </div>
+    <div class="row mt-2 mr-2">
+        <t-tasklist tasks="@{tasks}" />
     </div>
 </div>
 <div class="col-sm mt-2">

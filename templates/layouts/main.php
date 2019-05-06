@@ -49,6 +49,22 @@
             </ul>
             </t-access>
         </nav>
+        <t-access expression="getCurrentUser">
+            <ul class="nav bg-light nav-justified subnav">
+                <li class="nav-item p-2">
+                <t-link controller="project" overwrite params="${return []}"><?php echo L::project_plural?></t-link>
+                </li>
+                <li class="nav-item p-2">
+                <t-link controller="task" overwrite params="${return []}"><?php echo L::task_plural?></t-link>
+                </li>
+                <li class="nav-item p-2">
+                <t-link controller="user" overwrite params="${return []}"><?php echo L::user_plural?></t-link>
+                </li>
+                <li class="nav-item p-2">
+                <t-link controller="group" overwrite params="${return []}"><?php echo L::group_plural?></t-link>
+                </li>
+            </ul>
+        </t-access>
         <div class="py-4 px-3" id="body">
             <!--Body-->
         </div>

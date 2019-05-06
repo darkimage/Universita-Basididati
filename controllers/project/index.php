@@ -29,6 +29,7 @@
                 "projectsCount" => $projectsCount,
                 "params" => $this->params
             ];
+            $body->addToModel($this->params);
             $body->resources = ['header' => ['stylesheet' => "project.css"]];
             $this->render(L::project_list,$body);
         }
@@ -103,12 +104,10 @@
         * @method post void redirect("errors","notauth")
         */
         public function show(){
-            $projectid = "";
-            $users = [];
             if(!isset($this->params['id']))
                 $this->redirect("errors","index",["error"=>L::project_notspecified]);
             $projectid = $this->params['id'];
-            $project = Project::find("SELECT * FROM @this WHERE id=:id",["id"=>$this->params['id']]);
+            $project = Project::find("SELECT * FROM @this WHERE id=:id",["id"=>$projectid]);
             if(!$project)
                 $this->redirect("errors","index",["error"=>L::project_notfound($projectid)]);
             
@@ -125,7 +124,11 @@
             $groups = tGroup::findAll("SELECT g.id,g.Nome FROM tGroup as g, Project as p, ProjectGroup as pg 
             WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
 
+            $tasks = Task::findAll("SELECT * FROM @this WHERE Project=:id",['id'=>$projectid]);
+
             $auth = ($this->UserAuth->getCurrentUser()->id == $project->Creatore->id);
+            if(!$auth)
+                $auth = $this->UserAuth->UserHasAuth("SUPERADMIN");
 
             $body = new template\PageModel();
             $body->templateFile = '/templates/project/show_project.php';
@@ -133,6 +136,7 @@
                 "project" => $project,
                 "users" => $users,
                 "groups" => $groups,
+                "tasks" => $tasks,
                 "authorized" => $auth
             ];
             $body->resources = [

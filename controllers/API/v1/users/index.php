@@ -30,12 +30,25 @@
         * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
         * @service post void APIerrors->json($this->notauth())
         */
+        public function getGroupsOfProject(){
+            if(!isset($this->params['id']))
+                $this->json($this->APIerrors->notfound());
+            $projectid = $this->params['id'];
+            $groups = User::findAll("SELECT g.* FROM tGroup as g, Project as p, ProjectGroup as pg WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
+            $this->json($groups);
+        }
+
+        /**
+        * @service pre bool UserAuth->getCurrentUser()
+        * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
+        * @service post void APIerrors->json($this->notauth())
+        */
         public function createAssignee(){
             if(!isset($this->params['id']) || !isset($this->params['type']) )
                 $this->json($this->APIerrors->notfound());
             $id = $this->params['id'];
             $type = $this->params['type'];
-            $assignee = new Assignee(['User',($type == 'user') ? $id : null],['User',($type == 'group') ? $id : null]);
+            $assignee = new Assignee(['User',($type == 'user') ? $id : null],['tGroup',($type == 'group') ? $id : null]);
             try {
                 $assignee->save();
             } catch (\Throwable $th) {

@@ -54,6 +54,7 @@
                 $user = User::find("SELECT * FROM @this WHERE id=:userid",['userid'=>$userid]);
                 $projects = Project::findAll("SELECT DISTINCT p.* FROM User as u,Project as p,ProjectGroup as pg, GroupRole as gr WHERE p.id = pg.Project AND gr.Groupid = pg.tGroup AND u.id = gr.Userid AND u.id=:userid;",['userid'=>$userid]);
                 $groups = tGroup::findAll("SELECT g.* FROM User as u, tGroup as g, GroupRole as gr WHERE gr.Userid = u.id AND gr.Groupid = g.id AND u.id = :userid;",['userid'=>$userid]);
+                $tasks = Task::findAll("SELECT DISTINCT t.* FROM User as u, Task as t, Assignee as a,Grouprole as gr, tGroup as g WHERE u.id = :id AND ((a.User = u.id AND t.Assignee = a.id) OR (t.Assignee = a.id AND u.id = gr.Userid AND a.tGroup = g.id AND gr.Groupid = g.id));",['id'=>$userid]);
             } catch (Throwable $th) {
                 $this->redirect('errors');
             }
@@ -72,7 +73,8 @@
             $body->model = [ 
                 "user" => $user,
                 "projects" => $projects,
-                "groups" => $groups
+                "groups" => $groups,
+                "tasks" => $tasks
             ];
             $this->render(L::user_show($user->Nome),$body);
         }

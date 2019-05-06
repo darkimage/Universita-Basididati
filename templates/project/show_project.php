@@ -2,6 +2,16 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-8 material-container-static">
+        <div class="row ml-1 inline justify-content-end d-inline-flex" style="width:100%">
+        <t-if test="@{authorized}">
+            <t-link controller="project" action="edit" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-warning ml-2">
+                ${echo L::common_edit;}
+            </t-link>
+            <t-link controller="project" action="complete" overwrite params="${return ['id'=>$this->project->id]}" class="${ return 'btn btn-success ml-2 '.((!$this->project->Completato)?'':'disabled')}">
+                ${echo L::project_completebutton;}
+            </t-link>
+        </t-if>
+        </div>
         <div class="header inline" style="width:100%">
             <div class="inline capitalize">${echo $this->project->Nome}</div>
             <t-if test="@{project->Completato}">
@@ -34,19 +44,21 @@
                 <div class="multiline">${echo $this->project->Descrizione;}</div>
             </div>
         </div>
-        <div class="row pt-5 ml-1 inline justify-content-end d-inline-flex" style="width:100%">
-        <t-if test="@{authorized}">
-            <t-link controller="project" action="edit" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-warning ml-2">
-                ${echo L::common_edit;}
-            </t-link>
-            <t-link controller="project" action="complete" overwrite params="${return ['id'=>$this->project->id]}" class="${ return 'btn btn-success ml-2 '.((!$this->project->Completato)?'':'disabled')}">
-                ${echo L::project_completebutton;}
-            </t-link>
-        </t-if>
+        <div class="row pt-2 mr-2">
+            <div class="row ml-1 inline justify-content-end d-inline-flex" style="width:100%">
+            <t-if test="@{authorized}">
+                <t-link controller="task" action="add" overwrite params="${return ['id'=>$this->project->id]}" class="btn btn-primary ml-2 inline">
+                <i class="fas fa-plus mr-1"></i>${echo L::task_add;}
+                </t-link>
+            </t-if>
+            </div>
+        </div>
+        <div class="row mt-2 mr-2">
+            <t-tasklist tasks="@{tasks}" />
         </div>
         </div>
         <div class="col-sm-4 material-container">
-            <div class="row">
+            <div class="row ml-1">
                 <div class="col-sm">
                     <div class="text-primary font-weight-bold row">
                         ${echo L::project_users.":"}
@@ -72,7 +84,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row pt-2">
+            <div class="row pt-2 ml-1">
                 <div class="col-sm">
                     <div class="text-primary font-weight-bold row">
                         ${echo L::project_groups.":"}

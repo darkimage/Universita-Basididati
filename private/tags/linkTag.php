@@ -32,7 +32,7 @@ class linkTag extends htmlTag{
     }
 
     protected function getModel(){
-        return [ 'overwrite' => 'false'];
+        return [ 'overwrite' => 'false', 'action' => 'index'];
     }
 
     private function getParams(){

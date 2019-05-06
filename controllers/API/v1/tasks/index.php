@@ -106,6 +106,26 @@
         }
 
 
+        /**
+        * @service pre bool UserAuth->getCurrentUser()
+        * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
+        * @service post void APIerrors->json($this->notauth())
+        */
+        public function getList(){
+            if(!isset($this->params['id']))
+                $this->json($this->APIerrors->notfound());
+            $tasklistid = $this->params['id'];
+            try {
+                $tlist = tList::findAll("SELECT * FROM @this WHERE TaskList=:id",['id'=>$tasklistid]);
+                if($tlist)
+                    $this->json($tlist);
+                else
+                    $this->json($this->APIerrors->notfound());
+            } catch (\Throwable $th) {
+                $this->json($this->APIerrors->servererror());
+            }
+        }
+
     }
 
     require_once(ROOT."/private/Controller.php");

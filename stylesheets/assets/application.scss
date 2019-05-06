@@ -1,6 +1,19 @@
 @import "bootstrap/scss/bootstrap.scss";
 
 /* UI STYLE */
+.subnav .nav-item:hover{
+  background-color: #428bca;
+  transition: all 0.5s ease-in;
+}
+.subnav .nav-item:hover a{
+  color: #fff;
+  transition: all 0.5s ease-in;
+}
+
+.subnav .nav-item a{
+  text-decoration: none;
+}
+
 .badge {
 	.close {
     margin-left: .25rem;
