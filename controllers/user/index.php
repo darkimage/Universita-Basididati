@@ -54,7 +54,7 @@
                 $user = User::find("SELECT * FROM @this WHERE id=:userid",['userid'=>$userid]);
                 $projects = Project::findAll("SELECT DISTINCT p.* FROM User as u,Project as p,ProjectGroup as pg, GroupRole as gr WHERE p.id = pg.Project AND gr.Groupid = pg.tGroup AND u.id = gr.Userid AND u.id=:userid;",['userid'=>$userid]);
                 $groups = tGroup::findAll("SELECT g.* FROM User as u, tGroup as g, GroupRole as gr WHERE gr.Userid = u.id AND gr.Groupid = g.id AND u.id = :userid;",['userid'=>$userid]);
-                $tasks = Task::findAll("SELECT DISTINCT t.* FROM User as u, Task as t, Assignee as a,Grouprole as gr, tGroup as g WHERE u.id = :id AND ((a.User = u.id AND t.Assignee = a.id) OR (t.Assignee = a.id AND u.id = gr.Userid AND a.tGroup = g.id AND gr.Groupid = g.id));",['id'=>$userid]);
+                $tasks = Task::findAll("SELECT t.*, IFNULL(st.id,0) as Condivisa FROM User as u, Assignee as a,Grouprole as gr, tGroup as g, Task as t LEFT JOIN SharedTask as st ON t.id = st.Task WHERE u.id = :id AND ((a.User = u.id AND t.Assignee = a.id) OR (t.Assignee = a.id AND u.id = gr.Userid AND a.tGroup = g.id AND gr.Groupid = g.id) OR (st.User = u.id AND t.id = st.Task)) GROUP BY t.id",['id'=>$userid]);
             } catch (Throwable $th) {
                 $this->redirect('errors');
             }
@@ -74,12 +74,82 @@
                 "user" => $user,
                 "projects" => $projects,
                 "groups" => $groups,
-                "tasks" => $tasks
+                "tasks" => $tasks,
+                "authorized" => $auth
             ];
             $body->resources = ['header'=>['stylesheet'=>'user.css']];
             $this->render(L::user_show($user->Nome),$body);
         }
 
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @method post void redirect("errors")
+        */
+        public function process(){
+            if($this->params['update'] == 'false' && !$this->UserAuth->UserHasAuth("SUPERADMIN"))
+                $this->redirect("errors","notauth");
+            $user = User::fromData($this->params);
+            if($user){
+                if($this->params['update'] == 'true'){
+                    if($user->Password){
+                        $user->Password = password_hash($user->Password);
+                    }else{
+                        $userdb = User::find("SELECT * FROM @this WHERE id=:id",['id'=>$user->id]);
+                        $user->Password = $userdb->Password;
+                    }
+                }else{
+                    $user->Password = password_hash($user->Password);
+                }
+                try {
+                    $user->save();
+                } catch (\Throwable $th) {
+                    $this->redirect("errors");
+                }
+            }
+        }
+
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @service pre bool UserAuth->UserHasAuth("SUPERADMIN")
+        * @method post void redirect("errors")
+        */
+        public function add(){
+            $body = new template\PageModel();
+            $body->templateFile = '/templates/forms/user_form.php';
+            $this->render(L::user_add,$body); 
+        }
+
+
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @method post void redirect("errors")
+        */
+        public function edit(){
+            if(!isset($this->params['id']))
+                $this->redirect("errors","index",['error'=>L::user_notfound]);
+            $user = null;
+            $userid = $this->params['id'];
+            try {
+                $user = User::find("SELECT * FROM @this WHERE id=:id",['id'=>$userid]);
+                if(!$user)
+                    $this->redirect("errors","index",['error'=>L::user_notfound]);
+                if(!$this->UserAuth->UserHasAuth("SUPERADMIN")){
+                    if(!$this->UserAuth->getCurrentUser()->id == $user->id)
+                      $this->redirect("errors","notauth");  
+                }
+            } catch (\Throwable $th) {
+               $this->redirect("errors");
+            }
+            $body = new template\PageModel();
+            $body->templateFile = '/templates/forms/user_form.php';
+            $body->model = [ 'update'=>'true','user'=>$user];
+            $this->render(L::user_add,$body); 
+        }
+
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @method post void redirect("errors")
+        */
         public function logout(){
             $referee = $_SERVER['HTTP_REFERER'];
             Session::getInstance()->destroy();

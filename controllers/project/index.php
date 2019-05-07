@@ -111,17 +111,17 @@
             /*data*/
             $users = User::findAll("SELECT u.*,r.Authority,g.Nome as GroupName 
             FROM User as u, Role as r, ProjectGroup as pg,GroupRole as gr, Project as p, tGroup as g 
-            WHERE p.id = :projid 
+            WHERE p.id = :projid
             AND p.id = pg.Project 
             AND pg.tGroup = gr.Groupid 
             AND r.id = gr.Roleid 
             AND g.id = pg.tGroup
-            AND gr.Userid = u.id",['projid'=>$projectid]);
+            AND gr.Userid = u.id GROUP BY u.id",['projid'=>$projectid]);
 
             $groups = tGroup::findAll("SELECT g.id,g.Nome FROM tGroup as g, Project as p, ProjectGroup as pg 
             WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
 
-            $tasks = Task::findAll("SELECT * FROM @this WHERE Project=:id",['id'=>$projectid]);
+            $tasks = Task::findAll("SELECT t.*, IFNULL(st.id,0) as Condivisa FROM Project as p, Task as t LEFT JOIN SharedTask as st ON st.Task = t.id WHERE p.id = :id AND p.id = t.Project",['id'=>$projectid]);
 
             $auth = ($this->UserAuth->getCurrentUser()->id == $project->Creatore->id);
             if(!$auth)
@@ -190,7 +190,7 @@
                     $res = Project::find("DELETE FROM @this WHERE id=:id",['id'=> $projectid]);
                     if($res){
                         Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::project_deleted($projectid)];
-                        $this->redirect("project","index");
+                        $this->redirect("project");
                     }
                 }else{
                     $this->redirect("errors","index",["error"=>L::error_notauth]);

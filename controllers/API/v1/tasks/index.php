@@ -100,6 +100,7 @@
                 $res = tList::findAll("DELETE FROM @this WHERE Task=:tid AND TaskList=:tlid",['tid'=>$taskid , 'tlid'=>$tasklistid]);
                 if(!$res)
                     $this->json($this->APIerrors->servererror());
+                $this->json($this->APIerrors->success());
             } catch (\Throwable $th) {
                 $this->json($this->APIerrors->servererror());
             }
@@ -121,6 +122,44 @@
                     $this->json($tlist);
                 else
                     $this->json($this->APIerrors->notfound());
+            } catch (\Throwable $th) {
+                $this->json($this->APIerrors->servererror());
+            }
+        }
+
+        /**
+        * @service pre bool UserAuth->getCurrentUser()
+        * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
+        * @service post void APIerrors->json($this->notauth())
+        */
+        public function share(){
+            if(!isset($this->params['id']) || !isset($this->params['user']))
+                $this->json($this->APIerrors->notfound());
+            $taskid = $this->params['id'];
+            $userid = $this->params['user'];
+            try {
+                $sharedtask = new SharedTask(['User',$userid],['Task',$taskid]);
+                $sharedtask->save();
+                $this->json($sharedtask);
+            } catch (\Throwable $th) {
+                $this->json($this->APIerrors->servererror());
+            }
+        }
+
+        /**
+        * @service pre bool UserAuth->getCurrentUser()
+        * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
+        * @service post void APIerrors->json($this->notauth())
+        */
+        public function unshare(){
+            if(!isset($this->params['id']))
+                $this->json($this->APIerrors->notfound());
+            $sharetaskid = $this->params['id'];
+            try {
+                $res = SharedTask::findAll("DELETE FROM @this WHERE id=:id",['id'=>$sharetaskid]);
+                if(!$res)
+                    $this->json($this->APIerrors->servererror());
+                $this->json($this->APIerrors->success());
             } catch (\Throwable $th) {
                 $this->json($this->APIerrors->servererror());
             }

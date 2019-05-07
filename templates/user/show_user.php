@@ -1,4 +1,13 @@
 <div class="material-container-static">
+<t-if test="@{authorized}">
+    <div class="d-flex justify-content-end">
+    <div>
+    <t-link controller="user" action="edit" overwrite params="${return ['id'=>$this->user->id]}">
+    <button type="button" class="btn btn-warning">${echo L::common_edit}</button>
+    </t-link>
+    </div>
+    </div>
+</t-if>
 <h1><!--Title--></h1>
 <div class="container-fluid pt-2">
 <div class="row">

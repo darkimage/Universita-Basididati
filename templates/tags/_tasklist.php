@@ -20,6 +20,13 @@
             </span>
         </t-if>
         </div>
+        <t-if test="${(isset($this->task->Condivisa)? $this->task->Condivisa != 0 : false)}">
+        <div class="row ml-1 mt-2">
+            <span class="badge badge-pill badge-success ml-2">
+                ${echo L::task_shared}
+            </span>
+        </div>
+        </t-if>
     </div>
 </div>
 </t-each>

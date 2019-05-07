@@ -7,6 +7,7 @@ require_once(ROOT.'/private/dbConnection.php');
 class User extends Domain{
     public $id;
     public $Nome;
+    public $Cognome;
     public $DataNascita;
     public $NomeUtente;
     public $Password;

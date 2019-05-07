@@ -110,7 +110,9 @@
             $tList = null;
             $task = null;
             try {
-                $task = Task::find("SELECT * FROM @this WHERE id=:id",['id'=>$taskid]);
+                $task = Task::find("SELECT t.*, IF(st.id=null,null,u.id) as Condivisore, IFNULL(st.id,null) as SharedTask FROM Task as t LEFT JOIN SharedTask as st ON t.id = st.Task LEFT JOIN User as u ON u.id = st.User WHERE t.id=:id",['id'=>$taskid]);
+                if($task->Condivisore) 
+                    $task->Condivisore = User::find("SELECT * FROM @this WHERE id=:id",['id'=>$task->Condivisore]);
                 $tList = tList::findAll("SELECT l.* FROM tList as l, TaskList as tl WHERE tl.id=l.TaskList AND tl.Task=:id",['id'=>$task->id]);
             } catch (\Throwable $th) {
                 $this->redirect("errors");
@@ -158,7 +160,23 @@
         * @method post void redirect("errors","notauth")
         */
         public function remove(){
-            # code...
+            if(!isset($this->params['id']))
+                $this->redirect("errors","index",["error"=>L::task_notspecified]);
+            $taskid = $this->params['id'];
+            try {
+                $task = Task::find("SELECT * FROM @this WHERE id=:id",['id'=> $taskid]);
+                if($this->UserAuth->getCurrentUser()->id == $task->User->id || $this->UserAuth->UserHasAuth("SUPERADMIN")){
+                    $res = Task::find("DELETE FROM @this WHERE id=:id",['id'=> $taskid]);
+                    if($res){
+                        Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::task_deleted($taskid)];
+                        $this->redirect("task");
+                    }
+                }else{
+                    $this->redirect("errors","index",["error"=>L::error_notauth]);
+                }
+            } catch (\Throwable $th) {
+                $this->redirect("errors");
+            }
         }
 
     }

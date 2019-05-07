@@ -107,7 +107,7 @@
                         </t-if>
                         <t-if test="${!Count($this->groups)}">
                             <div class="text-center alert alert-secondary" role="alert" style="width:100%">
-                            <?php echo L::project_nogroups ?>
+                                <?php echo L::project_nogroups ?>
                             </div>
                         </t-if>
                     </div>

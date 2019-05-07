@@ -33,6 +33,72 @@ function searchUsers(elem,content,id, max){
     });
 }
 
+function searchUserShare(elem,content,taskid) {
+    if($(elem).val() == '') return;
+    showDropDown(content);
+    $.get( API+"users/getUsers")
+    .done(function(users) {
+        if(users.error){
+            console.log(users);
+            return;
+        }
+        $('#'+content).empty();
+        regex = new RegExp(encodeURI($(elem).val()),'g');
+        for(var i in users){
+            if(users[i].NomeUtente.match(regex)){
+                $('#'+content).append('<div onclick="return shareWith(\''+elem.id+'\','+users[i].id+','+taskid+',this)">'+users[i].NomeUtente+' ('+users[i].Nome+')</div>');
+            }
+        }
+    });
+}
+
+function shareWith(elem,userid,taskid,div){
+    $('#'+elem).val($(div).text());
+    $('#sharebtn').off("click");
+    $('#sharebtn').click(function(){
+        shareTask(taskid,userid);
+    });
+}
+
+function unShareTask(sharetaskid){
+    $.post( API+"tasks/unshare",{id: sharetaskid})
+    .done(function(res) {
+        if(res.error != 0){
+            console.log(res);
+            return;
+        }
+        $('#sharebtn').off("click");
+        $('#share').removeClass("d-none");
+        $('#sharebtnremove').addClass('d-none');
+        $('#user-share').remove();
+    });
+}
+
+function shareTask(taskid,userid){
+    $.post( API+"tasks/share",{id: taskid,user: userid}, "json")
+    .done(function(share) {
+        if(share.error){
+            console.log(share);
+            return;
+        }
+        $('#share').addClass("d-none");
+        $('#sharebtnremove').removeClass('d-none');
+        $('#sharebtnremove').off('click');
+        $('#sharebtnremove').click(function(){
+            unShareTask(share.id);
+        });
+        $('#user-share-container').append(`
+        <div id="user-share" class="row mt-2 ml-1">
+        <div class="material-container-static inline" style="width:100%">
+            <span class="badge badge-pill badge-secondary ml-2">Gruppo</span>
+            <a href="`+URL+'user/show?id='+share.User.id+`">
+               `+share.User.Nome+' ('+share.User.NomeUtente+`)
+            </a>
+        </div>
+        </div>`);
+    });
+}
+
 function showDropDown(elem,input){
     $('.user-error-add').addClass('d-none');
     $('.user-error-remove').addClass('d-none');
@@ -187,7 +253,7 @@ initTaskList();
 function removeTaskFromList(tasklist,task,elem){
     $.post( API+"tasks/removeTaskFromList", {id: tasklist,task: task.id}, "json")
     .done(function(data) {
-        if(data.error){
+        if(data.error != 0){
             console.log();
             return;
         }
