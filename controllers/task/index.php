@@ -44,8 +44,10 @@
             } catch (Throwable $th) {
                 $this->redirect('errors');
             }
-            if($update != 'true')
+            if($update != 'true'){
+                Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::task_added($task->id)];
                 $this->redirect('project','show',['id'=>$task->Project->id],"GET");
+            }
             else{
                 Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::task_updated($task->id)];
                 $this->redirect('task','show',['id'=>$task->id],"GET");

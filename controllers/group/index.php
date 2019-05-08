@@ -103,6 +103,8 @@
             }
             if($this->params['update'] == 'true')
                 Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::group_edited($group->id)];
+            else
+                Session::getInstace()->flash = ['class'=>'alert-success','message'=>L::group_added($group->id)];
             $this->redirect('group','show',['id'=>$group->id],"GET");
         }
 

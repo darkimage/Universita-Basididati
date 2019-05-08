@@ -83,7 +83,7 @@
 
         /**
         * @service pre bool UserAuth->requireUserLogin()
-        * @method post void redirect("errors")
+        * @method post void redirect("errors","notauth")
         */
         public function process(){
             if($this->params['update'] == 'false' && !$this->UserAuth->UserHasAuth("SUPERADMIN"))
@@ -102,6 +102,13 @@
                 }
                 try {
                     $user->save();
+                    if($this->params['update'] == 'true'){
+                        Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::user_updated($user->id)];
+                        $this->redirect("user","show",['id'=>$user->id]);
+                    }else{
+                        Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::user_added($user->id)];
+                        $this->redirect("user","show",['id'=>$user->id]);
+                    }
                 } catch (\Throwable $th) {
                     $this->redirect("errors");
                 }
@@ -111,7 +118,7 @@
         /**
         * @service pre bool UserAuth->requireUserLogin()
         * @service pre bool UserAuth->UserHasAuth("SUPERADMIN")
-        * @method post void redirect("errors")
+        * @method post void redirect("errors","notauth")
         */
         public function add(){
             $body = new template\PageModel();
@@ -122,7 +129,7 @@
 
         /**
         * @service pre bool UserAuth->requireUserLogin()
-        * @method post void redirect("errors")
+        * @method post void redirect("errors","notauth")
         */
         public function edit(){
             if(!isset($this->params['id']))
@@ -148,13 +155,38 @@
 
         /**
         * @service pre bool UserAuth->requireUserLogin()
-        * @method post void redirect("errors")
+        * @method post void redirect("errors","notauth")
         */
         public function logout(){
             $referee = $_SERVER['HTTP_REFERER'];
             Session::getInstance()->destroy();
             header("location:$referee");
             exit;
+        }
+
+        /**
+        * @service pre bool UserAuth->requireUserLogin()
+        * @service pre bool UserAuth->UserHasAuth("SUPERADMIN")
+        * @method post void redirect("errors","notauth")
+        */
+        public function remove(){
+            if(!isset($this->params['id']))
+                $this->redirect("errors","index",['error'=>L::user_notfound]);
+                $userid = $this->params['id'];
+            if(!$this->UserAuth->UserHasAuth("SUPERADMIN")){
+                if($userid != $this->UserAuth->getCurrentUser()->id()){
+                    $this->redirect("errors","notauth");
+                }
+            }
+            try {
+                $res = User::find("DELETE FROM @this WHERE id=:id",['id'=>$userid]);
+                if(!$res)
+                    $this->redirect("errors","notauth");
+                Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::user_deleted($userid)];
+                $this->redirect("user");
+            } catch (\Throwable $th) {
+                $this->redirect("errors");
+            }
         }
 
     }

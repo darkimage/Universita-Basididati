@@ -50,9 +50,10 @@
             } catch (Throwable $th) {
                 $this->redirect('errors');
             }
-            if($this->params['update'] != 'false'){
+            if($this->params['update'] != 'false')
                 Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::project_updated($project->id)];
-            }
+            else
+                Session::getInstance()->flash = ['class'=>'alert-success','message'=>L::project_added($project->id)];
             $this->redirect('project','show',['id'=>$project->id],"GET");
         }
 

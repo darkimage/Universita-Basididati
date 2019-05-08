@@ -49,7 +49,7 @@
                 }
             }
             $session->startSession();
-            $session->flash = L::login_error;
+            $session->flash = ['class'=> 'alert-danger','message'=>L::login_error];
             $this->redirect("login","index",$this->params);
         }
         

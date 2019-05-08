@@ -1,9 +1,13 @@
+<t-flashmessage />
 <div class="material-container-static">
 <t-if test="@{authorized}">
     <div class="d-flex justify-content-end">
     <div>
     <t-link controller="user" action="edit" overwrite params="${return ['id'=>$this->user->id]}">
     <button type="button" class="btn btn-warning">${echo L::common_edit}</button>
+    </t-link>
+    <t-link controller="user" action="remove" overwrite params="${return ['id'=>$this->user->id]}" class="btn btn-danger ml-2">
+        <i class="fas fa-trash-alt py-1"></i>
     </t-link>
     </div>
     </div>
