@@ -89,6 +89,8 @@
                 $Tasklist = TaskList::find("SELECT * FROM @this WHERE Task=:id",['id'=>$task->id]);
                 $auth = ($this->UserAuth->getCurrentUser()->id == $task->User->id);
                 if(!$auth)
+                    $auth = $this->UserAuth->UserHasAuth("SUPERADMIN");
+                if(!$auth)
                     $this->redirect("errors","index",["error"=>L::error_notauth]);
 
             } catch (\Throwable $th) {

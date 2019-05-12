@@ -85,7 +85,7 @@ function searchGroups(elem,content,id){
         }
         $('#'+content).empty();
         regex = new RegExp(encodeURI($(elem).val()),'g');
-        for(var i in data) {
+        for (let i = 0; i < data.length; i++) {
             if(data[i].Nome.match(regex)){
                 $('#'+content).append('<div onclick="return addGroup(this,\'groupdropdown\','+data[i].id+','+id+')">'+data[i].Nome+'</div>');
             }

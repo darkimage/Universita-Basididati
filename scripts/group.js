@@ -8,7 +8,7 @@ function searchUsers(elem,content,groupid){
             return;
         }
         $('#'+content).empty();
-        for(var i in users) {
+        for (let i = 0; i < users.length; i++) {
             usertxt = users[i].Nome+' ('+users[i].NomeUtente+')';
             $('#'+content).append('<div onclick="setUser(\''+elem.id+'\','+groupid+','+users[i].id+',\''+usertxt+'\')">'+usertxt+'</div>');
         }

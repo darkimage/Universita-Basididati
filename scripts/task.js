@@ -17,13 +17,13 @@ function searchUsers(elem,content,id, max){
                 return;
             }
             regex = new RegExp(encodeURI($(elem).val()),'g');
-            for(var i in users) {
+            for (let i = 0; i < users.length; i++) {
                 if(i == max) {break;}
                 if(users[i].NomeUtente.match(regex)){
                     $('#'+content).append('<div onclick="return setAssignee(\''+elem.id+'\',\''+content+'\',\'Assignee\','+users[i].id+',\''+data[i].NomeUtente+' ('+users[i].Nome+')\',\'user\')">'+users[i].NomeUtente+' ('+users[i].Nome+')</div>');
                 }
             }
-            for(var i in groups) {
+            for (let i = 0; i < groups.length; i++) {
                 if(i == max) {break;}
                 if(groups[i].Nome.match(regex)){
                     $('#'+content).append('<div onclick="return setAssignee(\''+elem.id+'\',\''+content+'\',\'Assignee\','+groups[i].id+',\''+groups[i].Nome+'\',\'group\')">'+groups[i].Nome+'</div>');
@@ -44,7 +44,7 @@ function searchUserShare(elem,content,taskid) {
         }
         $('#'+content).empty();
         regex = new RegExp(encodeURI($(elem).val()),'g');
-        for(var i in users){
+        for (let i = 0; i < users.length; i++) {
             if(users[i].NomeUtente.match(regex)){
                 $('#'+content).append('<div onclick="return shareWith(\''+elem.id+'\','+users[i].id+','+taskid+',this)">'+users[i].NomeUtente+' ('+users[i].Nome+')</div>');
             }
@@ -81,6 +81,7 @@ function shareTask(taskid,userid){
             console.log(share);
             return;
         }
+        console.log(share);
         $('#share').addClass("d-none");
         $('#sharebtnremove').removeClass('d-none');
         $('#sharebtnremove').off('click');
@@ -172,7 +173,7 @@ function searchTasks(elem,content,tasklist,project,task,max){
         }
         $('#'+content).empty();
         regex = new RegExp(encodeURI($(elem).val()),'g');
-        for(var i in data) {
+        for (let i = 0; i < data.length; i++) {
             if(i == max) {break;}
             if(task == data[i].id) {continue;}
             if(data[i].Nome.match(regex)){
@@ -226,7 +227,7 @@ function initTaskList() {
         }
         $('#_tasks').keyup(function() {searchTasks('#_tasks','tasksdropdown',tasklist,project,task,5)});
         console.log(data);
-        for(var i in data) {
+        for (let i = 0; i < data.length; i++) {
             $("#taskslist").prepend(
                 $('<li id="tasks'+data[i].Task.id+'" class="list-group-item"></li>').append(
                 $('<div class="container-fluid"></div>').append(

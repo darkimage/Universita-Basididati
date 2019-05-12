@@ -120,8 +120,8 @@
                     </div>
                 </div>
             </div>
-            <t-if test="${$this->task->SharedTask}">
             <div id="user-share-container">
+            <t-if test="${$this->task->SharedTask}">
             <div id="user-share" class="row mt-2 ml-1">
                 <div class="material-container-static inline" style="width:100%">
                 <span class="badge badge-pill badge-secondary ml-2">${echo L::common_group}</span>
@@ -130,8 +130,8 @@
                 </t-link>
                 </div>
             </div>
-            </div>
             </t-if>
+            </div>
             <div id="share" class="${return ($this->task->SharedTask)?'d-none':''}">
             <div class="alert alert-secondary text-center inline mt-2" role="alert" style="width:100%">
                 ${echo L::task_noshared}
@@ -149,13 +149,11 @@
             </div>
             </div>
             </t-if>
-            <t-if test="${$this->task->SharedTask}">
             <div class="d-flex justify-content-end">
-                <div><button type="button" id="sharebtnremove" class="btn btn-danger inline mt-2"
+                <div><button type="button" id="sharebtnremove" class="${return 'btn btn-danger inline mt-2 '.(($this->task->SharedTask)?'':'d-none')}"
                 onclick="${return 'unShareTask('.$this->task->SharedTask.')'}"
                 ><i class="fas fa-user-times mr-1"></i>${echo L::task_unshare}</button></div>
             </div>
-            </t-if>
         </div>
     </div>
 </div>
