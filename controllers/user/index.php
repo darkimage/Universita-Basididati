@@ -52,8 +52,8 @@
             $groups = null;
             try {
                 $user = User::find("SELECT * FROM @this WHERE id=:userid",['userid'=>$userid]);
-                $projects = Project::findAll("SELECT DISTINCT p.* FROM User as u,Project as p,ProjectGroup as pg, GroupRole as gr WHERE p.id = pg.Project AND gr.Groupid = pg.tGroup AND u.id = gr.Userid AND u.id=:userid;",['userid'=>$userid]);
-                $groups = tGroup::findAll("SELECT g.* FROM User as u, tGroup as g, GroupRole as gr WHERE gr.Userid = u.id AND gr.Groupid = g.id AND u.id = :userid;",['userid'=>$userid]);
+                $projects = Project::findAll("SELECT DISTINCT p.* FROM User as u,Project as p,ProjectGroup as pg, GroupRole as gr WHERE p.id = pg.Project AND gr.Groupid = pg.tGroup AND u.id = gr.Userid AND u.id=:userid",['userid'=>$userid]);
+                $groups = tGroup::findAll("SELECT g.* FROM User as u, tGroup as g, GroupRole as gr WHERE gr.Userid = u.id AND gr.Groupid = g.id AND u.id = :userid",['userid'=>$userid]);
                 $tasks = Task::findAll("SELECT t.*, IFNULL(st.id,0) as Condivisa FROM User as u, Assignee as a,Grouprole as gr, tGroup as g, Task as t LEFT JOIN SharedTask as st ON t.id = st.Task WHERE u.id = :id AND ((a.User = u.id AND t.Assignee = a.id) OR (t.Assignee = a.id AND u.id = gr.Userid AND a.tGroup = g.id AND gr.Groupid = g.id) OR (st.User = u.id AND t.id = st.Task)) GROUP BY t.id",['id'=>$userid]);
             } catch (Throwable $th) {
                 $this->redirect('errors');

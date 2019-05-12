@@ -5,7 +5,7 @@ function searchUsers(elem,content,id, max){
 
     $.post( API+"users/getUsersOfProject", {id: id}, "json")
     .done(function(users) {
-        $.post( API+"users/getGroupsOfProject", {id: id}, "json")
+        $.post( API+"groups/getGroupsOfProject", {id: id}, "json")
         .done(function(groups) {
             $('#'+content).empty();
             if(groups.error){

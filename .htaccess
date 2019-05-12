@@ -10,6 +10,7 @@ RewriteBase /
 #css rewrite rule
 RewriteRule ^stylesheets/(.*)\.css$ /stylesheets/scss.php/$1.scss [QSA,R=301,L]
 
+#base redirect rule /
 RewriteCond %{HTTP_HOST} !^m\.
 RewriteRule ^$ controllers/project/index.php?action=index [QSA,L]
 

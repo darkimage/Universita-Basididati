@@ -27,7 +27,7 @@
             if(!isset($this->params['id']))
                 $this->json($this->APIerrors->notfound());
             $projectid = $this->params['id'];
-            $groups = tGroup::findAll("SELECT g.id,g.Nome FROM tGroup as g, Project as p, ProjectGroup as pg 
+            $groups = tGroup::findAll("SELECT g.* FROM tGroup as g, Project as p, ProjectGroup as pg 
                 WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
             $this->json($groups);
         }

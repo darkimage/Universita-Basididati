@@ -119,7 +119,7 @@
             AND g.id = pg.tGroup
             AND gr.Userid = u.id GROUP BY u.id",['projid'=>$projectid]);
 
-            $groups = tGroup::findAll("SELECT g.id,g.Nome FROM tGroup as g, Project as p, ProjectGroup as pg 
+            $groups = tGroup::findAll("SELECT g.* FROM tGroup as g, Project as p, ProjectGroup as pg 
             WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
 
             $tasks = Task::findAll("SELECT t.*, IFNULL(st.id,0) as Condivisa FROM Project as p, Task as t LEFT JOIN SharedTask as st ON st.Task = t.id WHERE p.id = :id AND p.id = t.Project",['id'=>$projectid]);
@@ -157,7 +157,7 @@
                 if($this->UserAuth->getCurrentUser()->id != $project->Creatore->id)
                     $this->redirect("errors","index",["error"=>L::error_notauth]);
                 if($project){
-                    $groups = tGroup::findAll("SELECT g.id,g.Nome FROM tGroup as g, Project as p, ProjectGroup as pg WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
+                    $groups = tGroup::findAll("SELECT g.* FROM tGroup as g, Project as p, ProjectGroup as pg WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
                     $body = new template\PageModel();
                     $body->templateFile = '/templates/forms/project_form.php';
                     $body->model = array(
