@@ -16,7 +16,7 @@
     ok php node
 </t-if>
 
-<t-if test="@{arr:[false]}">
+<t-if test="@{arr:[${return false}]}">
     ok page attr with valid attr
 </t-if>
 
