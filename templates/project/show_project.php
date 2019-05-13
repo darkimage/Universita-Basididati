@@ -87,7 +87,7 @@
                         </t-each>
                     </t-if>
                     <t-if test="${!Count($this->users)}">
-                        <div class="text-center alert alert-secondary" role="alert" style="width:100%">
+                        <div class="text-center alert alert-secondary mt-2" role="alert" style="width:100%">
                         <?php echo L::project_nousers; ?>
                         </div>
                     </t-if>

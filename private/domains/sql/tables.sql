@@ -105,6 +105,8 @@ CREATE TABLE IF NOT EXISTS `tList`(
     `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `Task` int NOT NULL,
     `TaskList` int NOT NULL,
+    PRIMARY KEY (`Task`, `TaskList`),
+    UNIQUE KEY (`id`),
     FOREIGN KEY (`Task`) REFERENCES `Task`(`id`) ON DELETE CASCADE,
 	FOREIGN KEY (`TaskList`) REFERENCES `TaskList`(`id`) ON DELETE CASCADE
 );

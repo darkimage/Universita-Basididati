@@ -64,10 +64,6 @@
                     $auth = true;
             }else $auth = true;
 
-            if(!$auth)
-                $this->redirect("errors","notauth");
-            
-
             $body = new template\PageModel();
             $body->templateFile = '/templates/user/show_user.php';
             $body->model = [ 

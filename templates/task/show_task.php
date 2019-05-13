@@ -100,7 +100,7 @@
             <div class="row mt-2 ml-1">
                 <div class="material-container-static inline" style="width:100%">
                 <span class="badge badge-pill badge-secondary ml-2">${echo L::common_group}</span>
-                <t-link controller="user" action="show" overwrite params="${return ['id'=>$this->task->Assignee->tGroup->id]}">
+                <t-link controller="group" action="show" overwrite params="${return ['id'=>$this->task->Assignee->tGroup->id]}">
                     ${echo $this->task->Assignee->tGroup->Nome}
                 </t-link>
                 </div>

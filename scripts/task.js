@@ -20,7 +20,7 @@ function searchUsers(elem,content,id, max){
             for (let i = 0; i < users.length; i++) {
                 if(i == max) {break;}
                 if(users[i].NomeUtente.match(regex)){
-                    $('#'+content).append('<div onclick="return setAssignee(\''+elem.id+'\',\''+content+'\',\'Assignee\','+users[i].id+',\''+data[i].NomeUtente+' ('+users[i].Nome+')\',\'user\')">'+users[i].NomeUtente+' ('+users[i].Nome+')</div>');
+                    $('#'+content).append('<div onclick="return setAssignee(\''+elem.id+'\',\''+content+'\',\'Assignee\','+users[i].id+',\''+users[i].NomeUtente+' ('+users[i].Nome+')\',\'user\')">'+users[i].NomeUtente+' ('+users[i].Nome+')</div>');
                 }
             }
             for (let i = 0; i < groups.length; i++) {

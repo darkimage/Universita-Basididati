@@ -31,16 +31,16 @@ CREATE TABLE `assignee` (
   KEY `tGroup` (`tGroup`),
   CONSTRAINT `assignee_ibfk_1` FOREIGN KEY (`User`) REFERENCES `user` (`id`) ON DELETE CASCADE,
   CONSTRAINT `assignee_ibfk_2` FOREIGN KEY (`tGroup`) REFERENCES `tgroup` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `assignee`
 --
 
-LOCK TABLES `assignee` WRITE; 
+LOCK TABLES `assignee` WRITE;
 /*!40000 ALTER TABLE `assignee` DISABLE KEYS */;
-INSERT INTO `assignee` VALUES (1,3,NULL),(2,2,NULL),(3,3,NULL),(4,NULL,1),(5,NULL,2);
+INSERT INTO `assignee` VALUES (1,3,NULL),(2,2,NULL),(3,3,NULL),(4,NULL,1),(5,NULL,2),(9,3,NULL),(10,3,NULL),(11,4,NULL),(12,NULL,2);
 /*!40000 ALTER TABLE `assignee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -73,7 +73,7 @@ CREATE TABLE `grouprole` (
 
 LOCK TABLES `grouprole` WRITE;
 /*!40000 ALTER TABLE `grouprole` DISABLE KEYS */;
-INSERT INTO `grouprole` VALUES (1,1,1,4),(2,2,1,5),(3,3,2,4),(4,4,2,6),(5,3,1,6),(6,1,2,6);
+INSERT INTO `grouprole` VALUES (1,1,1,4),(6,1,2,6),(2,2,1,5),(5,3,1,6),(3,3,2,4),(4,4,2,6);
 /*!40000 ALTER TABLE `grouprole` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +96,7 @@ CREATE TABLE `project` (
   PRIMARY KEY (`id`),
   KEY `Creatore` (`Creatore`),
   CONSTRAINT `project_ibfk_1` FOREIGN KEY (`Creatore`) REFERENCES `user` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +105,7 @@ CREATE TABLE `project` (
 
 LOCK TABLES `project` WRITE;
 /*!40000 ALTER TABLE `project` DISABLE KEYS */;
-INSERT INTO `project` VALUES (1,'Progetto di Prova 1','Qui viene inserita una accurata descrizione del progetto e non solo.\r\nsupporta anche il multilinea.\r\nProva\r\nProva.',1,'2019-04-23 00:00:00','2019-05-01','2019-06-21',1),(2,'Progetto 2','Qui viene inserita una accurata descrizione del progetto 2',0,'2019-04-23 00:00:00',NULL,'2019-07-25',2);
+INSERT INTO `project` VALUES (1,'Progetto Completato','Qui viene inserita una accurata descrizione del progetto e non solo.\r\nLa descrizione supporta anche il multilinea.\r\nNel caso un progetto venga segnato come completato non puo tornare ad essre incompleto.\r\nAd ogni progetto possono essere associati dei Gruppi che aggiungono gli\r\nutenti al progetto, e solo il cratore di quest ultimo puo aggiungere Task al progetto e\r\ndichiaralo completato. \r\nSolo dopo la creazione e possibile aggiungere i gruppi.\r\nIl progetto e sempre modificabile e cancellabile anche dopo il completamento.',1,'2019-04-23 00:00:00','2019-05-01','2019-06-21',1),(2,'Progetto creazione sito web','Qui viene inserita una accurata descrizione del progetto e non solo.\r\nLa descrizione supporta anche il multilinea.\r\nNel caso un progetto venga segnato come completato non puo tornare ad essre incompleto.\r\nAd ogni progetto possono essere associati dei Gruppi che aggiungono gli\r\nutenti al progetto, e solo il cratore di quest ultimo puo aggiungere Task al progetto e\r\ndichiaralo completato. \r\nSolo dopo la creazione e possibile aggiungere i gruppi.\r\nIl progetto e sempre modificabile e cancellabile anche dopo il completamento.',0,'2019-04-23 00:00:00',NULL,'2019-07-25',2),(3,'Progetto vuoto','Qui viene inserita una accurata descrizione del progetto e non solo.\r\nLa descrizione supporta anche il multilinea.\r\nNel caso un progetto venga segnato come completato non puo tornare ad essre incompleto.\r\nAd ogni progetto possono essere associati dei Gruppi che aggiungono gli\r\nutenti al progetto, e solo il cratore di quest ultimo puo aggiungere Task al progetto e\r\ndichiaralo completato. \r\nSolo dopo la creazione e possibile aggiungere i gruppi.\r\nIl progetto e sempre modificabile e cancellabile anche dopo il completamento.',0,'2019-05-13 00:00:00',NULL,'2019-08-05',3),(4,'progetto taskmanager','Qui viene inserita una accurata descrizione del progetto e non solo.\r\nLa descrizione supporta anche il multilinea.\r\nNel caso un progetto venga segnato come completato non puo tornare ad essre incompleto.\r\nAd ogni progetto possono essere associati dei Gruppi che aggiungono gli\r\nutenti al progetto, e solo il cratore di quest ultimo puo aggiungere Task al progetto e\r\ndichiaralo completato. \r\nSolo dopo la creazione e possibile aggiungere i gruppi.\r\nIl progetto e sempre modificabile e cancellabile anche dopo il completamento.',0,'2019-05-13 00:00:00',NULL,'2019-05-13',4);
 /*!40000 ALTER TABLE `project` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,7 +126,7 @@ CREATE TABLE `projectgroup` (
   KEY `tGroup` (`tGroup`),
   CONSTRAINT `projectgroup_ibfk_1` FOREIGN KEY (`tGroup`) REFERENCES `tgroup` (`id`) ON DELETE CASCADE,
   CONSTRAINT `projectgroup_ibfk_2` FOREIGN KEY (`Project`) REFERENCES `project` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,7 +135,7 @@ CREATE TABLE `projectgroup` (
 
 LOCK TABLES `projectgroup` WRITE;
 /*!40000 ALTER TABLE `projectgroup` DISABLE KEYS */;
-INSERT INTO `projectgroup` VALUES (2,2,1),(4,2,2),(5,3,2),(29,4,1),(30,1,1);
+INSERT INTO `projectgroup` VALUES (2,2,1),(4,2,2),(5,3,2),(29,4,1),(30,1,1),(31,4,4),(32,2,4);
 /*!40000 ALTER TABLE `projectgroup` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -175,12 +175,12 @@ CREATE TABLE `sharedtask` (
   `User` int(11) NOT NULL,
   `Task` int(11) NOT NULL,
   PRIMARY KEY (`User`,`Task`),
+  UNIQUE KEY `id` (`id`),
   KEY `User` (`User`),
   KEY `Task` (`Task`),
-  UNIQUE KEY `id` (`id`),
   CONSTRAINT `sharedtask_ibfk_1` FOREIGN KEY (`User`) REFERENCES `user` (`id`) ON DELETE CASCADE,
   CONSTRAINT `sharedtask_ibfk_2` FOREIGN KEY (`Task`) REFERENCES `task` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,7 +189,7 @@ CREATE TABLE `sharedtask` (
 
 LOCK TABLES `sharedtask` WRITE;
 /*!40000 ALTER TABLE `sharedtask` DISABLE KEYS */;
-INSERT INTO `sharedtask` VALUES (1,1,3);
+INSERT INTO `sharedtask` VALUES (1,1,3),(9,2,1),(10,2,10);
 /*!40000 ALTER TABLE `sharedtask` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,7 +210,7 @@ CREATE TABLE `task` (
   `Completata` tinyint(1) NOT NULL,
   `User` int(11) NOT NULL,
   `Project` int(11) NOT NULL,
-  `Assignee` int(11),
+  `Assignee` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `User` (`User`),
   KEY `Project` (`Project`),
@@ -218,7 +218,7 @@ CREATE TABLE `task` (
   CONSTRAINT `task_ibfk_1` FOREIGN KEY (`User`) REFERENCES `user` (`id`) ON DELETE CASCADE,
   CONSTRAINT `task_ibfk_2` FOREIGN KEY (`Project`) REFERENCES `project` (`id`) ON DELETE CASCADE,
   CONSTRAINT `task_ibfk_3` FOREIGN KEY (`Assignee`) REFERENCES `assignee` (`id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -227,7 +227,7 @@ CREATE TABLE `task` (
 
 LOCK TABLES `task` WRITE;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
-INSERT INTO `task` VALUES (1,'Prova Task 1 with edit','Descrizione task 1','2019-05-04','2019-05-31','2019-05-05',1,1,1,5),(2,'Prova Task 2','Descrizione task 2','2019-05-04','2019-05-31','2019-05-31',1,2,1,2),(3,'Prova Task 2','Descrizione task 2','2019-05-04','2019-05-31','2019-05-31',1,2,1,1),(6,'Prova task proj 2','Descrivo la task','2019-05-05','2019-05-05',NULL,0,1,2,4);
+INSERT INTO `task` VALUES (1,'Completata con dipendenze','Le Task sono compiti assegnati a specifici progetti ed \r\na specifiche persono o gruppi di utenti.\r\nLe Task possono essere ulteriormente condivise con singoli utenti\r\nche possono anche non partecipare al progetto del quale la task\r\noggetto di condivisione fa parte.\r\nCome i progetti le task hanno un inizio e una data di scadenza\r\ne possono essere dichiarate completate.\r\nLe Task possono anche avere dipendere da una lista di altre task che \r\nfanno parte del progetto.','2019-05-04','2019-05-31',NULL,1,1,1,5),(2,'Completata dipendenza 1','Le Task sono compiti assegnati a specifici progetti ed \r\na specifiche persono o gruppi di utenti.\r\nLe Task possono essere ulteriormente condivise con singoli utenti\r\nche possono anche non partecipare al progetto del quale la task\r\noggetto di condivisione fa parte.\r\nCome i progetti le task hanno un inizio e una data di scadenza\r\ne possono essere dichiarate completate.\r\nLe Task possono anche avere dipendere da una lista di altre task che \r\nfanno parte del progetto.','2019-05-04','2019-05-31',NULL,1,2,1,2),(3,'Completata dipendenza 2','Le Task sono compiti assegnati a specifici progetti ed \r\na specifiche persono o gruppi di utenti.\r\nLe Task possono essere ulteriormente condivise con singoli utenti\r\nche possono anche non partecipare al progetto del quale la task\r\noggetto di condivisione fa parte.\r\nCome i progetti le task hanno un inizio e una data di scadenza\r\ne possono essere dichiarate completate.\r\nLe Task possono anche avere dipendere da una lista di altre task che \r\nfanno parte del progetto.','2019-05-04','2019-05-31',NULL,1,2,1,1),(6,'creare il sito web','Le Task sono compiti assegnati a specifici progetti ed \r\na specifiche persono o gruppi di utenti.\r\nLe Task possono essere ulteriormente condivise con singoli utenti\r\nche possono anche non partecipare al progetto del quale la task\r\noggetto di condivisione fa parte.\r\nCome i progetti le task hanno un inizio e una data di scadenza\r\ne possono essere dichiarate completate.\r\nLe Task possono anche avere dipendere da una lista di altre task che \r\nfanno parte del progetto.','2019-05-05','2019-05-05',NULL,0,1,2,4),(7,'interfaccia responsiva Bootstrap','Le Task sono compiti assegnati a specifici progetti ed \r\na specifiche persono o gruppi di utenti.\r\nLe Task possono essere ulteriormente condivise con singoli utenti\r\nche possono anche non partecipare al progetto del quale la task\r\noggetto di condivisione fa parte.\r\nCome i progetti le task hanno un inizio e una data di scadenza\r\ne possono essere dichiarate completate.\r\nLe Task possono anche avere dipendere da una lista di altre task che \r\nfanno parte del progetto.','2019-05-13','2019-05-13',NULL,0,1,2,10),(9,'creare API per javascript','Le Task sono compiti assegnati a specifici progetti ed \r\na specifiche persono o gruppi di utenti.\r\nLe Task possono essere ulteriormente condivise con singoli utenti\r\nche possono anche non partecipare al progetto del quale la task\r\noggetto di condivisione fa parte.\r\nCome i progetti le task hanno un inizio e una data di scadenza\r\ne possono essere dichiarate completate.\r\nLe Task possono anche avere dipendere da una lista di altre task che \r\nfanno parte del progetto.\r\n','2019-05-13','2019-05-16',NULL,0,1,2,11),(10,'ultimare relazione progetto','Le Task sono compiti assegnati a specifici progetti ed \r\na specifiche persono o gruppi di utenti.\r\nLe Task possono essere ulteriormente condivise con singoli utenti\r\nche possono anche non partecipare al progetto del quale la task\r\noggetto di condivisione fa parte.\r\nCome i progetti le task hanno un inizio e una data di scadenza\r\ne possono essere dichiarate completate.\r\nLe Task possono anche avere dipendere da una lista di altre task che \r\nfanno parte del progetto.','2019-05-13','2019-04-28','2019-05-13',1,4,4,12);
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -245,7 +245,7 @@ CREATE TABLE `tasklist` (
   PRIMARY KEY (`id`),
   KEY `Task` (`Task`),
   CONSTRAINT `tasklist_ibfk_1` FOREIGN KEY (`Task`) REFERENCES `task` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -254,7 +254,7 @@ CREATE TABLE `tasklist` (
 
 LOCK TABLES `tasklist` WRITE;
 /*!40000 ALTER TABLE `tasklist` DISABLE KEYS */;
-INSERT INTO `tasklist` VALUES (38,1,0);
+INSERT INTO `tasklist` VALUES (39,1,0),(40,6,0);
 /*!40000 ALTER TABLE `tasklist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -293,12 +293,13 @@ CREATE TABLE `tlist` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Task` int(11) NOT NULL,
   `TaskList` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`Task`,`TaskList`),
   KEY `Task` (`Task`),
   KEY `TaskList` (`TaskList`),
+  UNIQUE KEY `id` (`id`),
   CONSTRAINT `tlist_ibfk_1` FOREIGN KEY (`Task`) REFERENCES `task` (`id`) ON DELETE CASCADE,
   CONSTRAINT `tlist_ibfk_2` FOREIGN KEY (`TaskList`) REFERENCES `tasklist` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -307,7 +308,7 @@ CREATE TABLE `tlist` (
 
 LOCK TABLES `tlist` WRITE;
 /*!40000 ALTER TABLE `tlist` DISABLE KEYS */;
-INSERT INTO `tlist` VALUES (16,3,38),(17,3,38);
+INSERT INTO `tlist` VALUES (21,2,39),(22,3,39),(23,9,40),(24,7,40);
 /*!40000 ALTER TABLE `tlist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -377,4 +378,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-06 12:12:39
+-- Dump completed on 2019-05-13 13:40:07

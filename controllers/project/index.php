@@ -44,6 +44,9 @@
             $project = Project::fromData($this->params);
             $auth = ($this->UserAuth->getCurrentUser()->id == $project->Creatore->id);
             if(!$auth)
+                $auth = $this->UserAuth->UserHasAuth("SUPERADMIN");
+
+            if(!$auth)
                 $this->redirect("errors","index",["error"=>L::error_notauth]);
             try {
                 $project->save();
@@ -154,8 +157,10 @@
             if(isset($this->params['id'])){
                 $projectid = $this->params['id'];
                 $project = Project::find("SELECT * FROM @this WHERE id=:id",["id"=>$this->params['id']]);
-                if($this->UserAuth->getCurrentUser()->id != $project->Creatore->id)
-                    $this->redirect("errors","index",["error"=>L::error_notauth]);
+                if(!$this->UserAuth->UserHasAuth("SUPERADMIN")){
+                    if($this->UserAuth->getCurrentUser()->id != $project->Creatore->id)
+                        $this->redirect("errors","index",["error"=>L::error_notauth]);
+                }
                 if($project){
                     $groups = tGroup::findAll("SELECT g.* FROM tGroup as g, Project as p, ProjectGroup as pg WHERE p.id = pg.Project AND pg.tGroup = g.id AND p.id=:projid",['projid'=>$projectid]);
                     $body = new template\PageModel();

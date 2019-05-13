@@ -36,7 +36,11 @@
             </div>
             <div class="row">
                 <div class="text-secondary font-weight-bold">${echo L::project_title.":"}</div>
-                <span class="ml-1">${echo $this->task->Project->Nome;}</span>
+                <span class="ml-1">
+                <t-link controller="project" action="show" overwrite params="${return ['id'=>$this->task->Project->id]}">
+                    ${echo $this->task->Project->Nome;}
+                </t-link>
+                </span>
             </div>
             <div class="row">
                 <div class="text-secondary font-weight-bold">${echo L::task_dependencies.":"}</div>
