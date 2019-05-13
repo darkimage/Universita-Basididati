@@ -25,44 +25,13 @@
             );
             $innerBody->templateFile = '/templates/index/main_body.php';
             $this->render(L::project_add,$innerBody);
-            // $this->redirect('prova','test',array("test"=>'test','test1'=>'test1'));
-        }
-
-        public function logout(){
-            Session::getInstance()->destroy();
         }
 
         public function testerror(){
-            $session = Session::getInstance();
-            $session->startSession();
-            $session->error = "TESTING ERRORS";
             $this->redirect("errors");
         }
 
-        public function test500(){ //not funziona ancora con ErrorDocument di htaccess (troppo tardi? server config?)
-            header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
-            exit;
-        }
-
-        public function resource(){
-            $innerBody = new template\PageModel();
-            $innerBody->templateFile = '/templates/prova/prova_resource.php';
-            $this->render("test resource",$innerBody);
-        }
-
-        /**
-        * @service pre bool UserAuth->requireUserLogin()
-        * @service pre bool UserAuth->UserHasAnyAuths("USER","ADMIN","SUPERADMIN")
-        * @method post void redirect("errors","notauth")
-        */
-        public function project(){
-            $body = new template\PageModel();
-            $body->templateFile = '/templates/forms/project_form.php';
-            $body->model = [ "user" => $this->UserAuth->getCurrentUser()];
-            $this->render("Form Testing",$body);
-        }
-
-        public function testAttr(){
+        public function attributes(){
 
             $body = new template\PageModel();
             $body->templateFile = '/templates/prova/prova_attr.php';

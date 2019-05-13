@@ -23,7 +23,11 @@
 <!-- LINK EXPRESSIONS -->
 <t-link controller="project" action="add">Link to Project</t-link><br>
 <t-link href="/test">Link to a 404 page</t-link>
-
+<div>
+Each loop:
 <t-each collection="@{testarr}" item="item">
-ciao!
+<div class="inline" style="width:100%">
+    <span>item: <span> ${print_r($this->item)}
+</div>
 </t-each>
+</div>
