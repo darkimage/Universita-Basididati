@@ -1,4 +1,4 @@
-## Progetto Basi di Dati e Web
+## Progetto Basi di Dati e Web [![relazione](https://img.shields.io/badge/relazione-disponibile%20in%20pdf-brightgreen)](https://github.com/darkimage/Universita-Basididati/raw/master/documents/basi_di_dati.pdf)
 Il progetto verte sulla creazione di un sito web che utilizza un **database relazionale** per lo storage dei dati e una logica in **php** per la presentazione all'utente.
 
 Sono stati creati **tre principali sistemi cooperanti** per gestire queste necessita':
