@@ -56,7 +56,9 @@ Grafico del processing dei tag DOM (tagProcessor class):
 		 -  **${codice php valido}** questa scrittura è utilizzabile ovunque sia negli attributi dei tag sia in qualsiasi altra parte del codice html in base alla sua posizione durante il parsing verra’ prodotto il corrispettivo DOM valido. 
 		 -  **@{variabile:[${return ‘ciao’}]}** è possibile fare il nesting delle due scritture.
  
- - **tagProcessor (class)**: questa classe si occupa di processare tutti i tag DOM presenti nel tamplate dichiarato dalla classe PageModel. Utilizza la ricorsione per il processing e si occupa anche di copiare il model dei tag padri nei tag figli e di ricomporre un documento DOM valido.  htmlTag (abstract): questa è la classe base che ogni tag deve estendere per essere utilizzato e riconosciuto durante il processing della classe tagProcessor. Ogni classe che estende htmlTag deve implementare il metodo getModel().
+ - **tagProcessor (class)**: questa classe si occupa di processare tutti i tag DOM presenti nel tamplate dichiarato dalla classe PageModel. Utilizza la ricorsione per il processing e si occupa anche di copiare il model dei tag padri nei tag figli e di ricomporre un documento DOM valido. 
+ 
+ -  **htmlTag (abstract):** questa è la classe base che ogni tag deve estendere per essere utilizzato e riconosciuto durante il processing della classe tagProcessor. Ogni classe che estende htmlTag deve implementare il metodo getModel().
 
 ## Domain Classes
 la parte del MVC che riguarda i dati e trattata dal file dbConnection.php che comprende le classi: 
